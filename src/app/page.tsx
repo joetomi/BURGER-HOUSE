@@ -5,10 +5,12 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
 import { Footer } from "@/components/Footer";
+import { PremiumLoader } from "@/components/PremiumLoader";
 
 export default function Home() {
   return (
     <LanguageProvider>
+      <PremiumLoader />
       <main className="min-h-screen bg-transparent text-[#FFFFFF] font-poppins selection:bg-[#D4A017]/30 selection:text-[#FFFFFF] transition-all duration-300">
         <Hero />
         <MenuSection />
