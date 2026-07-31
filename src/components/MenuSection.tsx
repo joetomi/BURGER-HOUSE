@@ -16,39 +16,47 @@ export const MenuSection: React.FC = () => {
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { language } = useLanguage();
 
-  // Robust ScrollSpy to highlight active category tab as user manually scrolls
+  // Rock-solid contiguous ScrollSpy: checks which category section wrapper encompasses the target viewport line
   useEffect(() => {
     const handleScrollSpy = () => {
       if (isClickScrolling.current) return;
 
-      let bestCat = "";
-      let minDistance = Infinity;
-      const targetOffset = 180;
+      const viewportTarget = 140; // Pixels from top of screen (just below sticky header)
+      let foundCategory = "";
 
       for (const category of MENU_DATA) {
         const element = document.getElementById(`category-${category.id}`);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // Active section: top is above target offset zone and bottom is below it
-          if (rect.top <= targetOffset + 60 && rect.bottom >= targetOffset) {
-            bestCat = category.id;
+          // Check if the viewport target line is inside this category's bounding box
+          if (rect.top <= viewportTarget && rect.bottom > viewportTarget) {
+            foundCategory = category.id;
             break;
-          }
-          // Fallback: find section top closest to target offset
-          const dist = Math.abs(rect.top - targetOffset);
-          if (dist < minDistance) {
-            minDistance = dist;
-            bestCat = category.id;
           }
         }
       }
 
-      if (bestCat) {
-        setActiveCategory((prev) => (prev === bestCat ? prev : bestCat));
+      // If at very top of menu section, default to first category
+      if (!foundCategory && MENU_DATA.length > 0) {
+        const firstElem = document.getElementById(`category-${MENU_DATA[0].id}`);
+        if (firstElem) {
+          const firstRect = firstElem.getBoundingClientRect();
+          if (firstRect.top > viewportTarget) {
+            foundCategory = MENU_DATA[0].id;
+          } else {
+            // At very bottom of page, stick to last category
+            foundCategory = MENU_DATA[MENU_DATA.length - 1].id;
+          }
+        }
+      }
+
+      if (foundCategory) {
+        setActiveCategory((prev) => (prev === foundCategory ? prev : foundCategory));
       }
     };
 
     window.addEventListener("scroll", handleScrollSpy, { passive: true });
+    handleScrollSpy(); // Initial check
     return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
 
@@ -78,7 +86,7 @@ export const MenuSection: React.FC = () => {
 
     const element = document.getElementById(`category-${categoryId}`);
     if (element) {
-      const yOffset = -85;
+      const yOffset = -90;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -86,7 +94,7 @@ export const MenuSection: React.FC = () => {
     // Lock ScrollSpy during smooth scroll transition to prevent flicker
     scrollTimeoutRef.current = setTimeout(() => {
       isClickScrolling.current = false;
-    }, 1400);
+    }, 1200);
   };
 
   return (
@@ -156,7 +164,11 @@ export const MenuSection: React.FC = () => {
             const isMealsCategory = category.id === "meals";
 
             return (
-              <div key={category.id} className="flex flex-col items-center">
+              <div
+                key={category.id}
+                id={`category-${category.id}`}
+                className="flex flex-col items-center w-full scroll-mt-28"
+              >
                 {/* Hero Burger Showcase Image & Connector Line */}
                 {isBurgersCategory && (
                   <div className="flex flex-col items-center w-full">
@@ -225,12 +237,11 @@ export const MenuSection: React.FC = () => {
 
                 {/* Category Menu Card */}
                 <motion.div
-                  id={`category-${category.id}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="relative w-full scroll-mt-28 bg-gradient-to-[#121212]/55 via-[#121212]/35 to-[#121212]/55 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.3)]"
+                  className="relative w-full bg-gradient-to-b from-[#121212]/55 via-[#121212]/35 to-[#121212]/55 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.3)]"
                 >
                   {/* Category Title Header */}
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6 sm:mb-8 pb-4 border-b border-white/[0.06]">
