@@ -16,26 +16,36 @@ export const MenuSection: React.FC = () => {
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { language } = useLanguage();
 
-  // ScrollSpy to highlight active category tab as user manually scrolls
+  // Robust ScrollSpy to highlight active category tab as user manually scrolls
   useEffect(() => {
     const handleScrollSpy = () => {
       if (isClickScrolling.current) return;
 
-      const scrollPosition = window.scrollY + 160;
-      let currentCat = MENU_DATA[0].id;
+      let bestCat = "";
+      let minDistance = Infinity;
+      const targetOffset = 180;
 
       for (const category of MENU_DATA) {
         const element = document.getElementById(`category-${category.id}`);
         if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            currentCat = category.id;
+          const rect = element.getBoundingClientRect();
+          // Active section: top is above target offset zone and bottom is below it
+          if (rect.top <= targetOffset + 60 && rect.bottom >= targetOffset) {
+            bestCat = category.id;
             break;
+          }
+          // Fallback: find section top closest to target offset
+          const dist = Math.abs(rect.top - targetOffset);
+          if (dist < minDistance) {
+            minDistance = dist;
+            bestCat = category.id;
           }
         }
       }
-      setActiveCategory(currentCat);
+
+      if (bestCat) {
+        setActiveCategory((prev) => (prev === bestCat ? prev : bestCat));
+      }
     };
 
     window.addEventListener("scroll", handleScrollSpy, { passive: true });
@@ -73,9 +83,10 @@ export const MenuSection: React.FC = () => {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
 
+    // Lock ScrollSpy during smooth scroll transition to prevent flicker
     scrollTimeoutRef.current = setTimeout(() => {
       isClickScrolling.current = false;
-    }, 800);
+    }, 1400);
   };
 
   return (
@@ -219,7 +230,7 @@ export const MenuSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="relative w-full scroll-mt-28 bg-gradient-to-b from-[#121212]/55 via-[#121212]/35 to-[#121212]/55 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.3)]"
+                  className="relative w-full scroll-mt-28 bg-gradient-to-[#121212]/55 via-[#121212]/35 to-[#121212]/55 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.3)]"
                 >
                   {/* Category Title Header */}
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6 sm:mb-8 pb-4 border-b border-white/[0.06]">
