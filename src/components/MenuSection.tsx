@@ -16,51 +16,66 @@ export const MenuSection: React.FC = () => {
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { language } = useLanguage();
 
-  // Rock-solid contiguous ScrollSpy: checks which category section wrapper encompasses the target viewport line
+  // Continuous Mathematical Page Partitioning (Zero-gap ScrollSpy)
   useEffect(() => {
     const handleScrollSpy = () => {
       if (isClickScrolling.current) return;
 
-      const viewportTarget = 140; // Pixels from top of screen (just below sticky header)
-      let foundCategory = "";
+      const viewportOffset = 160; // Offset below floating sticky navbar
+      const currentY = window.scrollY + viewportOffset;
 
-      for (const category of MENU_DATA) {
-        const element = document.getElementById(`category-${category.id}`);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Check if the viewport target line is inside this category's bounding box
-          if (rect.top <= viewportTarget && rect.bottom > viewportTarget) {
-            foundCategory = category.id;
-            break;
-          }
+      // Extract exact absolute Y-top coordinates of all category sections
+      const categoryPositions = MENU_DATA.map((category) => {
+        const elem = document.getElementById(`category-${category.id}`);
+        if (elem) {
+          const top = elem.getBoundingClientRect().top + window.pageYOffset;
+          return { id: category.id, top };
+        }
+        return null;
+      }).filter((item): item is { id: string; top: number } => item !== null);
+
+      if (categoryPositions.length === 0) return;
+
+      // Zone 0: Before first section top (Hero area) -> Always first category ("burgers")
+      if (currentY < categoryPositions[0].top) {
+        setActiveCategory((prev) => (prev === categoryPositions[0].id ? prev : categoryPositions[0].id));
+        return;
+      }
+
+      // Zone N: After last section top -> Always last category ("drinks")
+      const lastIndex = categoryPositions.length - 1;
+      if (currentY >= categoryPositions[lastIndex].top) {
+        setActiveCategory((prev) => (prev === categoryPositions[lastIndex].id ? prev : categoryPositions[lastIndex].id));
+        return;
+      }
+
+      // Midpoint Partitioning between consecutive categories (Zero-gap Coverage)
+      let activeId = categoryPositions[0].id;
+      for (let i = 0; i < categoryPositions.length - 1; i++) {
+        const current = categoryPositions[i];
+        const next = categoryPositions[i + 1];
+        const midpoint = (current.top + next.top) / 2;
+
+        if (currentY >= current.top && currentY < midpoint) {
+          activeId = current.id;
+          break;
+        } else if (currentY >= midpoint && currentY < next.top) {
+          activeId = next.id;
+          break;
         }
       }
 
-      // If at very top of menu section, default to first category
-      if (!foundCategory && MENU_DATA.length > 0) {
-        const firstElem = document.getElementById(`category-${MENU_DATA[0].id}`);
-        if (firstElem) {
-          const firstRect = firstElem.getBoundingClientRect();
-          if (firstRect.top > viewportTarget) {
-            foundCategory = MENU_DATA[0].id;
-          } else {
-            // At very bottom of page, stick to last category
-            foundCategory = MENU_DATA[MENU_DATA.length - 1].id;
-          }
-        }
-      }
-
-      if (foundCategory) {
-        setActiveCategory((prev) => (prev === foundCategory ? prev : foundCategory));
+      if (activeId) {
+        setActiveCategory((prev) => (prev === activeId ? prev : activeId));
       }
     };
 
     window.addEventListener("scroll", handleScrollSpy, { passive: true });
-    handleScrollSpy(); // Initial check
+    handleScrollSpy(); // Initial execution
     return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
 
-  // Auto-scroll active tab into view inside container on mobile
+  // Auto-scroll active tab into view inside floating horizontal dock on mobile
   useEffect(() => {
     if (activeTabRef.current && floatingContainerRef.current) {
       const container = floatingContainerRef.current;
@@ -94,7 +109,7 @@ export const MenuSection: React.FC = () => {
     // Lock ScrollSpy during smooth scroll transition to prevent flicker
     scrollTimeoutRef.current = setTimeout(() => {
       isClickScrolling.current = false;
-    }, 1200);
+    }, 1000);
   };
 
   return (
