@@ -81,17 +81,21 @@ export const MenuSection: React.FC = () => {
   return (
     <section id="menu" className="relative pt-4 pb-12 px-4 sm:px-6 max-w-6xl mx-auto min-h-screen">
       {/* Menu Main Section Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8" dir={language === "ar" ? "rtl" : "ltr"}>
         <span
-          className={`text-xs font-semibold tracking-[0.35em] text-[#D4A017] uppercase block mb-3 ${
-            language === "ar" ? "font-cairo" : "font-poppins"
+          className={`text-xs font-semibold text-[#D4A017] uppercase block mb-3 ${
+            language === "ar"
+              ? "font-cairo max-md:tracking-normal tracking-[0.35em]"
+              : "font-poppins tracking-[0.35em]"
           }`}
         >
           {language === "ar" ? "تشكيلتنا المميزة" : "Our Selection"}
         </span>
         <h2
-          className={`text-3xl md:text-5xl font-bold tracking-wider text-[#FFFFFF] uppercase mb-4 ${
-            language === "ar" ? "font-cairo" : "font-poppins"
+          className={`text-3xl md:text-5xl font-bold text-[#FFFFFF] uppercase mb-4 ${
+            language === "ar"
+              ? "font-cairo max-md:tracking-normal tracking-wider"
+              : "font-poppins tracking-wider"
           }`}
         >
           {language === "ar" ? "قائمة الطعام" : "MENU"}
@@ -208,7 +212,7 @@ export const MenuSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Category Menu Card sitting directly below connector line with small elegant gap */}
+                {/* Category Menu Card */}
                 <motion.div
                   id={`category-${category.id}`}
                   initial={{ opacity: 0, y: 20 }}
@@ -220,8 +224,11 @@ export const MenuSection: React.FC = () => {
                   {/* Category Title Header */}
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6 sm:mb-8 pb-4 border-b border-white/[0.06]">
                     <h3
-                      className={`text-2xl md:text-3xl font-bold tracking-wider text-[#FFFFFF] uppercase ${
-                        language === "ar" ? "font-cairo text-right" : "font-poppins text-left"
+                      dir={language === "ar" ? "rtl" : "ltr"}
+                      className={`text-2xl md:text-3xl font-bold text-[#FFFFFF] uppercase ${
+                        language === "ar"
+                          ? "font-cairo text-right max-md:tracking-normal tracking-wider"
+                          : "font-poppins text-left tracking-wider"
                       }`}
                     >
                       {language === "ar" ? category.titleAr : category.titleEn}

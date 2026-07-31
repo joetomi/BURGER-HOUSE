@@ -65,8 +65,19 @@
 /* Arabic typography class */
 .font-cairo {
   font-family: 'Cairo', sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile Media Query Fix: Disable character separation (letter-spacing) on Arabic text on mobile screens only */
+@media (max-width: 768px) {
+  .font-cairo,
+  html[lang="ar"] .font-cairo,
+  [dir="rtl"] .font-cairo {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+  }
 }

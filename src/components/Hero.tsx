@@ -31,8 +31,11 @@ export const Hero: React.FC = () => {
 
         {/* Tagline */}
         <div
-          className={`flex items-center justify-center gap-3 md:gap-4 text-xs md:text-sm tracking-[0.35em] text-[#C7C7C7] uppercase mb-4 ${
-            language === "ar" ? "font-cairo font-semibold" : "font-poppins font-semibold"
+          dir={language === "ar" ? "rtl" : "ltr"}
+          className={`flex items-center justify-center gap-3 md:gap-4 text-xs md:text-sm text-[#C7C7C7] uppercase mb-4 ${
+            language === "ar"
+              ? "font-cairo font-semibold max-md:tracking-normal tracking-[0.35em]"
+              : "font-poppins font-semibold tracking-[0.35em]"
           }`}
         >
           <span>{language === "ar" ? "طازج." : "Fresh."}</span>
