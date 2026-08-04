@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
 import { Footer } from "@/components/Footer";
 import { PremiumLoader } from "@/components/PremiumLoader";
+import { PromotionsCarousel } from "@/components/PromotionsCarousel";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ export default function Home() {
         }`}
       >
         <Hero />
+        <PromotionsCarousel />
         <MenuSection />
         <Footer />
       </main>
