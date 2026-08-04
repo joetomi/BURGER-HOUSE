@@ -22,19 +22,24 @@ export const Footer: React.FC = () => {
         </span>
 
         {/* Contact & Social Links */}
-        <div className="mb-8 mt-2 flex flex-col items-center gap-4">
-          <span className="font-poppins text-xs font-semibold tracking-[0.26em] text-[#C7C7C7]/70 uppercase">
-            Contact Us
-          </span>
+        <div className="mb-10 mt-3 flex w-full flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-3" dir="rtl" lang="ar">
+            <span className="font-cairo text-base font-bold text-white/80 sm:text-lg">
+              وسائل التواصل
+            </span>
+            <div className="h-px w-10 bg-[#D4A017]/70" />
+          </div>
 
-          <div className="grid w-full max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3" dir="ltr">
+          <div className="grid w-full max-w-4xl grid-cols-1 gap-3 md:grid-cols-3" dir="ltr">
             <a
               href="tel:+218914391000"
               aria-label="Call Burger House at 0914391000"
-              className="flex h-12 items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/[0.025] px-4 text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
+              className="group flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[#111111]/70 px-4 text-left text-[#C7C7C7] backdrop-blur-sm transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
             >
-              <Phone className="h-[17px] w-[17px] text-[#D4A017]" aria-hidden="true" />
-              <span className="font-poppins text-sm font-semibold tracking-wide">0914391000</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D4A017]/10">
+                <Phone className="h-[18px] w-[18px] text-[#D4A017]" aria-hidden="true" />
+              </span>
+              <span className="font-poppins text-sm font-semibold tracking-wide text-white/85">0914391000</span>
             </a>
 
             <a
@@ -42,12 +47,14 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Burger House on Facebook"
-              className="flex h-12 items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/[0.025] px-4 text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
+              className="group flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[#111111]/70 px-4 text-left text-[#C7C7C7] backdrop-blur-sm transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
             >
-              <svg className="h-[18px] w-[18px] shrink-0 text-[#D4A017]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.01.28-1.7 1.75-1.7H17V2.42A23.5 23.5 0 0 0 14.44 2C11.9 2 10.16 3.55 10.16 6.4v3.1H7V13h3.16v9h3.34Z" />
-              </svg>
-              <span className="font-poppins text-sm font-semibold">Burger house misurata</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D4A017]/10">
+                <svg className="h-[18px] w-[18px] text-[#D4A017]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.01.28-1.7 1.75-1.7H17V2.42A23.5 23.5 0 0 0 14.44 2C11.9 2 10.16 3.55 10.16 6.4v3.1H7V13h3.16v9h3.34Z" />
+                </svg>
+              </span>
+              <span className="font-poppins text-sm font-semibold text-white/85">Burger house misurata</span>
             </a>
 
             <a
@@ -55,14 +62,16 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Burger House on Instagram"
-              className="flex h-12 items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/[0.025] px-4 text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
+              className="group flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[#111111]/70 px-4 text-left text-[#C7C7C7] backdrop-blur-sm transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
             >
-              <svg className="h-[18px] w-[18px] shrink-0 text-[#D4A017]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg>
-              <span className="font-poppins text-sm font-semibold">burger.house.misurata</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D4A017]/10">
+                <svg className="h-[18px] w-[18px] text-[#D4A017]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span className="font-poppins text-sm font-semibold text-white/85">burger.house.misurata</span>
             </a>
           </div>
         </div>
