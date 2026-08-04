@@ -78,14 +78,21 @@ export const Footer: React.FC = () => {
 
         {/* Simple Copyright */}
         <p
-          className={`text-[11px] tracking-widest text-[#C7C7C7]/50 uppercase ${
-            language === "ar" ? "font-cairo" : "font-poppins"
+          dir={language === "ar" ? "rtl" : "ltr"}
+          className={`text-[11px] text-[#C7C7C7]/50 uppercase ${
+            language === "ar" ? "font-cairo tracking-normal" : "font-poppins tracking-widest"
           }`}
         >
-          &copy; {new Date().getFullYear()}{" "}
-          {language === "ar"
-            ? "برجر هاوس مصراتة. جميع الحقوق محفوظة."
-            : "BURGER HOUSE. ALL RIGHTS RESERVED."}
+          {language === "ar" ? (
+            <span className="inline-flex flex-wrap items-center justify-center gap-x-1.5">
+              <span>برجر هاوس مصراتة. جميع الحقوق محفوظة.</span>
+              <span dir="ltr">&copy; {new Date().getFullYear()}</span>
+            </span>
+          ) : (
+            <>
+              &copy; {new Date().getFullYear()} BURGER HOUSE. ALL RIGHTS RESERVED.
+            </>
+          )}
         </p>
       </div>
     </footer>
