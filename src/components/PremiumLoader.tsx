@@ -28,17 +28,13 @@ export const PremiumLoader: React.FC<PremiumLoaderProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex min-h-screen items-center justify-center overflow-hidden bg-[#0F0F0F] px-6 transition-opacity duration-700 ease-in-out ${
+      className={`fixed inset-0 z-[9999] flex min-h-screen items-center justify-center overflow-hidden bg-[#090909] px-6 transition-opacity duration-700 ease-in-out ${
         isLeaving ? "opacity-0" : "opacity-100"
       }`}
       role="status"
       aria-label="Burger House menu is loading"
     >
-      <div
-        className="absolute inset-0 bg-repeat opacity-[0.055]"
-        style={{ backgroundImage: "url('/pattern.jpg')", backgroundSize: "560px" }}
-      />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,160,23,0.10),transparent_48%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.055),transparent_48%)]" />
 
       <motion.div
         className="relative flex flex-col items-center text-center"
@@ -50,7 +46,7 @@ export const PremiumLoader: React.FC<PremiumLoaderProps> = ({ onComplete }) => {
         transition={{ duration: shouldReduceMotion ? 0 : 0.65, ease: "easeInOut" }}
       >
         <motion.div
-          className="relative rounded-full border border-[#D4A017]/25 bg-black/40 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
+          className="relative rounded-full border border-white/10 bg-white/[0.015] p-1 shadow-[0_24px_70px_rgba(0,0,0,0.65)]"
           initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.86, filter: "blur(8px)" }}
           animate={
             isLogoReady
@@ -86,13 +82,15 @@ export const PremiumLoader: React.FC<PremiumLoaderProps> = ({ onComplete }) => {
             ease: "easeOut",
           }}
         >
-          <h1 className="font-poppins text-xl font-bold tracking-[0.28em] text-white sm:text-2xl">
+          <h1 className="font-poppins text-xl font-bold tracking-[0.24em] text-white sm:text-2xl">
             BURGER HOUSE
           </h1>
-          <div className="my-4 h-px w-12 bg-[#D4A017]" />
-          <p className="font-poppins text-[11px] font-semibold tracking-[0.5em] text-[#D4A017]">
-            MENU
-          </p>
+          <div className="my-4 h-px w-10 bg-white/25" />
+          <div className="rounded-full border border-white/15 px-5 py-2">
+            <p className="font-poppins text-[10px] font-medium tracking-[0.38em] text-white/70">
+              DIGITAL MENU
+            </p>
+          </div>
         </motion.div>
       </motion.div>
     </div>
