@@ -64,27 +64,11 @@ export const PromotionsCarousel: React.FC = () => {
 
   return (
     <section className="px-4 py-5 sm:px-6 sm:py-7" aria-label={isArabic ? "آخر عروضنا" : "Latest offers"}>
-      <div className="mx-auto mb-7 max-w-2xl text-center sm:mb-9" dir={isArabic ? "rtl" : "ltr"}>
-        <span
-          className={`text-xs font-semibold text-[#D4A017] ${
-            isArabic ? "font-cairo" : "font-poppins uppercase tracking-[0.24em]"
-          }`}
-        >
-          {isArabic ? "من قلب برجر هاوس" : "Straight from the grill"}
-        </span>
-        <h2
-          className={`mt-3 text-3xl font-bold text-white sm:text-4xl ${
-            isArabic ? "font-cairo" : "font-poppins tracking-wide"
-          }`}
-        >
-          {isArabic ? "لقطات تفتح الشهية" : "Cravings, captured"}
+      <div className="mx-auto mb-6 flex flex-col items-center text-center sm:mb-8">
+        <h2 className="font-poppins text-2xl font-bold tracking-[0.16em] text-white uppercase sm:text-3xl">
+          WHAT&apos;S NEW
         </h2>
-        <p className={`mx-auto mt-3 max-w-xl text-sm leading-7 text-white/55 sm:text-base ${isArabic ? "font-cairo" : "font-poppins"}`}>
-          {isArabic
-            ? "اختيارات وعروض من مطبخنا، تُقدّم لكم كما نحبها."
-            : "Fresh picks, offers, and Burger House moments worth tasting."}
-        </p>
-        <div className="mx-auto mt-5 h-px w-12 bg-[#D4A017]/70" />
+        <div className="mt-4 h-px w-12 bg-[#D4A017]/70" />
       </div>
 
       <div
