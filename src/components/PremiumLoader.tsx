@@ -88,7 +88,7 @@ export const PremiumLoader: React.FC<PremiumLoaderProps> = ({ onComplete }) => {
           <div className="my-4 h-px w-10 bg-white/25" />
           <div className="rounded-full border border-white/20 px-6 py-2.5">
             <p className="font-poppins text-xs font-semibold tracking-[0.28em] text-white/85 sm:text-sm">
-              DIGITAL MENU
+              OUR MENU
             </p>
           </div>
         </motion.div>
