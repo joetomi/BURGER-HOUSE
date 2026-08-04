@@ -7,6 +7,7 @@ import { MenuSection } from "@/components/MenuSection";
 import { Footer } from "@/components/Footer";
 import { PremiumLoader } from "@/components/PremiumLoader";
 import { PromotionsCarousel } from "@/components/PromotionsCarousel";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ export default function Home() {
           isLoading ? "pointer-events-none" : ""
         }`}
       >
+        <LanguageSwitcher />
         <Hero />
         <PromotionsCarousel />
         <MenuSection />

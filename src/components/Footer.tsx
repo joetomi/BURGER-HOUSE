@@ -23,9 +23,17 @@ export const Footer: React.FC = () => {
 
         {/* Contact & Social Links */}
         <div className="mb-10 mt-3 flex w-full flex-col items-center gap-5">
-          <div className="flex flex-col items-center gap-3" dir="rtl" lang="ar">
-            <span className="font-cairo text-base font-bold text-white/80 sm:text-lg">
-              وسائل التواصل
+          <div
+            className="flex flex-col items-center gap-3"
+            dir={language === "ar" ? "rtl" : "ltr"}
+            lang={language}
+          >
+            <span
+              className={`text-base font-bold text-white/80 sm:text-lg ${
+                language === "ar" ? "font-cairo" : "font-poppins tracking-[0.12em] uppercase"
+              }`}
+            >
+              {language === "ar" ? "وسائل التواصل" : "Contact Us"}
             </span>
             <div className="h-px w-10 bg-[#D4A017]/70" />
           </div>
@@ -90,7 +98,7 @@ export const Footer: React.FC = () => {
             </span>
           ) : (
             <>
-              &copy; {new Date().getFullYear()} BURGER HOUSE. ALL RIGHTS RESERVED.
+              &copy; {new Date().getFullYear()} BURGER HOUSE MISRATA. ALL RIGHTS RESERVED.
             </>
           )}
         </p>

@@ -2,10 +2,19 @@
 
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { ExternalLink } from "lucide-react";
 
 const PROMOTIONS = [
+  {
+    id: "fresh-orange-juice",
+    image: "/ad-fresh-orange-juice.jpg",
+    titleAr: "عصير برتقال طبيعي",
+    titleEn: "Fresh Orange Juice",
+    captionAr: "جديدنا: عصير برتقال طبيعي ومنعش 🍊",
+    captionEn: "New: fresh and refreshing orange juice.",
+    postUrl:
+      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02LoB3iTvwpE55jGkcoBQSh2mCaCjZUzv2Xy4c1kKxwuVig5qkUEqeYF6NiAJXM82dl",
+  },
   {
     id: "kofta-meal",
     image: "/ad-kofta.jpg",
@@ -26,13 +35,43 @@ const PROMOTIONS = [
     postUrl:
       "https://www.facebook.com/burgerhousemisurata/posts/pfbid02F7FUGCsoDBhjKSswHk2s4xjYXq4UbrPu5LDub2JpG6u5UrWHBWdgzBHAA8KErnLYl",
   },
+  {
+    id: "ramadan-iftar",
+    image: "/ad-ramadan-iftar.jpg",
+    titleAr: "إفطار رمضان",
+    titleEn: "Ramadan Iftar",
+    captionAr: "إفطار رمضان بطعم مختلف 🌙",
+    captionEn: "A different taste for Ramadan Iftar.",
+    postUrl:
+      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02ne5n9KJoXWrZUrs5kDZytkjftam152euEuKxkWg1R9UfP8NjqSDTHjewruSawPeKl",
+  },
+  {
+    id: "ramadan-meals",
+    image: "/ad-ramadan-meals.jpg",
+    titleAr: "وجبات إفطار رمضان",
+    titleEn: "Ramadan Iftar Meals",
+    captionAr: "اختيارات متكاملة لإفطار رمضان ✨",
+    captionEn: "Complete choices for Ramadan Iftar.",
+    postUrl:
+      "https://www.facebook.com/burgerhousemisurata/posts/pfbid0oqyhB1bdGxyL2AxoBqxMA3hJLsjioF47bCXwXmvuPqrw8BkVteskf5EftHgwWzsul",
+  },
+  {
+    id: "beef-quesadilla",
+    image: "/ad-beef-quesadilla.jpg",
+    titleAr: "كساديا لحم",
+    titleEn: "Beef Quesadilla",
+    captionAr: "كساديا لحم بطابع برجر هاوس 💛",
+    captionEn: "Beef quesadilla, Burger House style.",
+    postUrl:
+      "https://www.facebook.com/burgerhousemisurata/posts/pfbid028iNaFwoAU99Qz1eGugPj9xXwqbYGj542UQ1zjwe2pVczoDNSKozYSGUZBKKWgmo2l",
+  },
 ];
+
+const STORY_DURATION = 6500;
 
 export const PromotionsCarousel: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const shouldReduceMotion = useReducedMotion();
-  const { language } = useLanguage();
 
   useEffect(() => {
     PROMOTIONS.forEach((promotion) => {
@@ -42,14 +81,14 @@ export const PromotionsCarousel: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (isPaused || shouldReduceMotion) return;
+    if (shouldReduceMotion) return;
 
-    const interval = window.setInterval(() => {
+    const timeout = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % PROMOTIONS.length);
-    }, 6500);
+    }, STORY_DURATION);
 
-    return () => window.clearInterval(interval);
-  }, [isPaused, shouldReduceMotion]);
+    return () => window.clearTimeout(timeout);
+  }, [activeIndex, shouldReduceMotion]);
 
   const showPrevious = () => {
     setActiveIndex((current) => (current - 1 + PROMOTIONS.length) % PROMOTIONS.length);
@@ -60,10 +99,10 @@ export const PromotionsCarousel: React.FC = () => {
   };
 
   const activePromotion = PROMOTIONS[activeIndex];
-  const isArabic = language === "ar";
+  const isArabic = true;
 
   return (
-    <section className="px-4 py-5 sm:px-6 sm:py-7" aria-label={isArabic ? "آخر عروضنا" : "Latest offers"}>
+    <section dir="rtl" lang="ar" className="px-4 py-5 sm:px-6 sm:py-7" aria-label="آخر عروضنا">
       <div className="mx-auto mb-6 flex flex-col items-center text-center sm:mb-8">
         <h2 className="font-poppins text-2xl font-bold tracking-[0.16em] text-white uppercase sm:text-3xl">
           WHAT&apos;S NEW
@@ -71,14 +110,30 @@ export const PromotionsCarousel: React.FC = () => {
         <div className="mt-4 h-px w-12 bg-[#D4A017]/70" />
       </div>
 
-      <div
-        className="mx-auto w-full max-w-4xl"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onFocusCapture={() => setIsPaused(true)}
-        onBlurCapture={() => setIsPaused(false)}
-      >
+      <div className="mx-auto w-full max-w-4xl">
         <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/10 bg-[#111111] shadow-[0_24px_70px_rgba(0,0,0,0.38)] sm:aspect-[16/8]">
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 z-40 flex gap-1.5 p-4 sm:p-5"
+            dir="ltr"
+            aria-hidden="true"
+          >
+            {PROMOTIONS.map((promotion, index) => (
+              <div key={promotion.id} className="h-1 flex-1 overflow-hidden rounded-full bg-white/25 shadow-sm">
+                <motion.div
+                  key={`${activeIndex}-${promotion.id}`}
+                  className="h-full w-full origin-left rounded-full bg-white"
+                  initial={{ scaleX: index < activeIndex ? 1 : 0 }}
+                  animate={{ scaleX: index <= activeIndex ? 1 : 0 }}
+                  transition={
+                    index === activeIndex && !shouldReduceMotion
+                      ? { duration: STORY_DURATION / 1000, ease: "linear" }
+                      : { duration: 0 }
+                  }
+                />
+              </div>
+            ))}
+          </div>
+
           <AnimatePresence mode="wait">
             <motion.div
               key={activePromotion.id}
@@ -97,8 +152,21 @@ export const PromotionsCarousel: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/10" />
 
+              <button
+                type="button"
+                onClick={showPrevious}
+                aria-label={isArabic ? "المنشور السابق" : "Previous promotion"}
+                className="absolute inset-y-0 left-0 z-20 w-1/2 cursor-pointer bg-transparent"
+              />
+              <button
+                type="button"
+                onClick={showNext}
+                aria-label={isArabic ? "المنشور التالي" : "Next promotion"}
+                className="absolute inset-y-0 right-0 z-20 w-1/2 cursor-pointer bg-transparent"
+              />
+
               <div
-                className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 md:p-10"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10"
                 dir={isArabic ? "rtl" : "ltr"}
               >
                 <span
@@ -118,7 +186,7 @@ export const PromotionsCarousel: React.FC = () => {
                   href={activePromotion.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15 ${
+                  className={`pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15 ${
                     isArabic ? "font-cairo" : "font-poppins"
                   }`}
                 >
@@ -129,37 +197,6 @@ export const PromotionsCarousel: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          <button
-            type="button"
-            onClick={showPrevious}
-            aria-label={isArabic ? "الإعلان السابق" : "Previous promotion"}
-            className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/35 text-white/80 backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60 hover:text-white sm:left-5"
-          >
-            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            onClick={showNext}
-            aria-label={isArabic ? "الإعلان التالي" : "Next promotion"}
-            className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/35 text-white/80 backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60 hover:text-white sm:right-5"
-          >
-            <ChevronRight className="h-5 w-5" aria-hidden="true" />
-          </button>
-        </div>
-
-        <div className="mt-4 flex items-center justify-center gap-2" aria-label={isArabic ? "اختيار الإعلان" : "Choose promotion"}>
-          {PROMOTIONS.map((promotion, index) => (
-            <button
-              key={promotion.id}
-              type="button"
-              onClick={() => setActiveIndex(index)}
-              aria-label={`${isArabic ? "عرض الإعلان" : "Show promotion"} ${index + 1}`}
-              aria-current={index === activeIndex ? "true" : undefined}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                index === activeIndex ? "w-8 bg-[#D4A017]" : "w-2 bg-white/20 hover:bg-white/40"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>
