@@ -82,12 +82,12 @@ export const PremiumLoader: React.FC<PremiumLoaderProps> = ({ onComplete }) => {
             ease: "easeOut",
           }}
         >
-          <h1 className="font-poppins text-xl font-bold tracking-[0.24em] text-white sm:text-2xl">
+          <h1 className="font-poppins text-2xl font-bold tracking-[0.18em] text-white sm:text-3xl">
             BURGER HOUSE
           </h1>
           <div className="my-4 h-px w-10 bg-white/25" />
-          <div className="rounded-full border border-white/15 px-5 py-2">
-            <p className="font-poppins text-[10px] font-medium tracking-[0.38em] text-white/70">
+          <div className="rounded-full border border-white/20 px-6 py-2.5">
+            <p className="font-poppins text-xs font-semibold tracking-[0.28em] text-white/85 sm:text-sm">
               DIGITAL MENU
             </p>
           </div>
