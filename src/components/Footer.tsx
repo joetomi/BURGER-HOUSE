@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
         >
           &copy; {new Date().getFullYear()}{" "}
           {language === "ar"
-            ? "برجر هاوس. جميع الحقوق محفوظة."
+            ? "برجر هاوس مصراتة. جميع الحقوق محفوظة."
             : "BURGER HOUSE. ALL RIGHTS RESERVED."}
         </p>
       </div>
