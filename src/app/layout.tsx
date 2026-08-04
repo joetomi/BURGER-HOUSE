@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "BURGER HOUSE | Premium Menu",
   description: "Fresh. Grilled. Premium. Explore the official restaurant menu of BURGER HOUSE.",
   icons: {
-    icon: "/logo.png",
+    icon: "/loader-brand.png",
   },
 };
 
