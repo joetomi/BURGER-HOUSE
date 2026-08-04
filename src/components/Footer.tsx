@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
         >
           {language === "ar" ? (
             <span className="inline-flex flex-wrap items-center justify-center gap-x-1.5">
-              <span>برجر هاوس مصراتة. جميع الحقوق محفوظة.</span>
+              <span>جميع الحقوق محفوظة. برجر هاوس مصراتة.</span>
               <span dir="ltr">&copy; {new Date().getFullYear()}</span>
             </span>
           ) : (
