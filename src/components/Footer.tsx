@@ -3,6 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Logo3D } from "./Logo3D";
+import { Phone } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const { language } = useLanguage();
@@ -19,6 +20,50 @@ export const Footer: React.FC = () => {
         <span className="font-poppins text-xs font-bold tracking-[0.3em] text-[#FFFFFF] uppercase mb-4">
           BURGER HOUSE
         </span>
+
+        {/* Contact & Social Links */}
+        <div className="mb-8 mt-2 flex flex-col items-center gap-4">
+          <span className="font-poppins text-[10px] font-semibold tracking-[0.32em] text-[#C7C7C7]/55 uppercase">
+            Contact
+          </span>
+
+          <div className="flex items-center gap-3" dir="ltr">
+            <a
+              href="tel:+218914391000"
+              aria-label="Call Burger House at 0914391000"
+              className="group flex h-11 items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.025] px-4 text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-white"
+            >
+              <Phone className="h-[17px] w-[17px] text-[#D4A017]" aria-hidden="true" />
+              <span className="font-poppins text-sm font-semibold tracking-wide">0914391000</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/burgerhousemisurata"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Burger House on Facebook"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-[#D4A017]"
+            >
+              <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.01.28-1.7 1.75-1.7H17V2.42A23.5 23.5 0 0 0 14.44 2C11.9 2 10.16 3.55 10.16 6.4v3.1H7V13h3.16v9h3.34Z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.instagram.com/burger.house.misurata"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Burger House on Instagram"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-[#C7C7C7] transition-all duration-300 hover:border-[#D4A017]/45 hover:bg-[#D4A017]/[0.07] hover:text-[#D4A017]"
+            >
+              <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
 
         {/* Simple Copyright */}
         <p
