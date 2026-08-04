@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { MENU_DATA, MenuCategory } from "@/data/menu";
+import { Coffee, UtensilsCrossed } from "lucide-react";
+import { CAFE_MENU_DATA, MENU_DATA, MenuCategory } from "@/data/menu";
 import { MenuItemRow } from "./MenuItemRow";
 import { useLanguage } from "@/context/LanguageContext";
 import { TransparentConnectorLine } from "./TransparentConnectorLine";
 
 export const MenuSection: React.FC = () => {
+  const [menuMode, setMenuMode] = useState<"food" | "cafe">("food");
   const [activeCategory, setActiveCategory] = useState<string>("burgers");
   
   const activeTabRef = useRef<HTMLButtonElement>(null);
@@ -15,6 +17,7 @@ export const MenuSection: React.FC = () => {
   const isClickScrolling = useRef<boolean>(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { language } = useLanguage();
+  const menuData = menuMode === "food" ? MENU_DATA : CAFE_MENU_DATA;
 
   // Continuous Mathematical Page Partitioning (Zero-gap ScrollSpy)
   useEffect(() => {
@@ -25,7 +28,7 @@ export const MenuSection: React.FC = () => {
       const currentY = window.scrollY + viewportOffset;
 
       // Extract exact absolute Y-top coordinates of all category sections
-      const categoryPositions = MENU_DATA.map((category) => {
+      const categoryPositions = menuData.map((category) => {
         const elem = document.getElementById(`category-${category.id}`);
         if (elem) {
           const top = elem.getBoundingClientRect().top + window.pageYOffset;
@@ -73,7 +76,7 @@ export const MenuSection: React.FC = () => {
     window.addEventListener("scroll", handleScrollSpy, { passive: true });
     handleScrollSpy(); // Initial execution
     return () => window.removeEventListener("scroll", handleScrollSpy);
-  }, []);
+  }, [menuData]);
 
   // Auto-scroll active tab into view inside floating horizontal dock on mobile
   useEffect(() => {
@@ -112,6 +115,18 @@ export const MenuSection: React.FC = () => {
     }, 1000);
   };
 
+  const handleMenuModeChange = (mode: "food" | "cafe") => {
+    if (mode === menuMode) return;
+
+    setMenuMode(mode);
+    setActiveCategory(mode === "food" ? MENU_DATA[0].id : CAFE_MENU_DATA[0].id);
+    isClickScrolling.current = false;
+
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+  };
+
   return (
     <section id="menu" className="relative pt-4 pb-12 px-4 sm:px-6 max-w-6xl mx-auto min-h-screen">
       {/* Menu Main Section Header */}
@@ -123,7 +138,13 @@ export const MenuSection: React.FC = () => {
               : "font-poppins tracking-[0.35em]"
           }`}
         >
-          {language === "ar" ? "تشكيلتنا المميزة" : "Our Selection"}
+          {menuMode === "food"
+            ? language === "ar"
+              ? "تشكيلتنا المميزة"
+              : "Our Selection"
+            : language === "ar"
+              ? "مشروباتنا المختارة"
+              : "Coffee & Refreshments"}
         </span>
         <h2
           className={`text-3xl md:text-5xl font-bold text-[#FFFFFF] uppercase mb-4 ${
@@ -132,9 +153,47 @@ export const MenuSection: React.FC = () => {
               : "font-poppins tracking-wider"
           }`}
         >
-          {language === "ar" ? "قائمة الطعام" : "MENU"}
+          {menuMode === "food"
+            ? language === "ar"
+              ? "قائمة الطعام"
+              : "FOOD MENU"
+            : language === "ar"
+              ? "منيو الكافيه"
+              : "CAFÉ MENU"}
         </h2>
         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#D4A017] to-transparent mx-auto" />
+      </div>
+
+      <div className="mb-8 flex justify-center" dir={language === "ar" ? "rtl" : "ltr"}>
+        <div className="inline-flex items-center rounded-2xl border border-white/10 bg-[#111111]/80 p-1.5 shadow-[0_16px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl">
+          <button
+            type="button"
+            onClick={() => handleMenuModeChange("food")}
+            aria-pressed={menuMode === "food"}
+            className={`inline-flex min-w-[132px] items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition-all duration-300 sm:min-w-[160px] ${
+              menuMode === "food"
+                ? "bg-[#D4A017] text-[#0F0F0F] shadow-lg shadow-[#D4A017]/20"
+                : "text-white/65 hover:bg-white/5 hover:text-white"
+            } ${language === "ar" ? "font-cairo" : "font-poppins"}`}
+          >
+            <UtensilsCrossed className="h-4 w-4" aria-hidden="true" />
+            <span>{language === "ar" ? "منيو الطعام" : "Food Menu"}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleMenuModeChange("cafe")}
+            aria-pressed={menuMode === "cafe"}
+            className={`inline-flex min-w-[132px] items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition-all duration-300 sm:min-w-[160px] ${
+              menuMode === "cafe"
+                ? "bg-[#D4A017] text-[#0F0F0F] shadow-lg shadow-[#D4A017]/20"
+                : "text-white/65 hover:bg-white/5 hover:text-white"
+            } ${language === "ar" ? "font-cairo" : "font-poppins"}`}
+          >
+            <Coffee className="h-4 w-4" aria-hidden="true" />
+            <span>{language === "ar" ? "منيو الكافيه" : "Café Menu"}</span>
+          </button>
+        </div>
       </div>
 
       {/* Menu Wrapper bounding Sticky Dock behavior */}
@@ -147,7 +206,7 @@ export const MenuSection: React.FC = () => {
               className="flex items-center gap-1.5 overflow-x-auto scrollbar-none no-scrollbar py-0.5 px-1 max-w-full"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              {MENU_DATA.map((category) => {
+              {menuData.map((category) => {
                 const isActive = activeCategory === category.id;
                 return (
                   <button
@@ -170,7 +229,7 @@ export const MenuSection: React.FC = () => {
 
         {/* Full Categories Listing */}
         <div className="space-y-14 sm:space-y-20">
-          {MENU_DATA.map((category: MenuCategory) => {
+          {menuData.map((category: MenuCategory) => {
             const halfLength = Math.ceil(category.items.length / 2);
             const col1 = category.items.slice(0, halfLength);
             const col2 = category.items.slice(halfLength);

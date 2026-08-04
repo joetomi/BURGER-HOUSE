@@ -87,3 +87,60 @@ export const MENU_DATA: MenuCategory[] = [
     ],
   },
 ];
+
+export const CAFE_MENU_DATA: MenuCategory[] = [
+  {
+    id: "hot-coffee",
+    titleEn: "Hot Coffee",
+    titleAr: "قهوة ساخنة",
+    items: [
+      { id: "hc1", nameAr: "إسبريسو", nameEn: "Espresso", price: 6 },
+      { id: "hc2", nameAr: "دبل إسبريسو", nameEn: "Double Espresso", price: 8 },
+      { id: "hc3", nameAr: "أمريكانو", nameEn: "Americano", price: 7 },
+      { id: "hc4", nameAr: "كابتشينو", nameEn: "Cappuccino", price: 10 },
+      { id: "hc5", nameAr: "كافيه لاتيه", nameEn: "Café Latte", price: 11 },
+      { id: "hc6", nameAr: "فلات وايت", nameEn: "Flat White", price: 11 },
+      { id: "hc7", nameAr: "سبانيش لاتيه", nameEn: "Spanish Latte", price: 13 },
+      { id: "hc8", nameAr: "موكا", nameEn: "Mocha", price: 12 },
+    ],
+  },
+  {
+    id: "iced-coffee",
+    titleEn: "Iced Coffee",
+    titleAr: "قهوة باردة",
+    items: [
+      { id: "ic1", nameAr: "آيس أمريكانو", nameEn: "Iced Americano", price: 9 },
+      { id: "ic2", nameAr: "آيس لاتيه", nameEn: "Iced Latte", price: 12 },
+      { id: "ic3", nameAr: "آيس سبانيش لاتيه", nameEn: "Iced Spanish Latte", price: 14 },
+      { id: "ic4", nameAr: "آيس موكا", nameEn: "Iced Mocha", price: 13 },
+      { id: "ic5", nameAr: "كولد برو", nameEn: "Cold Brew", price: 13 },
+      { id: "ic6", nameAr: "أفوجاتو", nameEn: "Affogato", price: 12 },
+    ],
+  },
+  {
+    id: "fresh-juices",
+    titleEn: "Fresh Juices",
+    titleAr: "عصائر طبيعية",
+    items: [
+      { id: "fj1", nameAr: "برتقال طبيعي", nameEn: "Fresh Orange", price: 10 },
+      { id: "fj2", nameAr: "ليمون ونعناع", nameEn: "Lemon & Mint", price: 9 },
+      { id: "fj3", nameAr: "مانجو", nameEn: "Mango", price: 12 },
+      { id: "fj4", nameAr: "فراولة", nameEn: "Strawberry", price: 12 },
+      { id: "fj5", nameAr: "بطيخ", nameEn: "Watermelon", price: 10 },
+      { id: "fj6", nameAr: "توت مشكل", nameEn: "Mixed Berries", price: 14 },
+      { id: "fj7", nameAr: "كوكتيل طبيعي", nameEn: "Fresh Cocktail", price: 14 },
+    ],
+  },
+  {
+    id: "milkshakes",
+    titleEn: "Milkshakes",
+    titleAr: "ميلك شيك",
+    items: [
+      { id: "ms1", nameAr: "فانيليا", nameEn: "Vanilla", price: 13 },
+      { id: "ms2", nameAr: "شوكولاتة", nameEn: "Chocolate", price: 14 },
+      { id: "ms3", nameAr: "أوريو", nameEn: "Oreo", price: 16 },
+      { id: "ms4", nameAr: "لوتس", nameEn: "Lotus", price: 17 },
+      { id: "ms5", nameAr: "فراولة", nameEn: "Strawberry", price: 15 },
+    ],
+  },
+];
