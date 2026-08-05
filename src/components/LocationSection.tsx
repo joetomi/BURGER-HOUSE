@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Clock, MapPin, Navigation } from "lucide-react";
+import { Navigation } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const MAP_URL = "https://maps.app.goo.gl/HjW6x8W1vRjhgRm18";
@@ -20,93 +20,86 @@ export const LocationSection: React.FC = () => {
   return (
     <section
       id="location"
-      className="relative px-4 py-12 sm:px-6 sm:py-16"
+      className="relative mx-auto max-w-6xl px-4 pb-12 sm:px-6"
       dir={isArabic ? "rtl" : "ltr"}
       lang={language}
     >
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-8 text-center">
-          <span
-            className={`mb-3 block text-xs font-semibold uppercase text-[#D4A017] ${
-              isArabic ? "font-cairo" : "font-poppins tracking-[0.3em]"
-            }`}
-          >
-            {isArabic ? "زورونا" : "Visit Us"}
-          </span>
+      <div className="relative w-full rounded-3xl bg-gradient-to-b from-[#121212]/55 via-[#121212]/35 to-[#121212]/55 p-6 shadow-[0_15px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm sm:p-8 md:p-10">
+        <div className="mb-6 flex flex-col justify-between gap-2 border-b border-white/[0.06] pb-4 sm:mb-8 sm:flex-row sm:items-baseline">
           <h2
-            className={`mb-4 text-3xl font-bold text-white md:text-5xl ${
-              isArabic ? "font-cairo" : "font-poppins uppercase tracking-wider"
+            className={`text-2xl font-bold uppercase text-white md:text-3xl ${
+              isArabic
+                ? "font-cairo text-right tracking-wider max-md:tracking-normal"
+                : "font-poppins text-left tracking-wider"
             }`}
           >
             {isArabic ? "موقعنا" : "Our Location"}
           </h2>
-          <div className="mx-auto h-px w-16 bg-gradient-to-r from-transparent via-[#D4A017] to-transparent" />
+          <span
+            className={`text-xs uppercase text-[#C7C7C7]/60 ${
+              isArabic ? "font-cairo" : "font-poppins tracking-widest"
+            }`}
+          >
+            {isArabic ? "مصراتة، شارع طرابلس" : "Misrata, Tripoli Street"}
+          </span>
         </div>
 
-        <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#111111]/85 shadow-[0_24px_70px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-          <div className="aspect-[4/3] w-full overflow-hidden bg-[#171717] sm:aspect-[16/7]">
-            <iframe
-              title={isArabic ? "موقع برجر هاوس مصراتة على الخريطة" : "Burger House Misrata location map"}
-              src={MAP_EMBED_URL}
-              className="h-full w-full border-0"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#121212]/70 sm:aspect-[16/7]">
+          <iframe
+            title={isArabic ? "موقع برجر هاوس مصراتة على الخريطة" : "Burger House Misrata location map"}
+            src={MAP_EMBED_URL}
+            className="h-full w-full border-0"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
-          <div className="flex flex-col gap-5 border-t border-white/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-            <div className="flex items-start gap-3.5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#D4A017]/[0.12] text-[#D4A017]">
-                <MapPin className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <div>
-                <h3 className={`text-lg font-bold text-white ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic ? "مصراتة، شارع طرابلس" : "Misrata, Tripoli Street"}
-                </h3>
-              </div>
-            </div>
+        <div className="mt-5 flex justify-start">
+          <a
+            href={MAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-5 py-2.5 text-sm font-bold text-white transition-all hover:border-[#D4A017] hover:bg-[#D4A017]/10 sm:w-auto ${
+              isArabic ? "font-cairo" : "font-poppins"
+            }`}
+            aria-label={isArabic ? "فتح موقع برجر هاوس في خرائط جوجل" : "Open Burger House in Google Maps"}
+          >
+            <Navigation className="h-4 w-4 text-[#D4A017]" aria-hidden="true" />
+            <span>{isArabic ? "الاتجاهات إلى المطعم" : "Get Directions"}</span>
+          </a>
+        </div>
 
-            <a
-              href={MAP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-[#D4A017] px-5 py-3 text-sm font-bold text-[#0F0F0F] transition-colors hover:bg-[#F2B94B] ${
-                isArabic ? "font-cairo" : "font-poppins"
+        <div className="mt-8 border-t border-white/[0.06] pt-7">
+          <div className="mb-3 border-b border-white/[0.06] pb-4">
+            <h3
+              className={`text-xl font-bold uppercase text-white md:text-2xl ${
+                isArabic
+                  ? "font-cairo text-right tracking-wider max-md:tracking-normal"
+                  : "font-poppins text-left tracking-wider"
               }`}
-              aria-label={isArabic ? "فتح موقع برجر هاوس في خرائط جوجل" : "Open Burger House in Google Maps"}
             >
-              <Navigation className="h-4 w-4" aria-hidden="true" />
-              <span>{isArabic ? "الاتجاهات إلى المطعم" : "Get Directions"}</span>
-            </a>
+              {isArabic ? "مواعيد العمل" : "Opening Hours"}
+            </h3>
           </div>
 
-          <div className="border-t border-white/10 p-5 sm:p-7">
-            <div className="mb-4 flex items-center gap-2.5">
-              <Clock className="h-5 w-5 text-[#D4A017]" aria-hidden="true" />
-              <h3 className={`text-lg font-bold text-white ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                {isArabic ? "مواعيد العمل" : "Opening Hours"}
-              </h3>
-            </div>
-
-            <div className="grid gap-2 sm:grid-cols-2">
-              {OPENING_HOURS.map((day) => (
-                <div
-                  key={day.en}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-white/[0.025] px-4 py-3"
+          <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-2 lg:gap-x-16">
+            {OPENING_HOURS.map((day) => (
+              <div key={day.en} className="flex items-baseline gap-3 py-4">
+                <span className={`shrink-0 text-sm font-bold text-white sm:text-base ${isArabic ? "font-cairo" : "font-poppins"}`}>
+                  {isArabic ? day.ar : day.en}
+                </span>
+                <span className="menu-dots h-3 min-w-4 flex-1" aria-hidden="true" />
+                <span
+                  dir={isArabic ? "rtl" : "ltr"}
+                  className={`shrink-0 whitespace-nowrap text-sm font-bold text-[#D4A017] sm:text-base ${
+                    isArabic ? "font-cairo" : "font-poppins"
+                  }`}
                 >
-                  <span className={`text-sm font-bold text-white/90 ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                    {isArabic ? day.ar : day.en}
-                  </span>
-                  <span
-                    dir={isArabic ? "rtl" : "ltr"}
-                    className={`text-xs font-semibold text-white/60 sm:text-sm ${isArabic ? "font-cairo" : "font-poppins"}`}
-                  >
-                    {isArabic ? day.arTime : day.enTime}
-                  </span>
-                </div>
-              ))}
-            </div>
+                  {isArabic ? day.arTime : day.enTime}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
