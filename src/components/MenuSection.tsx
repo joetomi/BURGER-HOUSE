@@ -119,7 +119,7 @@ export const MenuSection: React.FC = () => {
     if (mode === menuMode) return;
 
     setMenuMode(mode);
-    setActiveCategory(mode === "food" ? MENU_DATA[0].id : CAFE_MENU_DATA[0].id);
+    setActiveCategory((mode === "food" ? MENU_DATA : CAFE_MENU_DATA)[0]?.id || "");
     isClickScrolling.current = false;
 
     if (scrollTimeoutRef.current) {

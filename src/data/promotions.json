@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "fresh-orange-juice",
+      "image": "/ad-fresh-orange-juice.jpg",
+      "titleAr": "عصير برتقال طبيعي",
+      "titleEn": "Fresh Orange Juice",
+      "captionAr": "جديدنا: عصير برتقال طبيعي ومنعش 🍊",
+      "captionEn": "New: fresh and refreshing orange juice.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid02LoB3iTvwpE55jGkcoBQSh2mCaCjZUzv2Xy4c1kKxwuVig5qkUEqeYF6NiAJXM82dl",
+      "enabled": true
+    },
+    {
+      "id": "kofta-meal",
+      "image": "/ad-kofta.jpg",
+      "titleAr": "وجبة كفتة",
+      "titleEn": "Kofta Meal",
+      "captionAr": "خليها خيار لإفطارك 🌙",
+      "captionEn": "Make it your choice for Iftar.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid02B9N1TbACzZUZfzdUFCwWGxcMfMosQFvuUu5xNVaubM44tqFwPDevh4YBt2WEUfZzl",
+      "enabled": true
+    },
+    {
+      "id": "cheese-deep-burger",
+      "image": "/ad-cheese-deep-burger.jpg",
+      "titleAr": "تشيز ديب برجر",
+      "titleEn": "Cheese Deep Burger",
+      "captionAr": "تجربة برجر غنية بالجبنة من برجر هاوس 💛",
+      "captionEn": "A cheese-loaded Burger House experience.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid02F7FUGCsoDBhjKSswHk2s4xjYXq4UbrPu5LDub2JpG6u5UrWHBWdgzBHAA8KErnLYl",
+      "enabled": true
+    },
+    {
+      "id": "ramadan-iftar",
+      "image": "/ad-ramadan-iftar.jpg",
+      "titleAr": "إفطار رمضان",
+      "titleEn": "Ramadan Iftar",
+      "captionAr": "إفطار رمضان بطعم مختلف 🌙",
+      "captionEn": "A different taste for Ramadan Iftar.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid02ne5n9KJoXWrZUrs5kDZytkjftam152euEuKxkWg1R9UfP8NjqSDTHjewruSawPeKl",
+      "enabled": true
+    },
+    {
+      "id": "ramadan-meals",
+      "image": "/ad-ramadan-meals.jpg",
+      "titleAr": "وجبات إفطار رمضان",
+      "titleEn": "Ramadan Iftar Meals",
+      "captionAr": "اختيارات متكاملة لإفطار رمضان ✨",
+      "captionEn": "Complete choices for Ramadan Iftar.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid0oqyhB1bdGxyL2AxoBqxMA3hJLsjioF47bCXwXmvuPqrw8BkVteskf5EftHgwWzsul",
+      "enabled": true
+    },
+    {
+      "id": "beef-quesadilla",
+      "image": "/ad-beef-quesadilla.jpg",
+      "titleAr": "كساديا لحم",
+      "titleEn": "Beef Quesadilla",
+      "captionAr": "كساديا لحم بطابع برجر هاوس 💛",
+      "captionEn": "Beef quesadilla, Burger House style.",
+      "postUrl": "https://www.facebook.com/burgerhousemisurata/posts/pfbid028iNaFwoAU99Qz1eGugPj9xXwqbYGj542UQ1zjwe2pVczoDNSKozYSGUZBKKWgmo2l",
+      "enabled": true
+    }
+  ]
+}

@@ -3,70 +3,20 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import promotionsContent from "@/data/promotions.json";
 
-const PROMOTIONS = [
-  {
-    id: "fresh-orange-juice",
-    image: "/ad-fresh-orange-juice.jpg",
-    titleAr: "عصير برتقال طبيعي",
-    titleEn: "Fresh Orange Juice",
-    captionAr: "جديدنا: عصير برتقال طبيعي ومنعش 🍊",
-    captionEn: "New: fresh and refreshing orange juice.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02LoB3iTvwpE55jGkcoBQSh2mCaCjZUzv2Xy4c1kKxwuVig5qkUEqeYF6NiAJXM82dl",
-  },
-  {
-    id: "kofta-meal",
-    image: "/ad-kofta.jpg",
-    titleAr: "وجبة كفتة",
-    titleEn: "Kofta Meal",
-    captionAr: "خليها خيار لإفطارك 🌙",
-    captionEn: "Make it your choice for Iftar.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02B9N1TbACzZUZfzdUFCwWGxcMfMosQFvuUu5xNVaubM44tqFwPDevh4YBt2WEUfZzl",
-  },
-  {
-    id: "cheese-deep-burger",
-    image: "/ad-cheese-deep-burger.jpg",
-    titleAr: "تشيز ديب برجر",
-    titleEn: "Cheese Deep Burger",
-    captionAr: "تجربة برجر غنية بالجبنة من برجر هاوس 💛",
-    captionEn: "A cheese-loaded Burger House experience.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02F7FUGCsoDBhjKSswHk2s4xjYXq4UbrPu5LDub2JpG6u5UrWHBWdgzBHAA8KErnLYl",
-  },
-  {
-    id: "ramadan-iftar",
-    image: "/ad-ramadan-iftar.jpg",
-    titleAr: "إفطار رمضان",
-    titleEn: "Ramadan Iftar",
-    captionAr: "إفطار رمضان بطعم مختلف 🌙",
-    captionEn: "A different taste for Ramadan Iftar.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid02ne5n9KJoXWrZUrs5kDZytkjftam152euEuKxkWg1R9UfP8NjqSDTHjewruSawPeKl",
-  },
-  {
-    id: "ramadan-meals",
-    image: "/ad-ramadan-meals.jpg",
-    titleAr: "وجبات إفطار رمضان",
-    titleEn: "Ramadan Iftar Meals",
-    captionAr: "اختيارات متكاملة لإفطار رمضان ✨",
-    captionEn: "Complete choices for Ramadan Iftar.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid0oqyhB1bdGxyL2AxoBqxMA3hJLsjioF47bCXwXmvuPqrw8BkVteskf5EftHgwWzsul",
-  },
-  {
-    id: "beef-quesadilla",
-    image: "/ad-beef-quesadilla.jpg",
-    titleAr: "كساديا لحم",
-    titleEn: "Beef Quesadilla",
-    captionAr: "كساديا لحم بطابع برجر هاوس 💛",
-    captionEn: "Beef quesadilla, Burger House style.",
-    postUrl:
-      "https://www.facebook.com/burgerhousemisurata/posts/pfbid028iNaFwoAU99Qz1eGugPj9xXwqbYGj542UQ1zjwe2pVczoDNSKozYSGUZBKKWgmo2l",
-  },
-];
+interface Promotion {
+  id: string;
+  image: string;
+  titleAr: string;
+  titleEn: string;
+  captionAr: string;
+  captionEn: string;
+  postUrl: string;
+  enabled?: boolean;
+}
 
+const PROMOTIONS = (promotionsContent.items as Promotion[]).filter((promotion) => promotion.enabled !== false);
 const STORY_DURATION = 6500;
 
 export const PromotionsCarousel: React.FC = () => {
@@ -81,7 +31,7 @@ export const PromotionsCarousel: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (shouldReduceMotion) return;
+    if (shouldReduceMotion || PROMOTIONS.length < 2) return;
 
     const timeout = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % PROMOTIONS.length);
@@ -89,6 +39,8 @@ export const PromotionsCarousel: React.FC = () => {
 
     return () => window.clearTimeout(timeout);
   }, [activeIndex, shouldReduceMotion]);
+
+  if (PROMOTIONS.length === 0) return null;
 
   const showPrevious = () => {
     setActiveIndex((current) => (current - 1 + PROMOTIONS.length) % PROMOTIONS.length);
@@ -99,7 +51,6 @@ export const PromotionsCarousel: React.FC = () => {
   };
 
   const activePromotion = PROMOTIONS[activeIndex];
-  const isArabic = true;
 
   return (
     <section dir="rtl" lang="ar" className="px-4 py-5 sm:px-6 sm:py-7" aria-label="آخر عروضنا">
@@ -145,7 +96,7 @@ export const PromotionsCarousel: React.FC = () => {
             >
               <img
                 src={activePromotion.image}
-                alt={isArabic ? activePromotion.titleAr : activePromotion.titleEn}
+                alt={activePromotion.titleAr}
                 className="h-full w-full object-cover"
                 loading="eager"
                 decoding="async"
@@ -155,48 +106,34 @@ export const PromotionsCarousel: React.FC = () => {
               <button
                 type="button"
                 onClick={showPrevious}
-                aria-label={isArabic ? "المنشور السابق" : "Previous promotion"}
+                aria-label="المنشور السابق"
                 className="absolute inset-y-0 left-0 z-20 w-1/2 cursor-pointer bg-transparent"
               />
               <button
                 type="button"
                 onClick={showNext}
-                aria-label={isArabic ? "المنشور التالي" : "Next promotion"}
+                aria-label="المنشور التالي"
                 className="absolute inset-y-0 right-0 z-20 w-1/2 cursor-pointer bg-transparent"
               />
 
-              <div
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10"
-                dir={isArabic ? "rtl" : "ltr"}
-              >
-                <span
-                  className={`mb-3 inline-flex rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] font-semibold text-white/80 backdrop-blur-md ${
-                    isArabic ? "font-cairo" : "font-poppins uppercase tracking-[0.18em]"
-                  }`}
-                >
-                  {isArabic ? "منشوراتنا المميزة" : "Featured posts"}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10" dir="rtl">
+                <span className="mb-3 inline-flex rounded-full border border-white/15 bg-black/35 px-3 py-1.5 font-cairo text-[10px] font-semibold text-white/80 backdrop-blur-md">
+                  منشوراتنا المميزة
                 </span>
-                <h2 className={`text-3xl font-bold sm:text-4xl ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic ? activePromotion.titleAr : activePromotion.titleEn}
-                </h2>
-                <p className={`mt-2 text-sm text-white/75 sm:text-base ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic ? activePromotion.captionAr : activePromotion.captionEn}
-                </p>
+                <h2 className="font-cairo text-3xl font-bold sm:text-4xl">{activePromotion.titleAr}</h2>
+                <p className="mt-2 font-cairo text-sm text-white/75 sm:text-base">{activePromotion.captionAr}</p>
                 <a
                   href={activePromotion.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15 ${
-                    isArabic ? "font-cairo" : "font-poppins"
-                  }`}
+                  className="pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 font-cairo text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15"
                 >
-                  {isArabic ? "عرض المنشور" : "View post"}
+                  عرض المنشور
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                 </a>
               </div>
             </motion.div>
           </AnimatePresence>
-
         </div>
       </div>
     </section>
