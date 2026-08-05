@@ -30,7 +30,7 @@ type AdminTab = "food" | "cafe" | "promotions";
 const inputClass =
   "min-h-11 w-full rounded-xl border border-white/10 bg-black/25 px-3.5 py-3 text-base text-white outline-none transition focus:border-[#D4A017]/70 focus:ring-2 focus:ring-[#D4A017]/15 sm:text-sm";
 const buttonClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-45";
+  "inline-flex min-h-12 items-center justify-center gap-2.5 rounded-xl px-4 py-2.5 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-45 sm:min-h-11 sm:gap-2";
 
 const makeId = (prefix: string) => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -150,13 +150,13 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
 
   return (
     <section>
-      <div className="mb-4 flex items-start justify-between gap-3 sm:mb-6 sm:items-center">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">{title}</h2>
-          <p className="mt-1 text-xs leading-5 text-white/45 sm:text-sm">إدارة الأقسام والأصناف والأسعار وترتيب ظهورها.</p>
+          <h2 className="text-2xl font-bold text-white">{title}</h2>
+          <p className="mt-1 text-sm leading-6 text-white/45">إدارة الأقسام والأصناف والأسعار وترتيب ظهورها.</p>
         </div>
-        <button type="button" onClick={addCategory} className={`${buttonClass} shrink-0 bg-[#D4A017] px-3 text-black hover:bg-[#E2B22D] sm:px-4`}>
-          <Plus className="h-4 w-4" /> إضافة قسم
+        <button type="button" onClick={addCategory} className={`${buttonClass} bg-[#D4A017] text-black hover:bg-[#E2B22D]`}>
+          <Plus className="h-5 w-5 sm:h-4 sm:w-4" /> إضافة قسم
         </button>
       </div>
 
@@ -164,7 +164,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
         <aside className="rounded-2xl border border-white/10 bg-[#151515]/80 p-2 sm:p-3">
           <div className="flex gap-2 overflow-x-auto pb-1 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">
             {categories.map((category, index) => (
-              <div key={category.id} className="flex min-w-[145px] shrink-0 items-center gap-1 lg:min-w-0 lg:shrink">
+              <div key={category.id} className="flex min-w-[160px] shrink-0 items-center gap-1 lg:min-w-0 lg:shrink">
                 <button
                   type="button"
                   onClick={() => setSelectedId(category.id)}
@@ -183,18 +183,18 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                     aria-label="تحريك القسم للأعلى"
                     disabled={index === 0}
                     onClick={() => onChange(moveItem(categories, index, -1))}
-                    className="rounded p-1 text-white/35 hover:text-white disabled:opacity-20"
+                    className="rounded-lg p-2 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20 lg:p-1"
                   >
-                    <ArrowUp className="h-3.5 w-3.5" />
+                    <ArrowUp className="h-5 w-5 lg:h-3.5 lg:w-3.5" />
                   </button>
                   <button
                     type="button"
                     aria-label="تحريك القسم للأسفل"
                     disabled={index === categories.length - 1}
                     onClick={() => onChange(moveItem(categories, index, 1))}
-                    className="rounded p-1 text-white/35 hover:text-white disabled:opacity-20"
+                    className="rounded-lg p-2 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20 lg:p-1"
                   >
-                    <ArrowDown className="h-3.5 w-3.5" />
+                    <ArrowDown className="h-5 w-5 lg:h-3.5 lg:w-3.5" />
                   </button>
                 </div>
               </div>
@@ -203,7 +203,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
           </div>
         </aside>
 
-        <div className="min-w-0 rounded-2xl border border-white/10 bg-[#151515]/80 p-3 sm:p-6">
+        <div className="min-w-0 rounded-2xl border border-white/10 bg-[#151515]/80 p-4 sm:p-6">
           {!selected ? (
             <div className="py-20 text-center text-white/35">أضف قسماً للبدء.</div>
           ) : (
@@ -229,14 +229,14 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                   إظهار القسم في الموقع
                 </label>
                 <button type="button" onClick={removeCategory} className={`${buttonClass} bg-red-500/10 text-red-300 hover:bg-red-500/20`}>
-                  <Trash2 className="h-4 w-4" /> حذف القسم
+                  <Trash2 className="h-5 w-5 sm:h-4 sm:w-4" /> حذف القسم
                 </button>
               </div>
 
               <div className="mt-5 flex items-center justify-between gap-3">
                 <h3 className="font-bold text-white">الأصناف</h3>
                 <button type="button" onClick={addMenuItem} className={`${buttonClass} bg-white/8 text-white hover:bg-white/12`}>
-                  <Plus className="h-4 w-4" /> إضافة صنف
+                  <Plus className="h-5 w-5 sm:h-4 sm:w-4" /> إضافة صنف
                 </button>
               </div>
 
@@ -312,17 +312,17 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                           type="button"
                           disabled={index === 0}
                           onClick={() => updateSelected({ items: moveItem(selected.items, index, -1) })}
-                          className="rounded-lg p-2 text-white/40 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                          className="rounded-xl p-2.5 text-white/50 hover:bg-white/5 hover:text-white disabled:opacity-20 sm:p-2"
                         >
-                          <ArrowUp className="h-4 w-4" />
+                          <ArrowUp className="h-5 w-5 sm:h-4 sm:w-4" />
                         </button>
                         <button
                           type="button"
                           disabled={index === selected.items.length - 1}
                           onClick={() => updateSelected({ items: moveItem(selected.items, index, 1) })}
-                          className="rounded-lg p-2 text-white/40 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                          className="rounded-xl p-2.5 text-white/50 hover:bg-white/5 hover:text-white disabled:opacity-20 sm:p-2"
                         >
-                          <ArrowDown className="h-4 w-4" />
+                          <ArrowDown className="h-5 w-5 sm:h-4 sm:w-4" />
                         </button>
                         <button
                           type="button"
@@ -331,9 +331,9 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                               updateSelected({ items: selected.items.filter((current) => current.id !== item.id) });
                             }
                           }}
-                          className="rounded-lg p-2 text-red-300/65 hover:bg-red-500/10 hover:text-red-300"
+                          className="rounded-xl p-2.5 text-red-300/75 hover:bg-red-500/10 hover:text-red-300 sm:p-2"
                         >
-                          <Trash2 className="h-4 w-4" />
+                          <Trash2 className="h-5 w-5 sm:h-4 sm:w-4" />
                         </button>
                       </div>
                     </div>
@@ -375,13 +375,13 @@ const PromotionsEditor: React.FC<{
 
   return (
     <section>
-      <div className="mb-4 flex items-start justify-between gap-3 sm:mb-6 sm:items-center">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">منشورات البانر</h2>
-          <p className="mt-1 text-xs leading-5 text-white/45 sm:text-sm">إدارة الصور والنصوص والترتيب الظاهر في قسم القصص.</p>
+          <h2 className="text-2xl font-bold text-white">منشورات البانر</h2>
+          <p className="mt-1 text-sm leading-6 text-white/45">إدارة الصور والنصوص والترتيب الظاهر في قسم القصص.</p>
         </div>
-        <button type="button" onClick={addPromotion} className={`${buttonClass} shrink-0 bg-[#D4A017] px-3 text-black hover:bg-[#E2B22D] sm:px-4`}>
-          <Plus className="h-4 w-4" /> إضافة منشور
+        <button type="button" onClick={addPromotion} className={`${buttonClass} bg-[#D4A017] text-black hover:bg-[#E2B22D]`}>
+          <Plus className="h-5 w-5 sm:h-4 sm:w-4" /> إضافة منشور
         </button>
       </div>
 
@@ -389,7 +389,7 @@ const PromotionsEditor: React.FC<{
         {promotions.map((promotion, index) => (
           <article key={promotion.id} className="rounded-2xl border border-white/10 bg-[#151515]/80 p-4 sm:p-5">
             <div className="grid gap-5 lg:grid-cols-[190px_minmax(0,1fr)]">
-              <div className="mx-auto w-full max-w-[220px] sm:max-w-none">
+              <div className="mx-auto w-full max-w-[280px] sm:max-w-none">
                 <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                   {promotion.image ? (
                     <img
@@ -404,7 +404,7 @@ const PromotionsEditor: React.FC<{
                   )}
                 </div>
                 <label className={`${buttonClass} mt-3 w-full cursor-pointer bg-white/8 text-white hover:bg-white/12`}>
-                  <ImagePlus className="h-4 w-4" /> اختيار صورة
+                  <ImagePlus className="h-5 w-5 sm:h-4 sm:w-4" /> اختيار صورة
                   <input
                     type="file"
                     accept="image/jpeg,image/png,image/webp"
@@ -466,7 +466,7 @@ const PromotionsEditor: React.FC<{
                       onClick={() => onChange(moveItem(promotions, index, -1))}
                       className="rounded-lg p-2.5 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20"
                     >
-                      <ArrowUp className="h-4 w-4" />
+                      <ArrowUp className="h-5 w-5 sm:h-4 sm:w-4" />
                     </button>
                     <button
                       type="button"
@@ -474,7 +474,7 @@ const PromotionsEditor: React.FC<{
                       onClick={() => onChange(moveItem(promotions, index, 1))}
                       className="rounded-lg p-2.5 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20"
                     >
-                      <ArrowDown className="h-4 w-4" />
+                      <ArrowDown className="h-5 w-5 sm:h-4 sm:w-4" />
                     </button>
                     <button
                       type="button"
@@ -485,7 +485,7 @@ const PromotionsEditor: React.FC<{
                       }}
                       className="rounded-lg p-2.5 text-red-300/70 hover:bg-red-500/10 hover:text-red-300"
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-5 w-5 sm:h-4 sm:w-4" />
                     </button>
                   </div>
                 </div>
@@ -629,32 +629,32 @@ export const AdminApp: React.FC = () => {
       <header className="border-b border-white/10 bg-[#111111]/95 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <div className="flex items-center gap-3">
-            <img src="/loader-brand.png" alt="برجر هاوس" className="h-10 w-10 object-contain sm:h-11 sm:w-11" />
+            <img src="/loader-brand.png" alt="برجر هاوس" className="h-12 w-12 object-contain sm:h-11 sm:w-11" />
             <div className="min-w-0">
-              <h1 className="truncate text-sm font-bold sm:text-base">لوحة إدارة برجر هاوس</h1>
+              <h1 className="truncate text-base font-bold">لوحة إدارة برجر هاوس</h1>
               <p className="text-xs text-white/40">مرحباً، {username}</p>
             </div>
           </div>
           <div className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center">
             <a href="/" target="_blank" rel="noopener noreferrer" className={`${buttonClass} w-full bg-white/5 px-3 text-white/65 hover:bg-white/10 hover:text-white sm:w-auto sm:px-4`}>
-              <ExternalLink className="h-4 w-4" /> فتح الموقع
+              <ExternalLink className="h-5 w-5 sm:h-4 sm:w-4" /> فتح الموقع
             </a>
             <button type="button" onClick={logout} className={`${buttonClass} w-full bg-red-500/10 px-3 text-red-300 hover:bg-red-500/20 sm:w-auto sm:px-4`}>
-              <LogOut className="h-4 w-4" /> خروج
+              <LogOut className="h-5 w-5 sm:h-4 sm:w-4" /> خروج
             </button>
           </div>
         </div>
       </header>
 
       <div className="mx-auto max-w-7xl px-3 py-4 sm:px-6 sm:py-8">
-        <div className="mb-4 grid grid-cols-3 gap-2 sm:mb-6 sm:gap-3">
-          <div className="rounded-2xl border border-white/10 bg-[#151515]/80 p-3 text-center sm:p-4 sm:text-right"><span className="block text-[10px] leading-4 text-white/40 sm:text-xs">أصناف الطعام</span><strong className="mt-1 block text-xl text-[#D4A017] sm:text-2xl">{counts.food}</strong></div>
-          <div className="rounded-2xl border border-white/10 bg-[#151515]/80 p-3 text-center sm:p-4 sm:text-right"><span className="block text-[10px] leading-4 text-white/40 sm:text-xs">أصناف الكافيه</span><strong className="mt-1 block text-xl text-[#D4A017] sm:text-2xl">{counts.cafe}</strong></div>
-          <div className="rounded-2xl border border-white/10 bg-[#151515]/80 p-3 text-center sm:p-4 sm:text-right"><span className="block text-[10px] leading-4 text-white/40 sm:text-xs">منشورات البانر</span><strong className="mt-1 block text-xl text-[#D4A017] sm:text-2xl">{counts.promotions}</strong></div>
+        <div className="mb-5 grid grid-cols-2 gap-3 sm:mb-6 sm:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-[#151515]/80 p-4"><span className="text-xs text-white/45">أصناف الطعام</span><strong className="mt-1 block text-2xl text-[#D4A017]">{counts.food}</strong></div>
+          <div className="rounded-2xl border border-white/10 bg-[#151515]/80 p-4"><span className="text-xs text-white/45">أصناف الكافيه</span><strong className="mt-1 block text-2xl text-[#D4A017]">{counts.cafe}</strong></div>
+          <div className="col-span-2 rounded-2xl border border-white/10 bg-[#151515]/80 p-4 sm:col-span-1"><span className="text-xs text-white/45">منشورات البانر</span><strong className="mt-1 block text-2xl text-[#D4A017]">{counts.promotions}</strong></div>
         </div>
 
-        <div className="sticky top-0 z-30 mb-4 flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-white/10 bg-[#151515]/95 p-2 shadow-lg backdrop-blur-xl sm:static sm:mb-6 sm:gap-3 sm:p-3 sm:shadow-none">
-          <nav className="grid w-full grid-cols-3 gap-1.5 sm:flex sm:w-auto sm:max-w-full sm:gap-2 sm:overflow-x-auto">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#151515]/80 p-3">
+          <nav className="grid w-full grid-cols-3 gap-2 sm:flex sm:w-auto sm:max-w-full sm:overflow-x-auto">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
@@ -662,29 +662,29 @@ export const AdminApp: React.FC = () => {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`${buttonClass} min-w-0 whitespace-nowrap px-2 text-[11px] sm:px-4 sm:text-sm ${activeTab === tab.id ? "bg-[#D4A017] text-black" : "bg-white/5 text-white/60 hover:text-white"}`}
+                  className={`${buttonClass} min-w-0 whitespace-nowrap px-2 text-[13px] sm:px-4 sm:text-sm ${activeTab === tab.id ? "bg-[#D4A017] text-black" : "bg-white/5 text-white/60 hover:text-white"}`}
                 >
-                  <Icon className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" /> {tab.label}
+                  <Icon className="h-5 w-5 shrink-0 sm:h-4 sm:w-4" /> {tab.label}
                 </button>
               );
             })}
           </nav>
           <div className="grid w-full grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] gap-2 sm:flex sm:w-auto sm:items-center">
-            <button type="button" disabled={loadingContent || publishing} onClick={() => void refreshContent()} className={`${buttonClass} w-full bg-white/5 px-2 text-xs text-white/60 hover:text-white sm:w-auto sm:px-4 sm:text-sm`}>
-              <RefreshCw className={`h-4 w-4 ${loadingContent ? "animate-spin" : ""}`} /> تحديث
+            <button type="button" disabled={loadingContent || publishing} onClick={() => void refreshContent()} className={`${buttonClass} w-full bg-white/5 px-3 text-sm text-white/60 hover:text-white sm:w-auto sm:px-4`}>
+              <RefreshCw className={`h-5 w-5 sm:h-4 sm:w-4 ${loadingContent ? "animate-spin" : ""}`} /> تحديث
             </button>
-            <button type="button" disabled={!dirty || publishing} onClick={publish} className={`${buttonClass} w-full bg-[#D4A017] px-2 text-xs text-black hover:bg-[#E2B22D] sm:w-auto sm:px-4 sm:text-sm`}>
-              {publishing ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
+            <button type="button" disabled={!dirty || publishing} onClick={publish} className={`${buttonClass} w-full bg-[#D4A017] px-3 text-sm text-black hover:bg-[#E2B22D] sm:w-auto sm:px-4`}>
+              {publishing ? <LoaderCircle className="h-5 w-5 animate-spin sm:h-4 sm:w-4" /> : <Save className="h-5 w-5 sm:h-4 sm:w-4" />}
               {publishing ? "جارٍ الحفظ..." : dirty ? "حفظ التعديلات" : "لا توجد تغييرات"}
             </button>
           </div>
         </div>
 
-        {dirty && <div className="mb-4 rounded-xl border border-amber-300/20 bg-amber-400/10 px-3 py-3 text-xs text-amber-100 sm:mb-5 sm:px-4 sm:text-sm">لديك تغييرات لم تُحفظ بعد.</div>}
-        {error && <div className="mb-4 rounded-xl border border-red-400/20 bg-red-500/10 px-3 py-3 text-xs text-red-200 sm:mb-5 sm:px-4 sm:text-sm">{error}</div>}
+        {dirty && <div className="mb-5 rounded-xl border border-amber-300/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">لديك تغييرات لم تُحفظ بعد.</div>}
+        {error && <div className="mb-5 rounded-xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">{error}</div>}
         {success && (
-          <div className="mb-4 rounded-xl border border-emerald-400/20 bg-emerald-500/10 px-3 py-3 text-xs text-emerald-100 sm:mb-5 sm:px-4 sm:text-sm">
-            <span className="inline-flex items-center gap-2"><BadgeCheck className="h-4 w-4" />{success}</span>
+          <div className="mb-5 rounded-xl border border-emerald-400/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-100">
+            <span className="inline-flex items-center gap-2"><BadgeCheck className="h-5 w-5 sm:h-4 sm:w-4" />{success}</span>
           </div>
         )}
 
