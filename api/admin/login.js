@@ -16,7 +16,7 @@ export default async function handler(request, response) {
   const expectedUsername = process.env.ADMIN_USERNAME;
 
   if (!expectedUsername || !process.env.ADMIN_PASSWORD_HASH || !process.env.ADMIN_SESSION_SECRET) {
-    return response.status(503).json({ error: "لم يتم إعداد حساب الإدارة في Vercel بعد." });
+    return response.status(503).json({ error: "حساب الإدارة غير متاح حالياً. حاول لاحقاً." });
   }
 
   if (username !== expectedUsername || !verifyPassword(password)) {
@@ -31,4 +31,3 @@ export default async function handler(request, response) {
   response.setHeader("Set-Cookie", createSessionCookie(username));
   return response.status(200).json({ authenticated: true, username });
 }
-

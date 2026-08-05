@@ -120,7 +120,7 @@ export const validateImages = (images) => {
     const size = Buffer.byteLength(image.contentBase64, "base64");
     totalBytes += size;
     if (size > 1_800_000) throw new Error("حجم الصورة يجب ألا يتجاوز 1.8 ميجابايت.");
-    if (totalBytes > 3_200_000) throw new Error("إجمالي حجم الصور في عملية النشر كبير جداً.");
+    if (totalBytes > 3_200_000) throw new Error("إجمالي حجم الصور في عملية الحفظ كبير جداً.");
     return { path: image.path, contentBase64: image.contentBase64 };
   });
 };

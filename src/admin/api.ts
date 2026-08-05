@@ -39,8 +39,7 @@ export const publishAdminContent = (payload: {
   promotions: AdminPromotionsContent;
   images: Array<{ path: string; contentBase64: string }>;
 }) =>
-  request<{ commitSha: string; commitUrl: string }>("/api/admin/publish", {
+  request<{ commitSha: string }>("/api/admin/publish", {
     method: "POST",
     body: JSON.stringify(payload),
   });
-

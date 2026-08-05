@@ -19,7 +19,6 @@ export default async function handler(request, response) {
 
     return response.status(200).json(await publishAdminContent({ baseSha, menu, promotions, images }));
   } catch (error) {
-    return response.status(error.status || 400).json({ error: error.message || "تعذر نشر التعديلات." });
+    return response.status(error.status || 400).json({ error: error.message || "تعذر حفظ التعديلات." });
   }
 }
-

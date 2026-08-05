@@ -508,7 +508,7 @@ export const AdminApp: React.FC = () => {
   const [publishing, setPublishing] = useState(false);
   const [dirty, setDirty] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState<{ message: string; url?: string } | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     document.documentElement.dir = "rtl";
@@ -529,7 +529,7 @@ export const AdminApp: React.FC = () => {
   }, []);
 
   const refreshContent = async (force = false) => {
-    if (dirty && !force && !window.confirm("توجد تغييرات غير منشورة. هل تريد تجاهلها وإعادة التحميل؟")) return;
+    if (dirty && !force && !window.confirm("توجد تغييرات غير محفوظة. هل تريد تجاهلها وإعادة التحميل؟")) return;
     setLoadingContent(true);
     setError("");
     setSuccess(null);
@@ -571,7 +571,7 @@ export const AdminApp: React.FC = () => {
   };
 
   const publish = async () => {
-    if (!content || !dirty || !window.confirm("نشر جميع التعديلات الآن؟ سيبدأ Vercel بتحديث الموقع تلقائياً.")) return;
+    if (!content || !dirty || !window.confirm("حفظ جميع التعديلات الآن؟ ستظهر في الموقع تلقائياً بعد قليل.")) return;
     setPublishing(true);
     setError("");
     setSuccess(null);
@@ -592,16 +592,16 @@ export const AdminApp: React.FC = () => {
       });
       setContent({ ...content, baseSha: result.commitSha, promotions });
       setDirty(false);
-      setSuccess({ message: "تم إرسال التعديلات بنجاح، وبدأ تحديث الموقع.", url: result.commitUrl });
+      setSuccess("تم حفظ التعديلات بنجاح. ستظهر في الموقع خلال لحظات.");
     } catch (requestError) {
-      setError(requestError instanceof Error ? requestError.message : "تعذر نشر التعديلات.");
+      setError(requestError instanceof Error ? requestError.message : "تعذر حفظ التعديلات.");
     } finally {
       setPublishing(false);
     }
   };
 
   const logout = async () => {
-    if (dirty && !window.confirm("توجد تغييرات غير منشورة. هل تريد تسجيل الخروج؟")) return;
+    if (dirty && !window.confirm("توجد تغييرات غير محفوظة. هل تريد تسجيل الخروج؟")) return;
     await logoutAdmin().catch(() => undefined);
     setUsername(null);
     setContent(null);
@@ -675,17 +675,16 @@ export const AdminApp: React.FC = () => {
             </button>
             <button type="button" disabled={!dirty || publishing} onClick={publish} className={`${buttonClass} bg-[#D4A017] text-black hover:bg-[#E2B22D]`}>
               {publishing ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
-              {publishing ? "جارٍ النشر..." : dirty ? "نشر التعديلات" : "لا توجد تغييرات"}
+              {publishing ? "جارٍ الحفظ..." : dirty ? "حفظ التعديلات" : "لا توجد تغييرات"}
             </button>
           </div>
         </div>
 
-        {dirty && <div className="mb-5 rounded-xl border border-amber-300/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">لديك تغييرات لم تُنشر بعد.</div>}
+        {dirty && <div className="mb-5 rounded-xl border border-amber-300/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">لديك تغييرات لم تُحفظ بعد.</div>}
         {error && <div className="mb-5 rounded-xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">{error}</div>}
         {success && (
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-emerald-400/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-100">
-            <span className="inline-flex items-center gap-2"><BadgeCheck className="h-4 w-4" />{success.message}</span>
-            {success.url && <a href={success.url} target="_blank" rel="noopener noreferrer" className="font-bold underline">عرض عملية النشر</a>}
+          <div className="mb-5 rounded-xl border border-emerald-400/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-100">
+            <span className="inline-flex items-center gap-2"><BadgeCheck className="h-4 w-4" />{success}</span>
           </div>
         )}
 

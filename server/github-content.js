@@ -4,7 +4,7 @@ const PROMOTIONS_PATH = "src/data/promotions.json";
 
 const getConfig = () => {
   const token = process.env.GITHUB_TOKEN;
-  if (!token) throw new Error("GITHUB_TOKEN is not configured.");
+  if (!token) throw new Error("خدمة حفظ البيانات غير متاحة حالياً.");
   return {
     token,
     owner: process.env.GITHUB_OWNER || "joetomi",
@@ -28,7 +28,7 @@ const githubRequest = async (path, options = {}) => {
 
   const body = await response.json().catch(() => ({}));
   if (!response.ok) {
-    const error = new Error(body.message || `GitHub request failed with status ${response.status}.`);
+    const error = new Error("تعذر الاتصال بخدمة حفظ البيانات. حاول مرة أخرى بعد قليل.");
     error.status = response.status;
     throw error;
   }
@@ -51,7 +51,7 @@ const getBranchState = async () => {
 const getJsonFile = async (path) => {
   const { branch } = getConfig();
   const file = await githubRequest(repoPath(`/contents/${path}?ref=${encodeURIComponent(branch)}`));
-  if (file.type !== "file" || !file.content) throw new Error(`Repository file is unavailable: ${path}`);
+  if (file.type !== "file" || !file.content) throw new Error("تعذر تحميل بيانات الموقع حالياً.");
   return JSON.parse(Buffer.from(file.content.replace(/\n/g, ""), "base64").toString("utf8"));
 };
 
@@ -75,7 +75,7 @@ const createBlob = async (content, encoding = "utf-8") => {
 export const publishAdminContent = async ({ baseSha, menu, promotions, images = [] }) => {
   const current = await getBranchState();
   if (current.commitSha !== baseSha) {
-    const conflict = new Error("تم تحديث الموقع من مصدر آخر. أعد تحميل أحدث نسخة قبل النشر.");
+    const conflict = new Error("تم تحديث المحتوى من جلسة أخرى. أعد تحميل أحدث نسخة قبل الحفظ.");
     conflict.status = 409;
     throw conflict;
   }
@@ -130,15 +130,11 @@ export const publishAdminContent = async ({ baseSha, menu, promotions, images = 
     }),
   });
 
-  const { branch, owner, repository } = getConfig();
+  const { branch } = getConfig();
   await githubRequest(repoPath(`/git/refs/heads/${encodeURIComponent(branch)}`), {
     method: "PATCH",
     body: JSON.stringify({ sha: commit.sha, force: false }),
   });
 
-  return {
-    commitSha: commit.sha,
-    commitUrl: `https://github.com/${owner}/${repository}/commit/${commit.sha}`,
-  };
+  return { commitSha: commit.sha };
 };
-
