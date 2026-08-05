@@ -306,6 +306,21 @@
           "enabled": true
         }
       ]
+    },
+    {
+      "id": "category-msg6npvg-3rft",
+      "titleAr": "قسم تجريبي",
+      "titleEn": "Test Category",
+      "enabled": true,
+      "items": [
+        {
+          "id": "item-msg6ol4a-4oe7",
+          "nameAr": "صنف تجريبي 1",
+          "nameEn": "Test Item 1",
+          "price": 10,
+          "enabled": true
+        }
+      ]
     }
   ],
   "cafe": [
