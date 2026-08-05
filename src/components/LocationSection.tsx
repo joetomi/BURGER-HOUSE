@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Navigation } from "lucide-react";
+import { ArrowDown, Navigation } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const MAP_URL = "https://maps.app.goo.gl/HjW6x8W1vRjhgRm18";
@@ -36,11 +36,12 @@ export const LocationSection: React.FC = () => {
             {isArabic ? "موقعنا" : "Our Location"}
           </h2>
           <span
-            className={`text-xs uppercase text-[#C7C7C7]/60 ${
-              isArabic ? "font-cairo" : "font-poppins tracking-widest"
+            className={`inline-flex items-center gap-2 text-sm font-semibold text-white/85 sm:text-base ${
+              isArabic ? "font-cairo" : "font-poppins"
             }`}
           >
-            {isArabic ? "مصراتة، شارع طرابلس" : "Misrata, Tripoli Street"}
+            <span>{isArabic ? "مصراتة، شارع طرابلس" : "Misrata, Tripoli Street"}</span>
+            <ArrowDown className="h-4 w-4 shrink-0 text-[#D4A017]" aria-hidden="true" />
           </span>
         </div>
 
