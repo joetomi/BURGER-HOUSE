@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import promotionsContent from "@/data/promotions.json";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface Promotion {
   id: string;
@@ -22,6 +23,7 @@ const STORY_DURATION = 6500;
 export const PromotionsCarousel: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
+  const { language } = useLanguage();
 
   useEffect(() => {
     PROMOTIONS.forEach((promotion) => {
@@ -51,9 +53,12 @@ export const PromotionsCarousel: React.FC = () => {
   };
 
   const activePromotion = PROMOTIONS[activeIndex];
+  const activeTitle = language === "ar" ? activePromotion.titleAr : activePromotion.titleEn || activePromotion.titleAr;
+  const activeCaption = language === "ar" ? activePromotion.captionAr : activePromotion.captionEn || activePromotion.captionAr;
+  const isArabic = language === "ar";
 
   return (
-    <section dir="rtl" lang="ar" className="px-4 py-5 sm:px-6 sm:py-7" aria-label="آخر عروضنا">
+    <section dir="rtl" lang={language} className="px-4 py-5 sm:px-6 sm:py-7" aria-label={isArabic ? "آخر عروضنا" : "Latest promotions"}>
       <div className="mx-auto mb-6 flex flex-col items-center text-center sm:mb-8">
         <h2 className="font-poppins text-2xl font-bold tracking-[0.16em] text-white uppercase sm:text-3xl">
           WHAT&apos;S NEW
@@ -96,7 +101,7 @@ export const PromotionsCarousel: React.FC = () => {
             >
               <img
                 src={activePromotion.image}
-                alt={activePromotion.titleAr}
+                alt={activeTitle}
                 className="h-full w-full object-cover"
                 loading="eager"
                 decoding="async"
@@ -106,29 +111,29 @@ export const PromotionsCarousel: React.FC = () => {
               <button
                 type="button"
                 onClick={showPrevious}
-                aria-label="المنشور السابق"
+                aria-label={isArabic ? "المنشور السابق" : "Previous post"}
                 className="absolute inset-y-0 left-0 z-20 w-1/2 cursor-pointer bg-transparent"
               />
               <button
                 type="button"
                 onClick={showNext}
-                aria-label="المنشور التالي"
+                aria-label={isArabic ? "المنشور التالي" : "Next post"}
                 className="absolute inset-y-0 right-0 z-20 w-1/2 cursor-pointer bg-transparent"
               />
 
               <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10" dir="rtl">
-                <span className="mb-3 inline-flex rounded-full border border-white/15 bg-black/35 px-3 py-1.5 font-cairo text-[10px] font-semibold text-white/80 backdrop-blur-md">
-                  منشوراتنا المميزة
+                <span className={`mb-3 inline-flex rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] font-semibold text-white/80 backdrop-blur-md ${isArabic ? "font-cairo" : "font-poppins"}`}>
+                  {isArabic ? "منشوراتنا المميزة" : "Featured Posts"}
                 </span>
-                <h2 className="font-cairo text-3xl font-bold sm:text-4xl">{activePromotion.titleAr}</h2>
-                <p className="mt-2 font-cairo text-sm text-white/75 sm:text-base">{activePromotion.captionAr}</p>
+                <h2 className={`${isArabic ? "font-cairo" : "font-poppins"} text-3xl font-bold sm:text-4xl`}>{activeTitle}</h2>
+                <p className={`mt-2 ${isArabic ? "font-cairo" : "font-poppins"} text-sm text-white/75 sm:text-base`}>{activeCaption}</p>
                 <a
                   href={activePromotion.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 font-cairo text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15"
+                  className={`pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-xs font-semibold text-white backdrop-blur-md transition-colors hover:border-[#D4A017]/60 hover:bg-[#D4A017]/15 ${isArabic ? "font-cairo" : "font-poppins"}`}
                 >
-                  عرض المنشور
+                  {isArabic ? "عرض المنشور" : "View Post"}
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                 </a>
               </div>
