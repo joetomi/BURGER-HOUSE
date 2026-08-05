@@ -9,13 +9,8 @@ const MAP_EMBED_URL =
   "https://www.google.com/maps?q=32.3687626,15.0824737&z=16&output=embed";
 
 const OPENING_HOURS = [
-  { ar: "الأربعاء", en: "Wednesday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
-  { ar: "الخميس", en: "Thursday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
-  { ar: "الجمعة", en: "Friday", arTime: "4 مساءً – 12 منتصف الليل", enTime: "4 PM – 12 AM", special: true },
-  { ar: "السبت", en: "Saturday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
-  { ar: "الأحد", en: "Sunday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
-  { ar: "الإثنين", en: "Monday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
-  { ar: "الثلاثاء", en: "Tuesday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
+  { ar: "السبت – الخميس", en: "Saturday – Thursday", arTime: "12 ظهراً – 12 منتصف الليل", enTime: "12 PM – 12 AM" },
+  { ar: "الجمعة", en: "Friday", arTime: "4 مساءً – 12 منتصف الليل", enTime: "4 PM – 12 AM" },
 ];
 
 export const LocationSection: React.FC = () => {
@@ -66,14 +61,9 @@ export const LocationSection: React.FC = () => {
                 <MapPin className="h-5 w-5" aria-hidden="true" />
               </span>
               <div>
-                <h3 className={`mb-1 text-lg font-bold text-white ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic ? "برجر هاوس مصراتة" : "Burger House Misrata"}
+                <h3 className={`text-lg font-bold text-white ${isArabic ? "font-cairo" : "font-poppins"}`}>
+                  {isArabic ? "مصراتة، شارع طرابلس" : "Misrata, Tripoli Street"}
                 </h3>
-                <p className={`max-w-2xl text-sm leading-7 text-white/60 sm:text-base ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic
-                    ? "نستقبلكم في برجر هاوس مصراتة. افتحوا الموقع على الخريطة للوصول إلينا بسهولة."
-                    : "Visit Burger House in Misrata. Open the location in Google Maps for easy directions."}
-                </p>
               </div>
             </div>
 
@@ -90,41 +80,33 @@ export const LocationSection: React.FC = () => {
               <span>{isArabic ? "الاتجاهات إلى المطعم" : "Get Directions"}</span>
             </a>
           </div>
-        </div>
 
-        <div className="mt-5 rounded-[28px] border border-white/10 bg-[#111111]/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-sm sm:p-7">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#D4A017]/[0.12] text-[#D4A017]">
-              <Clock className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <h3 className={`text-xl font-bold text-white sm:text-2xl ${isArabic ? "font-cairo" : "font-poppins"}`}>
-              {isArabic ? "مواعيد العمل" : "Opening Hours"}
-            </h3>
-          </div>
+          <div className="border-t border-white/10 p-5 sm:p-7">
+            <div className="mb-4 flex items-center gap-2.5">
+              <Clock className="h-5 w-5 text-[#D4A017]" aria-hidden="true" />
+              <h3 className={`text-lg font-bold text-white ${isArabic ? "font-cairo" : "font-poppins"}`}>
+                {isArabic ? "مواعيد العمل" : "Opening Hours"}
+              </h3>
+            </div>
 
-          <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-            {OPENING_HOURS.map((day) => (
-              <div
-                key={day.en}
-                className={`flex min-h-14 items-center justify-between gap-4 rounded-2xl border px-4 py-3 ${
-                  day.special
-                    ? "border-[#D4A017]/30 bg-[#D4A017]/[0.08]"
-                    : "border-white/[0.07] bg-white/[0.025]"
-                }`}
-              >
-                <span className={`text-sm font-bold text-white/90 ${isArabic ? "font-cairo" : "font-poppins"}`}>
-                  {isArabic ? day.ar : day.en}
-                </span>
-                <span
-                  dir={isArabic ? "rtl" : "ltr"}
-                  className={`text-xs font-semibold sm:text-sm ${
-                    day.special ? "text-[#D4A017]" : "text-white/55"
-                  } ${isArabic ? "font-cairo" : "font-poppins"}`}
+            <div className="grid gap-2 sm:grid-cols-2">
+              {OPENING_HOURS.map((day) => (
+                <div
+                  key={day.en}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-white/[0.025] px-4 py-3"
                 >
-                  {isArabic ? day.arTime : day.enTime}
-                </span>
-              </div>
-            ))}
+                  <span className={`text-sm font-bold text-white/90 ${isArabic ? "font-cairo" : "font-poppins"}`}>
+                    {isArabic ? day.ar : day.en}
+                  </span>
+                  <span
+                    dir={isArabic ? "rtl" : "ltr"}
+                    className={`text-xs font-semibold text-white/60 sm:text-sm ${isArabic ? "font-cairo" : "font-poppins"}`}
+                  >
+                    {isArabic ? day.arTime : day.enTime}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
