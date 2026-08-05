@@ -121,7 +121,10 @@ export const PromotionsCarousel: React.FC = () => {
                 className="absolute inset-y-0 right-0 z-20 w-1/2 cursor-pointer bg-transparent"
               />
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10" dir="rtl">
+              <div
+                className={`pointer-events-none absolute inset-x-0 bottom-0 z-30 p-6 text-white sm:p-8 md:p-10 ${isArabic ? "text-right" : "text-left"}`}
+                dir={isArabic ? "rtl" : "ltr"}
+              >
                 <span className={`mb-3 inline-flex rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] font-semibold text-white/80 backdrop-blur-md ${isArabic ? "font-cairo" : "font-poppins"}`}>
                   {isArabic ? "منشوراتنا المميزة" : "Featured Posts"}
                 </span>
