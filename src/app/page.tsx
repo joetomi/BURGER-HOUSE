@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { PremiumLoader } from "@/components/PremiumLoader";
 import { PromotionsCarousel } from "@/components/PromotionsCarousel";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LocationSection } from "@/components/LocationSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <PromotionsCarousel />
         <MenuSection />
+        <LocationSection />
         <Footer />
       </main>
     </LanguageProvider>
