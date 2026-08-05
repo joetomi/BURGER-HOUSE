@@ -654,7 +654,7 @@ export const AdminApp: React.FC = () => {
         </div>
 
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#151515]/80 p-3">
-          <nav className="flex w-full max-w-full gap-2 overflow-x-auto sm:w-auto">
+          <nav className="grid w-full grid-cols-3 gap-2 overflow-hidden sm:flex sm:w-auto sm:max-w-full sm:overflow-x-auto">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
@@ -662,7 +662,7 @@ export const AdminApp: React.FC = () => {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`${buttonClass} whitespace-nowrap ${activeTab === tab.id ? "bg-[#D4A017] text-black" : "bg-white/5 text-white/60 hover:text-white"}`}
+                  className={`${buttonClass} min-w-0 whitespace-nowrap px-2 text-xs sm:px-4 sm:text-sm ${activeTab === tab.id ? "bg-[#D4A017] text-black" : "bg-white/5 text-white/60 hover:text-white"}`}
                 >
                   <Icon className="h-4 w-4" /> {tab.label}
                 </button>
