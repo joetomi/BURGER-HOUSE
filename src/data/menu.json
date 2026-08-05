@@ -316,13 +316,6 @@
       "enabled": true,
       "items": [
         {
-          "id": "hc1",
-          "nameAr": "تست 1234",
-          "nameEn": "test1234",
-          "price": 200,
-          "enabled": true
-        },
-        {
           "id": "hc6",
           "nameAr": "فلات وايت",
           "nameEn": "Flat White",
