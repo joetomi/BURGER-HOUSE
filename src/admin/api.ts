@@ -22,10 +22,10 @@ const request = async <T>(url: string, options: RequestInit = {}): Promise<T> =>
 export const getAdminSession = () =>
   request<{ authenticated: boolean; username: string | null }>("/api/admin/session", { method: "GET" });
 
-export const loginAdmin = (username: string, password: string) =>
+export const loginAdmin = (password: string) =>
   request<{ authenticated: boolean; username: string }>("/api/admin/login", {
     method: "POST",
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ password }),
   });
 
 export const logoutAdmin = () =>

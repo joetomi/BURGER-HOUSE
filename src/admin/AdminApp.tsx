@@ -43,7 +43,6 @@ const moveItem = <T,>(items: T[], index: number, direction: -1 | 1) => {
 };
 
 const LoginScreen: React.FC<{ onLoggedIn: (username: string) => void }> = ({ onLoggedIn }) => {
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -53,7 +52,7 @@ const LoginScreen: React.FC<{ onLoggedIn: (username: string) => void }> = ({ onL
     setLoading(true);
     setError("");
     try {
-      const session = await loginAdmin(username, password);
+      const session = await loginAdmin(password);
       onLoggedIn(session.username);
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : "تعذر تسجيل الدخول.");
@@ -73,22 +72,13 @@ const LoginScreen: React.FC<{ onLoggedIn: (username: string) => void }> = ({ onL
 
         <form onSubmit={submit} className="space-y-4">
           <label className="block">
-            <span className="mb-2 block text-sm font-semibold text-white/70">اسم المستخدم</span>
-            <input
-              value={username}
-              onChange={(event) => setUsername(event.target.value)}
-              autoComplete="username"
-              className={inputClass}
-              required
-            />
-          </label>
-          <label className="block">
-            <span className="mb-2 block text-sm font-semibold text-white/70">كلمة المرور</span>
+            <span className="mb-2 block text-sm font-semibold text-white/70">رمز الدخول</span>
             <input
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               autoComplete="current-password"
+              autoFocus
               className={inputClass}
               required
             />

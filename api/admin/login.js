@@ -11,23 +11,21 @@ export default async function handler(request, response) {
   const state = attempts.get(ip) || { count: 0, blockedUntil: 0 };
   if (state.blockedUntil > Date.now()) return response.status(429).json({ error: "محاولات كثيرة. حاول لاحقاً." });
 
-  const username = String(request.body?.username || "").trim();
   const password = String(request.body?.password || "");
-  const expectedUsername = process.env.ADMIN_USERNAME;
 
-  if (!expectedUsername || !process.env.ADMIN_PASSWORD_HASH || !process.env.ADMIN_SESSION_SECRET) {
+  if (!process.env.ADMIN_PASSWORD_HASH || !process.env.ADMIN_SESSION_SECRET) {
     return response.status(503).json({ error: "حساب الإدارة غير متاح حالياً. حاول لاحقاً." });
   }
 
-  if (username !== expectedUsername || !verifyPassword(password)) {
+  if (!verifyPassword(password)) {
     state.count += 1;
     state.blockedUntil = state.count >= 5 ? Date.now() + 15 * 60 * 1000 : 0;
     attempts.set(ip, state);
     await new Promise((resolve) => setTimeout(resolve, 500));
-    return response.status(401).json({ error: "اسم المستخدم أو كلمة المرور غير صحيحة." });
+    return response.status(401).json({ error: "رمز الدخول غير صحيح." });
   }
 
   attempts.delete(ip);
-  response.setHeader("Set-Cookie", createSessionCookie(username));
-  return response.status(200).json({ authenticated: true, username });
+  response.setHeader("Set-Cookie", createSessionCookie("admin"));
+  return response.status(200).json({ authenticated: true, username: "admin" });
 }
