@@ -310,80 +310,115 @@
   ],
   "cafe": [
     {
-      "id": "hot-coffee",
-      "titleAr": "قهوة ساخنة",
-      "titleEn": "Hot Coffee",
-      "enabled": true,
-      "items": [
-        {
-          "id": "hc6",
-          "nameAr": "فلات وايت",
-          "nameEn": "Flat White",
-          "price": 11,
-          "enabled": true
-        },
-        {
-          "id": "hc7",
-          "nameAr": "سبانيش لاتيه",
-          "nameEn": "Spanish Latte",
-          "price": 13,
-          "enabled": true
-        },
-        {
-          "id": "hc8",
-          "nameAr": "موكا",
-          "nameEn": "Mocha",
-          "price": 12,
-          "enabled": true
-        }
-      ]
-    },
-    {
       "id": "iced-coffee",
       "titleAr": "قهوة باردة",
-      "titleEn": "Iced Coffee",
+      "titleEn": "ICED COFFEE",
       "enabled": true,
       "items": [
         {
           "id": "ic1",
-          "nameAr": "آيس أمريكانو",
+          "nameAr": "ايس امريكانو",
           "nameEn": "Iced Americano",
           "price": 9,
           "enabled": true
         },
         {
           "id": "ic2",
-          "nameAr": "آيس لاتيه",
-          "nameEn": "Iced Latte",
-          "price": 12,
+          "nameAr": "ايس شيكن اسبريسو",
+          "nameEn": "Iced Shaken Espresso",
+          "price": 0,
           "enabled": true
         },
         {
           "id": "ic3",
-          "nameAr": "آيس سبانيش لاتيه",
-          "nameEn": "Iced Spanish Latte",
-          "price": 14,
+          "nameAr": "ايس كافي \"فانيليا ، كراميل ، بندق\"",
+          "nameEn": "Iced Caffè \"Vanilla, Caramel, Hazelnut\"",
+          "price": 0,
           "enabled": true
         },
         {
           "id": "ic4",
-          "nameAr": "آيس موكا",
+          "nameAr": "ايس موكا",
           "nameEn": "Iced Mocha",
           "price": 13,
           "enabled": true
         },
         {
           "id": "ic5",
-          "nameAr": "كولد برو",
-          "nameEn": "Cold Brew",
-          "price": 13,
+          "nameAr": "فرابتشينو",
+          "nameEn": "Frappuccino",
+          "price": 0,
           "enabled": true
         },
         {
           "id": "ic6",
-          "nameAr": "أفوجاتو",
-          "nameEn": "Affogato",
+          "nameAr": "سبانش لاتي",
+          "nameEn": "Spanish Latte",
+          "price": 14,
+          "enabled": true
+        },
+        {
+          "id": "ic7",
+          "nameAr": "أڤوكاتو كافي",
+          "nameEn": "Affogato Coffee",
           "price": 12,
+          "enabled": true
+        },
+        {
+          "id": "ic8",
+          "nameAr": "أڤوكاتو تويست",
+          "nameEn": "Affogato Twist",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ic9",
+          "nameAr": "بليند ايس كافي",
+          "nameEn": "Blended Iced Coffee",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "iced-tea",
+      "titleAr": "شاي مثلج",
+      "titleEn": "ICED TEA",
+      "enabled": true,
+      "items": [
+        {
+          "id": "it1",
+          "nameAr": "كلاسيك",
+          "nameEn": "Classic",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "it2",
+          "nameAr": "خوخ",
+          "nameEn": "Peach",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "it3",
+          "nameAr": "باشن فروت",
+          "nameEn": "Passion Fruit",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "it4",
+          "nameAr": "مانجو",
+          "nameEn": "Mango",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "it5",
+          "nameAr": "كركاديه",
+          "nameEn": "Roselle",
+          "price": 0,
           "enabled": true
         }
       ]
@@ -391,56 +426,220 @@
     {
       "id": "fresh-juices",
       "titleAr": "عصائر طبيعية",
-      "titleEn": "Fresh Juices",
+      "titleEn": "FRESH JUICES",
       "enabled": true,
       "items": [
         {
           "id": "fj1",
-          "nameAr": "برتقال طبيعي",
-          "nameEn": "Fresh Orange",
-          "price": 10,
-          "enabled": true
-        },
-        {
-          "id": "fj2",
-          "nameAr": "ليمون ونعناع",
-          "nameEn": "Lemon & Mint",
-          "price": 9,
-          "enabled": true
-        },
-        {
-          "id": "fj3",
-          "nameAr": "مانجو",
-          "nameEn": "Mango",
-          "price": 12,
-          "enabled": true
-        },
-        {
-          "id": "fj4",
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 12,
           "enabled": true
         },
         {
-          "id": "fj5",
-          "nameAr": "بطيخ",
-          "nameEn": "Watermelon",
+          "id": "fj2",
+          "nameAr": "مانجا",
+          "nameEn": "Mango",
+          "price": 12,
+          "enabled": true
+        },
+        {
+          "id": "fj3",
+          "nameAr": "كوكتيل",
+          "nameEn": "Cocktail",
+          "price": 14,
+          "enabled": true
+        },
+        {
+          "id": "fj4",
+          "nameAr": "برتقال",
+          "nameEn": "Orange",
           "price": 10,
           "enabled": true
         },
         {
+          "id": "fj5",
+          "nameAr": "اناناس",
+          "nameEn": "Pineapple",
+          "price": 0,
+          "enabled": true
+        },
+        {
           "id": "fj6",
-          "nameAr": "توت مشكل",
-          "nameEn": "Mixed Berries",
-          "price": 14,
+          "nameAr": "ليمون ونعناع",
+          "nameEn": "Lemon & Mint",
+          "price": 9,
           "enabled": true
         },
         {
           "id": "fj7",
-          "nameAr": "كوكتيل طبيعي",
-          "nameEn": "Fresh Cocktail",
-          "price": 14,
+          "nameAr": "كيوي",
+          "nameEn": "Kiwi",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fj8",
+          "nameAr": "يلو ميكس",
+          "nameEn": "Yellow Mix",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fj9",
+          "nameAr": "ريد ميكس",
+          "nameEn": "Red Mix",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fj10",
+          "nameAr": "كركاديه",
+          "nameEn": "Roselle",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "froppe",
+      "titleAr": "فروبي",
+      "titleEn": "FROPPÉ",
+      "enabled": true,
+      "items": [
+        {
+          "id": "fr1",
+          "nameAr": "موز",
+          "nameEn": "Banana",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fr2",
+          "nameAr": "فراولة",
+          "nameEn": "Strawberry",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fr3",
+          "nameAr": "مانجا",
+          "nameEn": "Mango",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fr4",
+          "nameAr": "كوكتيل",
+          "nameEn": "Cocktail",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "fr5",
+          "nameAr": "غرين بليرز",
+          "nameEn": "Green Blazers",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "mojito",
+      "titleAr": "موخيتو",
+      "titleEn": "MOJITO",
+      "enabled": true,
+      "items": [
+        {
+          "id": "mj1",
+          "nameAr": "كلاسيك",
+          "nameEn": "Classic",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj2",
+          "nameAr": "بلو",
+          "nameEn": "Blue Mojito",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj3",
+          "nameAr": "رمان",
+          "nameEn": "Pomegranate",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj4",
+          "nameAr": "باشن فروت",
+          "nameEn": "Passion Fruit",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj5",
+          "nameAr": "بلوبيري",
+          "nameEn": "Blueberry",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj6",
+          "nameAr": "فراولة",
+          "nameEn": "Strawberry",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj7",
+          "nameAr": "اناناس",
+          "nameEn": "Pineapple",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "mj8",
+          "nameAr": "كركاديه",
+          "nameEn": "Roselle",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "smoothies",
+      "titleAr": "سموثي",
+      "titleEn": "SMOOTHIES",
+      "enabled": true,
+      "items": [
+        {
+          "id": "sm1",
+          "nameAr": "كوكنت",
+          "nameEn": "Coconut",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "sm2",
+          "nameAr": "باشن مانجو",
+          "nameEn": "Passion Mango",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "sm3",
+          "nameAr": "غرين",
+          "nameEn": "Green",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "sm4",
+          "nameAr": "تروبيكال",
+          "nameEn": "Tropical",
+          "price": 0,
           "enabled": true
         }
       ]
@@ -448,7 +647,7 @@
     {
       "id": "milkshakes",
       "titleAr": "ميلك شيك",
-      "titleEn": "Milkshakes",
+      "titleEn": "MILKSHAKES",
       "enabled": true,
       "items": [
         {
@@ -460,30 +659,94 @@
         },
         {
           "id": "ms2",
-          "nameAr": "شوكولاتة",
+          "nameAr": "شوكلت",
           "nameEn": "Chocolate",
           "price": 14,
           "enabled": true
         },
         {
           "id": "ms3",
-          "nameAr": "أوريو",
-          "nameEn": "Oreo",
-          "price": 16,
+          "nameAr": "بستاشيو",
+          "nameEn": "Pistachio",
+          "price": 0,
           "enabled": true
         },
         {
           "id": "ms4",
-          "nameAr": "لوتس",
-          "nameEn": "Lotus",
-          "price": 17,
+          "nameAr": "كراميل",
+          "nameEn": "Caramel",
+          "price": 0,
           "enabled": true
         },
         {
           "id": "ms5",
+          "nameAr": "كندر",
+          "nameEn": "Kinder",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ms6",
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 15,
+          "enabled": true
+        },
+        {
+          "id": "ms7",
+          "nameAr": "مانجا",
+          "nameEn": "Mango",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ms8",
+          "nameAr": "بلوبيري",
+          "nameEn": "Blueberry",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ms9",
+          "nameAr": "يلو ميكس",
+          "nameEn": "Yellow Mix",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ms10",
+          "nameAr": "ريد ميكس",
+          "nameEn": "Red Mix",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "water-soft-drinks",
+      "titleAr": "مشروبات ومياه",
+      "titleEn": "WATER & SOFT DRINKS",
+      "enabled": true,
+      "items": [
+        {
+          "id": "ws1",
+          "nameAr": "ماء",
+          "nameEn": "Still Water",
+          "price": 1,
+          "enabled": true
+        },
+        {
+          "id": "ws2",
+          "nameAr": "ماء غازي",
+          "nameEn": "Sparkling Water",
+          "price": 0,
+          "enabled": true
+        },
+        {
+          "id": "ws3",
+          "nameAr": "مشروب غازي",
+          "nameEn": "Soft Drinks",
+          "price": 3,
           "enabled": true
         }
       ]
