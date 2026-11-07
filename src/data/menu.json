@@ -310,6 +310,28 @@
   ],
   "cafe": [
     {
+      "id": "category-mw6tce3z-6ya3",
+      "titleAr": "قهوة ساخنة",
+      "titleEn": "HOT COFFEE",
+      "enabled": true,
+      "items": [
+        {
+          "id": "item-mw6tdz6e-npac",
+          "nameAr": "مكياتو",
+          "nameEn": "Micahato",
+          "price": 5,
+          "enabled": true
+        },
+        {
+          "id": "item-mw6tf77h-h4fd",
+          "nameAr": "صنف جديد",
+          "nameEn": "New Item",
+          "price": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
       "id": "iced-coffee",
       "titleAr": "قهوة باردة",
       "titleEn": "ICED COFFEE",
