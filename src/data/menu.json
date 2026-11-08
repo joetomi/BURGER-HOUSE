@@ -2,6 +2,8 @@
   "version": 1,
   "food": [
     {
+      "image": "/hero-burger.png",
+      "imageVisible": true,
       "id": "burgers",
       "titleAr": "برجر",
       "titleEn": "Burgers",
@@ -105,11 +107,11 @@
           "price": 13,
           "enabled": true
         }
-      ],
-      "image": "/hero-burger.png",
-      "imageVisible": true
+      ]
     },
     {
+      "image": "/category-wraps.png",
+      "imageVisible": true,
       "id": "sandwiches",
       "titleAr": "ساندوتشات راب",
       "titleEn": "Sandwiches & Wraps",
@@ -185,11 +187,11 @@
           "price": 12,
           "enabled": true
         }
-      ],
-      "image": "/category-wraps.png",
-      "imageVisible": true
+      ]
     },
     {
+      "image": "/category-meals.png",
+      "imageVisible": true,
       "id": "meals",
       "titleAr": "وجبات",
       "titleEn": "Meals & Loaded Fries",
@@ -237,11 +239,11 @@
           "price": 30,
           "enabled": true
         }
-      ],
-      "image": "/category-meals.png",
-      "imageVisible": true
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "sides",
       "titleAr": "المقبلات",
       "titleEn": "Sides & Extras",
@@ -275,11 +277,11 @@
           "price": 2,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "drinks",
       "titleAr": "المشروبات",
       "titleEn": "Beverages",
@@ -313,13 +315,13 @@
           "price": 3,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     }
   ],
   "cafe": [
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "category-mw6tce3z-6ya3",
       "titleAr": "قهوة ساخنة",
       "titleEn": "HOT COFFEE",
@@ -339,11 +341,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "iced-coffee",
       "titleAr": "قهوة باردة",
       "titleEn": "ICED COFFEE",
@@ -412,11 +414,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "iced-tea",
       "titleAr": "شاي مثلج",
       "titleEn": "ICED TEA",
@@ -457,11 +459,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/categories/fresh-juices-1794134491961.webp",
+      "imageVisible": false,
       "id": "fresh-juices",
       "titleAr": "عصائر طبيعية",
       "titleEn": "FRESH JUICES",
@@ -537,11 +539,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "froppe",
       "titleAr": "فروبي",
       "titleEn": "FROPPÉ",
@@ -582,11 +584,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "mojito",
       "titleAr": "موخيتو",
       "titleEn": "MOJITO",
@@ -648,11 +650,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "smoothies",
       "titleAr": "سموثي",
       "titleEn": "SMOOTHIES",
@@ -686,11 +688,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "milkshakes",
       "titleAr": "ميلك شيك",
       "titleEn": "MILKSHAKES",
@@ -766,11 +768,11 @@
           "price": 0,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     },
     {
+      "image": "/category-default.svg",
+      "imageVisible": false,
       "id": "water-soft-drinks",
       "titleAr": "مشروبات ومياه",
       "titleEn": "WATER & SOFT DRINKS",
@@ -797,9 +799,7 @@
           "price": 3,
           "enabled": true
         }
-      ],
-      "image": "/category-default.svg",
-      "imageVisible": false
+      ]
     }
   ]
 }
