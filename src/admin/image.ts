@@ -8,7 +8,7 @@ const readAsDataUrl = (blob: Blob) =>
     reader.readAsDataURL(blob);
   });
 
-export const preparePromotionImage = async (file: File, promotionId: string): Promise<PendingImage> => {
+export const preparePromotionImage = async (file: File, promotionId: string, directory: "promotions" | "categories" = "promotions"): Promise<PendingImage> => {
   if (!file.type.startsWith("image/")) throw new Error("الملف المحدد ليس صورة.");
   if (file.size > 10_000_000) throw new Error("حجم الصورة الأصلية كبير جداً.");
 
@@ -34,8 +34,8 @@ export const preparePromotionImage = async (file: File, promotionId: string): Pr
   const safeId = promotionId.toLowerCase().replace(/[^a-z0-9._-]/g, "-").slice(0, 50) || "promotion";
   const filename = `${safeId}-${Date.now()}.webp`;
   return {
-    path: `public/promotions/${filename}`,
-    publicPath: `/promotions/${filename}`,
+    path: `public/${directory}/${filename}`,
+    publicPath: `/${directory}/${filename}`,
     contentBase64: dataUrl.split(",")[1],
     previewUrl: dataUrl,
   };

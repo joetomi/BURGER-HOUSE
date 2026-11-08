@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowUp,
@@ -102,6 +102,8 @@ interface MenuEditorProps {
 
 const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) => {
   const [selectedId, setSelectedId] = useState(categories[0]?.id || "");
+  const latestEditor = useRef({ categories, onChange });
+  latestEditor.current = { categories, onChange };
   const selectedIndex = categories.findIndex((category) => category.id === selectedId);
   const selected = categories[selectedIndex] || categories[0];
 
@@ -114,11 +116,21 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
     onChange(categories.map((category) => (category.id === selected.id ? { ...category, ...patch } : category)));
   };
 
+  const uploadCategoryImage = async (file: File, categoryId: string) => {
+    try {
+      const pendingImage = await preparePromotionImage(file, categoryId, "categories");
+      latestEditor.current.onChange(latestEditor.current.categories.map((category) => category.id === categoryId
+        ? { ...category, image: pendingImage.publicPath, pendingImage } : category));
+    } catch (imageError) {
+      window.alert(imageError instanceof Error ? imageError.message : "تعذر تجهيز الصورة.");
+    }
+  };
+
   const addCategory = () => {
     const id = makeId("category");
     onChange([
       ...categories,
-      { id, titleAr: "قسم جديد", titleEn: "New Category", enabled: true, items: [] },
+      { id, titleAr: "قسم جديد", titleEn: "New Category", enabled: true, image: "/category-default.svg", imageVisible: true, items: [] },
     ]);
     setSelectedId(id);
   };
@@ -220,6 +232,33 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                 </label>
                 <button type="button" onClick={removeCategory} className={`${buttonClass} bg-red-500/10 text-red-300 hover:bg-red-500/20`}>
                   <Trash2 className="h-4 w-4" /> حذف القسم
+                </button>
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-white/10 bg-black/20 p-4">
+                <label className="inline-flex items-center gap-2 text-sm text-white/75">
+                  <input type="checkbox" checked={selected.imageVisible !== false}
+                    onChange={(event) => updateSelected({ imageVisible: event.target.checked })}
+                    className="h-4 w-4 accent-[#D4A017]" />
+                  إظهار صورة القسم في الموقع
+                </label>
+                <div className="mt-4 aspect-video w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-[#121212] sm:max-w-md md:max-w-lg">
+                  <img src={selected.pendingImage?.previewUrl || selected.image || "/category-default.svg"}
+                    alt={`صورة قسم ${selected.titleAr}`} className="h-full w-full object-contain" />
+                </div>
+                <p className="mt-2 text-xs text-white/45">صورة أفقية بنسبة 16:9. إخفاؤها لا يحذفها، ويمكنك استبدالها في أي وقت.</p>
+                <label className={`${buttonClass} mt-3 cursor-pointer bg-white/8 text-white hover:bg-white/12`}>
+                  <ImagePlus className="h-4 w-4" /> رفع صورة للقسم
+                  <input key={selected.id} type="file" accept="image/jpeg,image/png,image/webp" className="hidden" aria-label="رفع صورة للقسم"
+                    onChange={(event) => {
+                      const file = event.target.files?.[0];
+                      event.target.value = "";
+                      if (file) void uploadCategoryImage(file, selected.id);
+                    }} />
+                </label>
+                <button type="button" className={`${buttonClass} mr-2 mt-3 bg-white/5 text-white/65`}
+                  onClick={() => updateSelected({ image: "/category-default.svg", pendingImage: undefined })}>
+                  استعادة الصورة الافتراضية
                 </button>
               </div>
 
@@ -566,21 +605,26 @@ export const AdminApp: React.FC = () => {
     setError("");
     setSuccess(null);
     try {
-      const images = content.promotions.items
-        .map((promotion) => promotion.pendingImage)
+      const images = [...content.promotions.items, ...content.menu.food, ...content.menu.cafe]
+        .map((entry) => entry.pendingImage)
         .filter((image): image is NonNullable<typeof image> => Boolean(image))
         .map((image) => ({ path: image.path, contentBase64: image.contentBase64 }));
       const promotions = {
         ...content.promotions,
         items: content.promotions.items.map(({ pendingImage: _pendingImage, ...promotion }) => promotion),
       };
+      const menu = {
+        ...content.menu,
+        food: content.menu.food.map(({ pendingImage: _pendingImage, ...category }) => category),
+        cafe: content.menu.cafe.map(({ pendingImage: _pendingImage, ...category }) => category),
+      };
       const result = await publishAdminContent({
         baseSha: content.baseSha,
-        menu: content.menu,
+        menu,
         promotions,
         images,
       });
-      setContent({ ...content, baseSha: result.commitSha, promotions });
+      setContent({ ...content, baseSha: result.commitSha, menu, promotions });
       setDirty(false);
       setSuccess("تم حفظ التعديلات بنجاح. ستظهر في الموقع خلال لحظات.");
     } catch (requestError) {

@@ -10,6 +10,9 @@ export interface AdminMenuCategory {
   id: string;
   titleAr: string;
   titleEn: string;
+  image: string;
+  imageVisible: boolean;
+  pendingImage?: PendingImage;
   enabled: boolean;
   items: AdminMenuItem[];
 }

@@ -12,6 +12,8 @@ export interface MenuCategory {
   id: string;
   titleEn: string;
   titleAr: string;
+  image: string;
+  imageVisible: boolean;
   enabled?: boolean;
   items: MenuItem[];
 }

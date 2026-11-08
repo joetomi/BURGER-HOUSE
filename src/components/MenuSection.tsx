@@ -233,9 +233,6 @@ export const MenuSection: React.FC = () => {
             const halfLength = Math.ceil(category.items.length / 2);
             const col1 = category.items.slice(0, halfLength);
             const col2 = category.items.slice(halfLength);
-            const isBurgersCategory = category.id === "burgers";
-            const isSandwichesCategory = category.id === "sandwiches";
-            const isMealsCategory = category.id === "meals";
 
             return (
               <div
@@ -243,68 +240,23 @@ export const MenuSection: React.FC = () => {
                 id={`category-${category.id}`}
                 className="flex flex-col items-center w-full scroll-mt-28"
               >
-                {/* Hero Burger Showcase Image & Connector Line */}
-                {isBurgersCategory && (
+                {category.imageVisible && (
                   <div className="flex flex-col items-center w-full">
-                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
+                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-video rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
                       <div className="absolute top-4 left-5 z-20 pointer-events-none">
-                        <span className="font-poppins text-xs sm:text-sm font-bold tracking-[0.35em] text-[#FFFFFF]/90 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
-                          BURGER
+                        <span className="font-poppins text-xs sm:text-sm font-bold tracking-[0.2em] text-white/90 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
+                          {category.titleEn}
                         </span>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-tr from-[#D4A017]/10 via-transparent to-transparent pointer-events-none z-10" />
                       <img
-                        src="/hero-burger.png"
-                        alt="Signature Burger House Burger"
-                        className="w-full h-auto object-contain"
+                        src={category.image || "/category-default.svg"}
+                        alt={language === "ar" ? category.titleAr : category.titleEn}
+                        loading="lazy"
+                        className="w-full h-full object-contain"
                       />
                       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/60 to-transparent z-20" />
                     </div>
-                    {/* Centered Golden Connector Line */}
-                    <TransparentConnectorLine />
-                  </div>
-                )}
-
-                {/* Hero Wrap Showcase Image & Connector Line */}
-                {isSandwichesCategory && (
-                  <div className="flex flex-col items-center w-full">
-                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
-                      <div className="absolute top-4 left-5 z-20 pointer-events-none">
-                        <span className="font-poppins text-xs sm:text-sm font-bold tracking-[0.35em] text-[#FFFFFF]/90 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
-                          WRAPS
-                        </span>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-[#D4A017]/10 via-transparent to-transparent pointer-events-none z-10" />
-                      <img
-                        src="/category-wraps.png"
-                        alt="Signature Burger House Wrap"
-                        className="w-full h-auto object-contain"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/60 to-transparent z-20" />
-                    </div>
-                    {/* Centered Golden Connector Line */}
-                    <TransparentConnectorLine />
-                  </div>
-                )}
-
-                {/* Hero Meal Showcase Image & Connector Line */}
-                {isMealsCategory && (
-                  <div className="flex flex-col items-center w-full">
-                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
-                      <div className="absolute top-4 left-5 z-20 pointer-events-none">
-                        <span className="font-poppins text-xs sm:text-sm font-bold tracking-[0.35em] text-[#FFFFFF]/90 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
-                          MEALS
-                        </span>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-[#D4A017]/10 via-transparent to-transparent pointer-events-none z-10" />
-                      <img
-                        src="/category-meals.png"
-                        alt="Signature Burger House Meal"
-                        className="w-full h-auto object-contain"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/60 to-transparent z-20" />
-                    </div>
-                    {/* Centered Golden Connector Line */}
                     <TransparentConnectorLine />
                   </div>
                 )}

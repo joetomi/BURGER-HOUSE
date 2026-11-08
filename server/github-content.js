@@ -80,7 +80,9 @@ export const publishAdminContent = async ({ baseSha, menu, promotions, images = 
     throw conflict;
   }
 
-  const previousPromotions = await getJsonFile(PROMOTIONS_PATH);
+  const [previousPromotions, previousMenu] = await Promise.all([
+    getJsonFile(PROMOTIONS_PATH), getJsonFile(MENU_PATH),
+  ]);
   const [menuBlob, promotionsBlob] = await Promise.all([
     createBlob(`${JSON.stringify(menu, null, 2)}\n`),
     createBlob(`${JSON.stringify(promotions, null, 2)}\n`),
@@ -95,16 +97,16 @@ export const publishAdminContent = async ({ baseSha, menu, promotions, images = 
     })),
   );
 
-  const nextImages = new Set(
-    promotions.items
-      .map((promotion) => promotion.image)
-      .filter((path) => path.startsWith("/promotions/"))
-      .map((path) => `public${path}`),
-  );
-  const removedImages = (previousPromotions.items || [])
-    .map((promotion) => promotion.image)
-    .filter((path) => typeof path === "string" && path.startsWith("/promotions/"))
-    .map((path) => `public${path}`)
+  const managedImages = (menuContent, promotionsContent) =>
+    [...(menuContent.food || []), ...(menuContent.cafe || []), ...(promotionsContent.items || [])]
+      .map((entry) => entry.image)
+      .filter((path) => typeof path === "string" && /^\/(categories|promotions)\//.test(path))
+      .map((path) => `public${path}`);
+  const nextImages = new Set(managedImages(menu, promotions));
+  if (images.some((image) => !nextImages.has(image.path))) {
+    throw new Error("توجد صورة غير مرتبطة بقسم أو منشور.");
+  }
+  const removedImages = [...new Set(managedImages(previousMenu, previousPromotions))]
     .filter((path) => !nextImages.has(path))
     .map((path) => ({ path, mode: "100644", type: "blob", sha: null }));
 

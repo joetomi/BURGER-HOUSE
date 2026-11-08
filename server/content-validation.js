@@ -29,6 +29,8 @@ const cleanMenuItem = (item) => {
   };
 };
 
+const CATEGORY_IMAGE_PATTERN = /^\/(?:categories\/[a-z0-9._-]+\.(?:jpg|jpeg|png|webp)|hero-burger\.png|category-(?:wraps|meals)\.png|category-default\.svg)$/i;
+
 const cleanCategory = (category) => {
   if (!Array.isArray(category?.items) || category.items.length > 100) throw new Error("قائمة الأصناف غير صالحة.");
   const itemIds = new Set();
@@ -38,7 +40,13 @@ const cleanCategory = (category) => {
     itemIds.add(item.id);
   }
 
+  const image = category?.image || "/category-default.svg";
+  if (typeof image !== "string" || image.length > 180 || !CATEGORY_IMAGE_PATTERN.test(image)) {
+    throw new Error("مسار صورة القسم غير صالح.");
+  }
   return {
+    image,
+    imageVisible: cleanEnabled(category?.imageVisible),
     id: cleanId(category?.id, "معرّف القسم"),
     titleAr: cleanText(category?.titleAr, "اسم القسم بالعربية"),
     titleEn: cleanText(category?.titleEn, "اسم القسم بالإنجليزية"),
@@ -111,7 +119,7 @@ export const validateImages = (images) => {
 
   let totalBytes = 0;
   return images.map((image) => {
-    if (typeof image?.path !== "string" || !/^public\/promotions\/[a-z0-9._-]+\.(jpg|jpeg|png|webp)$/i.test(image.path)) {
+    if (typeof image?.path !== "string" || !/^public\/(?:promotions|categories)\/[a-z0-9._-]+\.(jpg|jpeg|png|webp)$/i.test(image.path)) {
       throw new Error("مسار الصورة المرفوعة غير صالح.");
     }
     if (typeof image?.contentBase64 !== "string" || !/^[A-Za-z0-9+/=]+$/.test(image.contentBase64)) {
@@ -120,7 +128,7 @@ export const validateImages = (images) => {
     const size = Buffer.byteLength(image.contentBase64, "base64");
     totalBytes += size;
     if (size > 1_800_000) throw new Error("حجم الصورة يجب ألا يتجاوز 1.8 ميجابايت.");
-    if (totalBytes > 3_200_000) throw new Error("إجمالي حجم الصور في عملية الحفظ كبير جداً.");
+    if (totalBytes > 2_500_000) throw new Error("إجمالي حجم الصور في عملية الحفظ كبير جداً.");
     return { path: image.path, contentBase64: image.contentBase64 };
   });
 };
