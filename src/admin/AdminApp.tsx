@@ -296,11 +296,11 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                     className="h-4 w-4 accent-[#D4A017]" />
                   إظهار صورة القسم في الموقع
                 </label>
-                <div className="mt-4 aspect-video w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-[#121212] sm:max-w-md md:max-w-lg">
+                <div className="mt-4 w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-[#121212] sm:max-w-md md:max-w-lg">
                   <img src={selected.pendingImage?.previewUrl || selected.image || "/category-default.svg"}
-                    alt={`صورة قسم ${selected.titleAr}`} className="h-full w-full object-contain" />
+                    alt={`صورة قسم ${selected.titleAr}`} className="block h-auto w-full" />
                 </div>
-                <p className="mt-2 text-xs text-white/45">صورة أفقية بنسبة 16:9. إخفاؤها لا يحذفها، ويمكنك استبدالها في أي وقت.</p>
+                <p className="mt-2 text-xs text-white/45">صورة أفقية مستطيلة، ويتكيف الإطار مع أبعادها. إخفاؤها لا يحذفها، ويمكنك استبدالها في أي وقت.</p>
                 <label className={`${buttonClass} mt-3 cursor-pointer bg-[#D4A017] text-black hover:bg-[#E2B22D]`}>
                   <ImagePlus className="h-4 w-4" /> رفع صورة للقسم
                   <input key={selected.id} type="file" accept="image/jpeg,image/png,image/webp" className="hidden" aria-label="رفع صورة للقسم"

@@ -242,7 +242,7 @@ export const MenuSection: React.FC = () => {
               >
                 {category.imageVisible && (
                   <div className="flex flex-col items-center w-full">
-                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-video rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
+                    <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121212]/70 backdrop-blur-md">
                       <div className="absolute top-4 left-5 z-20 pointer-events-none">
                         <span className="font-poppins text-xs sm:text-sm font-bold tracking-[0.2em] text-white/90 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
                           {category.titleEn}
@@ -253,7 +253,7 @@ export const MenuSection: React.FC = () => {
                         src={category.image || "/category-default.svg"}
                         alt={language === "ar" ? category.titleAr : category.titleEn}
                         loading="lazy"
-                        className="w-full h-full object-contain"
+                        className="block w-full h-auto"
                       />
                       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/60 to-transparent z-20" />
                     </div>
