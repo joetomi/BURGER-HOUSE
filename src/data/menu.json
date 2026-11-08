@@ -320,8 +320,8 @@
   ],
   "cafe": [
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/category-mw6tce3z-6ya3-1794135209465.webp",
+      "imageVisible": true,
       "id": "category-mw6tce3z-6ya3",
       "titleAr": "قهوة ساخنة",
       "titleEn": "HOT COFFEE",
@@ -344,8 +344,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/iced-coffee-1794135218841.webp",
+      "imageVisible": true,
       "id": "iced-coffee",
       "titleAr": "قهوة باردة",
       "titleEn": "ICED COFFEE",
@@ -417,8 +417,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/iced-tea-1794135227041.webp",
+      "imageVisible": true,
       "id": "iced-tea",
       "titleAr": "شاي مثلج",
       "titleEn": "ICED TEA",
@@ -542,8 +542,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/froppe-1794135234225.webp",
+      "imageVisible": true,
       "id": "froppe",
       "titleAr": "فروبي",
       "titleEn": "FROPPÉ",
@@ -587,8 +587,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/mojito-1794135240899.webp",
+      "imageVisible": true,
       "id": "mojito",
       "titleAr": "موخيتو",
       "titleEn": "MOJITO",
@@ -653,8 +653,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/smoothies-1794135247777.webp",
+      "imageVisible": true,
       "id": "smoothies",
       "titleAr": "سموثي",
       "titleEn": "SMOOTHIES",
@@ -691,8 +691,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/milkshakes-1794135255795.webp",
+      "imageVisible": true,
       "id": "milkshakes",
       "titleAr": "ميلك شيك",
       "titleEn": "MILKSHAKES",
@@ -771,8 +771,8 @@
       ]
     },
     {
-      "image": "/category-default.svg",
-      "imageVisible": false,
+      "image": "/categories/water-soft-drinks-1794135263518.webp",
+      "imageVisible": true,
       "id": "water-soft-drinks",
       "titleAr": "مشروبات ومياه",
       "titleEn": "WATER & SOFT DRINKS",
