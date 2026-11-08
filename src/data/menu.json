@@ -463,7 +463,7 @@
     },
     {
       "image": "/categories/fresh-juices-1794134491961.webp",
-      "imageVisible": false,
+      "imageVisible": true,
       "id": "fresh-juices",
       "titleAr": "عصائر طبيعية",
       "titleEn": "FRESH JUICES",
