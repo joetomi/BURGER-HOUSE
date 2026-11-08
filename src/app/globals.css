@@ -101,20 +101,20 @@
 
 }
 
-/* Keep Safari's obscured bottom edge sampling a transparent surface as cards
-   and sticky navigation pass it. It must live outside the clipped app root.
-   Reference: https://fantinel.dev/blog/safari-floating-url-bar-background */
+/* A fixed transparent edge sentinel avoids Safari's opaque toolbar sampling.
+   Keep it outside #root and above page overlays without intercepting input.
+   Reference: https://www.reddit.com/r/webdev/comments/1savcsm/ */
 .safari-toolbar-surface { display: none; }
 @supports (-webkit-touch-callout: none) {
   .safari-toolbar-surface {
     display: block;
-    position: sticky;
-    bottom: -2px;
+    position: fixed;
     left: 0;
-    width: 100%;
-    height: 6px;
-    background-color: transparent;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: transparent;
     pointer-events: none;
-    z-index: 999;
+    z-index: 2147483647;
   }
 }
