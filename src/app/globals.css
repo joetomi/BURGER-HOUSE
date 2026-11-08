@@ -99,9 +99,22 @@
   html, body { overflow: visible; }
   #root { overflow-x: clip; }
 
-  /* Avoid WebKit's opaque chrome extension for composited sticky backdrops. */
-  .menu-category-dock {
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+}
+
+/* Keep Safari's obscured bottom edge sampling a transparent surface as cards
+   and sticky navigation pass it. It must live outside the clipped app root.
+   Reference: https://fantinel.dev/blog/safari-floating-url-bar-background */
+.safari-toolbar-surface { display: none; }
+@supports (-webkit-touch-callout: none) {
+  .safari-toolbar-surface {
+    display: block;
+    position: sticky;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 999;
   }
 }
