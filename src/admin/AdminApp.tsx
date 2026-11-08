@@ -256,10 +256,6 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                       if (file) void uploadCategoryImage(file, selected.id);
                     }} />
                 </label>
-                <button type="button" className={`${buttonClass} mr-2 mt-3 bg-white/5 text-white/65`}
-                  onClick={() => updateSelected({ image: "/category-default.svg", pendingImage: undefined })}>
-                  استعادة الصورة الافتراضية
-                </button>
               </div>
 
               <div className="mt-5 flex items-center justify-between gap-3">
