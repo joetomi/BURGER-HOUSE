@@ -202,7 +202,7 @@ export const MenuSection: React.FC = () => {
       <div className="relative">
         {/* Pure Native Sticky Top Dock */}
         <div className="sticky top-4 sm:top-6 z-50 flex justify-center mb-8 pointer-events-none">
-          <div className="pointer-events-auto relative max-w-[94vw] sm:max-w-max bg-[#121212]/94 backdrop-blur-2xl border border-white/12 shadow-[0_20px_50px_rgba(0,0,0,0.85)] rounded-full p-1.5 sm:p-2 flex items-center">
+          <div className="menu-category-dock pointer-events-auto relative max-w-[94vw] sm:max-w-max bg-[#121212]/94 backdrop-blur-2xl border border-white/12 shadow-[0_20px_50px_rgba(0,0,0,0.85)] rounded-full p-1.5 sm:p-2 flex items-center">
             <div
               ref={floatingContainerRef}
               className="flex items-center gap-1.5 overflow-x-auto scrollbar-none no-scrollbar py-0.5 px-1 max-w-full"

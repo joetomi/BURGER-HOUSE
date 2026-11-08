@@ -92,3 +92,16 @@
   max-height: calc(100dvh - 3rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
   overflow-y: auto;
 }
+
+/* iOS must keep the document scroller unclipped when its toolbar collapses.
+   Clip horizontal decoration on the content root instead. */
+@supports (-webkit-touch-callout: none) {
+  html, body { overflow: visible; }
+  #root { overflow-x: clip; }
+
+  /* Avoid WebKit's opaque chrome extension for composited sticky backdrops. */
+  .menu-category-dock {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
