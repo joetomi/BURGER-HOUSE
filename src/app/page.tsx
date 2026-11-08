@@ -2,6 +2,7 @@
 
 import React from "react";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { InstallMenuPrompt } from "@/components/InstallMenuPrompt";
 import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
 import { Footer } from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <MenuSection />
         <LocationSection />
         <Footer />
+        <InstallMenuPrompt />
       </main>
     </LanguageProvider>
   );

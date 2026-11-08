@@ -26,16 +26,14 @@
   }
 
   body {
-    background-color: #0F0F0F;
-    background-image: linear-gradient(rgba(15, 15, 15, 0.35), rgba(15, 15, 15, 0.35)), url('/pattern.jpg');
-    background-repeat: repeat;
-    background-size: 650px 650px;
-    background-attachment: scroll;
+    background: transparent;
     color: #FFFFFF;
     overflow-x: hidden;
     margin: 0;
-    padding: 0;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
     min-height: 100vh;
+    min-height: 100svh;
+    box-sizing: border-box;
   }
 }
 
@@ -80,4 +78,17 @@
     letter-spacing: normal !important;
     word-spacing: normal !important;
   }
+}
+
+/* Keep the patterned canvas continuous beneath Safari's floating controls. */
+@supports (overflow: clip) {
+  body { overflow-x: clip; }
+}
+#root { min-height: 100svh; }
+.install-menu-card {
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  left: max(1rem, env(safe-area-inset-left, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  max-height: calc(100dvh - 3rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
 }
