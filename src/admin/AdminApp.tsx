@@ -247,7 +247,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                     alt={`صورة قسم ${selected.titleAr}`} className="h-full w-full object-contain" />
                 </div>
                 <p className="mt-2 text-xs text-white/45">صورة أفقية بنسبة 16:9. إخفاؤها لا يحذفها، ويمكنك استبدالها في أي وقت.</p>
-                <label className={`${buttonClass} mt-3 cursor-pointer bg-white/8 text-white hover:bg-white/12`}>
+                <label className={`${buttonClass} mt-3 cursor-pointer bg-[#D4A017] text-black hover:bg-[#E2B22D]`}>
                   <ImagePlus className="h-4 w-4" /> رفع صورة للقسم
                   <input key={selected.id} type="file" accept="image/jpeg,image/png,image/webp" className="hidden" aria-label="رفع صورة للقسم"
                     onChange={(event) => {
