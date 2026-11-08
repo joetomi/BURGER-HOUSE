@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Coffee, UtensilsCrossed } from "lucide-react";
 import { CAFE_MENU_DATA, MENU_DATA, MenuCategory } from "@/data/menu";
 import { MenuItemRow } from "./MenuItemRow";
 import { useLanguage } from "@/context/LanguageContext";
+import { useSessionScroll, useSessionState } from "@/lib/session";
 import { TransparentConnectorLine } from "./TransparentConnectorLine";
 
 export const MenuSection: React.FC = () => {
-  const [menuMode, setMenuMode] = useState<"food" | "cafe">("food");
-  const [activeCategory, setActiveCategory] = useState<string>("burgers");
+  const [menuMode, setMenuMode] = useSessionState<"food" | "cafe">("bh-menu-mode", "food", (value) => value === "food" || value === "cafe");
+  const [activeCategory, setActiveCategory] = useSessionState<string>("bh-menu-category", "burgers", (value) => typeof value === "string");
+  useSessionScroll("bh-menu-scroll", true);
   
   const activeTabRef = useRef<HTMLButtonElement>(null);
   const floatingContainerRef = useRef<HTMLDivElement>(null);

@@ -16,6 +16,7 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { getAdminSession, loadAdminContent, loginAdmin, logoutAdmin, publishAdminContent } from "./api";
+import { useSessionScroll, useSessionState } from "@/lib/session";
 import { preparePromotionImage } from "./image";
 import type {
   AdminContentResponse,
@@ -155,7 +156,7 @@ interface MenuEditorProps {
 }
 
 const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) => {
-  const [selectedId, setSelectedId] = useState(categories[0]?.id || "");
+  const [selectedId, setSelectedId] = useSessionState<string>(`bh-admin-category-${title}`, categories[0]?.id || "", (value) => typeof value === "string");
   const latestEditor = useRef({ categories, onChange });
   latestEditor.current = { categories, onChange };
   const selectedIndex = categories.findIndex((category) => category.id === selectedId);
@@ -582,7 +583,8 @@ export const AdminApp: React.FC = () => {
   const [checkingSession, setCheckingSession] = useState(true);
   const [username, setUsername] = useState<string | null>(null);
   const [content, setContent] = useState<AdminContentResponse | null>(null);
-  const [activeTab, setActiveTab] = useState<AdminTab>("food");
+  const [activeTab, setActiveTab] = useSessionState<AdminTab>("bh-admin-tab", "food", (value) => ["food", "cafe", "promotions"].includes(value));
+  useSessionScroll("bh-admin-scroll", Boolean(username && content));
   const [loadingContent, setLoadingContent] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const [savedFingerprint, setSavedFingerprint] = useState("");
@@ -773,8 +775,8 @@ export const AdminApp: React.FC = () => {
           <div className="flex min-h-[420px] items-center justify-center text-[#D4A017]"><LoaderCircle className="h-8 w-8 animate-spin" /></div>
         ) : content ? (
           <>
-            {activeTab === "food" && <MenuEditor title="منيو الطعام" categories={content.menu.food} onChange={(food) => setMenu({ ...content.menu, food })} />}
-            {activeTab === "cafe" && <MenuEditor title="منيو الكافيه" categories={content.menu.cafe} onChange={(cafe) => setMenu({ ...content.menu, cafe })} />}
+            {activeTab === "food" && <MenuEditor key="food" title="منيو الطعام" categories={content.menu.food} onChange={(food) => setMenu({ ...content.menu, food })} />}
+            {activeTab === "cafe" && <MenuEditor key="cafe" title="منيو الكافيه" categories={content.menu.cafe} onChange={(cafe) => setMenu({ ...content.menu, cafe })} />}
             {activeTab === "promotions" && <PromotionsEditor promotions={content.promotions.items} onChange={(items) => setPromotions({ ...content.promotions, items })} />}
           </>
         ) : null}

@@ -14,6 +14,10 @@ const request = async <T>(url: string, options: RequestInit = {}): Promise<T> =>
     },
   });
 
+  if (response.status === 429) {
+    throw new Error("طلبات كثيرة. يرجى الانتظار حتى عشر دقائق قبل إعادة محاولة الدخول.");
+  }
+
   const body = (await response.json().catch(() => ({}))) as T & ApiErrorBody;
   if (!response.ok) throw new Error(body.error || "تعذر الاتصال بالخادم.");
   return body;

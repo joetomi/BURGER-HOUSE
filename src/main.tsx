@@ -4,6 +4,8 @@ import Home from "./app/page";
 import { AdminApp } from "./admin/AdminApp";
 import "./app/globals.css";
 
+if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+
 const isAdminRoute = window.location.pathname === "/admin" || window.location.pathname.startsWith("/admin/");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
