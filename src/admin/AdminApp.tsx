@@ -32,6 +32,60 @@ const inputClass =
 const buttonClass =
   "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-45";
 
+const contentFingerprint = (content: Pick<AdminContentResponse, "menu" | "promotions">) =>
+  JSON.stringify({ menu: content.menu, promotions: content.promotions },
+    (key, value) => key === "pendingImage" ? undefined : value);
+
+const FloatingSaveButton: React.FC<{
+  dirty: boolean;
+  publishing: boolean;
+  onSave: () => void;
+}> = ({ dirty, publishing, onSave }) => {
+  const anchorRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState<{ left: number; width: number } | null>(null);
+
+  useEffect(() => {
+    if (!dirty) {
+      setPosition(null);
+      return;
+    }
+    const update = () => {
+      const rect = anchorRef.current?.getBoundingClientRect();
+      const next = rect && rect.top < 16 ? { left: rect.left, width: rect.width } : null;
+      setPosition((current) => current?.left === next?.left && current?.width === next?.width ? current : next);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    const observer = new ResizeObserver(update);
+    if (anchorRef.current) observer.observe(anchorRef.current);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+      observer.disconnect();
+    };
+  }, [dirty, publishing]);
+
+  const floating = dirty && position !== null;
+  const label = publishing ? "جارٍ الحفظ..." : dirty ? "حفظ التعديلات" : "لا توجد تغييرات";
+  const contents = <>{publishing ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}{label}</>;
+  const classes = `${buttonClass} w-full bg-[#D4A017] text-black hover:bg-[#E2B22D]`;
+  return (
+    <div ref={anchorRef} className="w-full sm:w-auto">
+      <button type="button" disabled={!dirty || publishing} onClick={onSave}
+        aria-hidden={floating || undefined} tabIndex={floating ? -1 : undefined}
+        className={`${classes} ${floating ? "invisible" : ""}`}>
+        {contents}
+      </button>
+      {floating && <button type="button" disabled={publishing} onClick={onSave}
+        className={`${classes} fixed z-[100] shadow-[0_8px_30px_rgba(0,0,0,0.5)] ring-1 ring-[#D4A017]/30`}
+        style={{ top: 16, left: position.left, width: position.width }}>
+        {contents}
+      </button>}
+    </div>
+  );
+};
+
 const makeId = (prefix: string) => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
 
 const moveItem = <T,>(items: T[], index: number, direction: -1 | 1) => {
@@ -531,7 +585,8 @@ export const AdminApp: React.FC = () => {
   const [activeTab, setActiveTab] = useState<AdminTab>("food");
   const [loadingContent, setLoadingContent] = useState(false);
   const [publishing, setPublishing] = useState(false);
-  const [dirty, setDirty] = useState(false);
+  const [savedFingerprint, setSavedFingerprint] = useState("");
+  const dirty = content !== null && contentFingerprint(content) !== savedFingerprint;
   const [error, setError] = useState("");
   const [success, setSuccess] = useState<string | null>(null);
 
@@ -559,8 +614,9 @@ export const AdminApp: React.FC = () => {
     setError("");
     setSuccess(null);
     try {
-      setContent(await loadAdminContent());
-      setDirty(false);
+      const loaded = await loadAdminContent();
+      setSavedFingerprint(contentFingerprint(loaded));
+      setContent(loaded);
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : "تعذر تحميل المحتوى.");
     } finally {
@@ -584,14 +640,12 @@ export const AdminApp: React.FC = () => {
   const setMenu = (menu: AdminMenuContent) => {
     if (!content) return;
     setContent({ ...content, menu });
-    setDirty(true);
     setSuccess(null);
   };
 
   const setPromotions = (promotions: AdminPromotionsContent) => {
     if (!content) return;
     setContent({ ...content, promotions });
-    setDirty(true);
     setSuccess(null);
   };
 
@@ -621,7 +675,7 @@ export const AdminApp: React.FC = () => {
         images,
       });
       setContent({ ...content, baseSha: result.commitSha, menu, promotions });
-      setDirty(false);
+      setSavedFingerprint(contentFingerprint({ menu, promotions }));
       setSuccess("تم حفظ التعديلات بنجاح. ستظهر في الموقع خلال لحظات.");
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : "تعذر حفظ التعديلات.");
@@ -635,7 +689,7 @@ export const AdminApp: React.FC = () => {
     await logoutAdmin().catch(() => undefined);
     setUsername(null);
     setContent(null);
-    setDirty(false);
+    setSavedFingerprint("");
   };
 
   if (checkingSession) {
@@ -703,10 +757,7 @@ export const AdminApp: React.FC = () => {
             <button type="button" disabled={loadingContent || publishing} onClick={() => void refreshContent()} className={`${buttonClass} w-full bg-white/5 text-white/60 hover:text-white sm:w-auto`}>
               <RefreshCw className={`h-4 w-4 ${loadingContent ? "animate-spin" : ""}`} /> تحديث
             </button>
-            <button type="button" disabled={!dirty || publishing} onClick={publish} className={`${buttonClass} w-full bg-[#D4A017] text-black hover:bg-[#E2B22D] sm:w-auto`}>
-              {publishing ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
-              {publishing ? "جارٍ الحفظ..." : dirty ? "حفظ التعديلات" : "لا توجد تغييرات"}
-            </button>
+            <FloatingSaveButton dirty={dirty} publishing={publishing} onSave={publish} />
           </div>
         </div>
 
