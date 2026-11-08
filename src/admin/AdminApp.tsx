@@ -185,7 +185,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                     aria-label="تحريك القسم للأعلى"
                     disabled={index === 0}
                     onClick={() => onChange(moveItem(categories, index, -1))}
-                    className="rounded p-1 text-white/35 hover:text-white disabled:opacity-20"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-1 text-white/50 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                   >
                     <ArrowUp className="h-3.5 w-3.5" />
                   </button>
@@ -194,7 +194,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                     aria-label="تحريك القسم للأسفل"
                     disabled={index === categories.length - 1}
                     onClick={() => onChange(moveItem(categories, index, 1))}
-                    className="rounded p-1 text-white/35 hover:text-white disabled:opacity-20"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-1 text-white/50 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                   >
                     <ArrowDown className="h-3.5 w-3.5" />
                   </button>
@@ -221,7 +221,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                 </label>
               </div>
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5">
-                <label className="inline-flex items-center gap-2 text-sm text-white/65">
+                <label className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/65 transition hover:bg-white/10">
                   <input
                     type="checkbox"
                     checked={selected.enabled}
@@ -236,7 +236,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
               </div>
 
               <div className="mt-5 rounded-2xl border border-white/10 bg-black/20 p-4">
-                <label className="inline-flex items-center gap-2 text-sm text-white/75">
+                <label className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/75 transition hover:bg-white/10">
                   <input type="checkbox" checked={selected.imageVisible !== false}
                     onChange={(event) => updateSelected({ imageVisible: event.target.checked })}
                     className="h-4 w-4 accent-[#D4A017]" />
@@ -318,7 +318,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                         />
                       </label>
                       <div className="flex items-center justify-end gap-1 pb-1">
-                        <label className="ml-2 inline-flex items-center gap-1.5 text-xs text-white/50">
+                        <label className="ml-2 inline-flex min-h-9 cursor-pointer items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-2.5 py-2 text-xs text-white/65 transition hover:bg-white/10">
                           <input
                             type="checkbox"
                             checked={item.enabled}
@@ -337,7 +337,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                           type="button"
                           disabled={index === 0}
                           onClick={() => updateSelected({ items: moveItem(selected.items, index, -1) })}
-                          className="rounded-lg p-2 text-white/40 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                          className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white/60 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                         >
                           <ArrowUp className="h-4 w-4" />
                         </button>
@@ -345,7 +345,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                           type="button"
                           disabled={index === selected.items.length - 1}
                           onClick={() => updateSelected({ items: moveItem(selected.items, index, 1) })}
-                          className="rounded-lg p-2 text-white/40 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                          className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white/60 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                         >
                           <ArrowDown className="h-4 w-4" />
                         </button>
@@ -356,7 +356,7 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                               updateSelected({ items: selected.items.filter((current) => current.id !== item.id) });
                             }
                           }}
-                          className="rounded-lg p-2 text-red-300/65 hover:bg-red-500/10 hover:text-red-300"
+                          className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-xl border border-red-300/15 bg-red-500/10 p-2 text-red-300/75 transition hover:bg-red-500/20 hover:text-red-300"
                         >
                           <Trash2 className="h-4 w-4" />
                         </button>
@@ -475,7 +475,7 @@ const PromotionsEditor: React.FC<{
                 </label>
 
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
-                  <label className="inline-flex items-center gap-2 text-sm text-white/60">
+                  <label className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/60 transition hover:bg-white/10">
                     <input
                       type="checkbox"
                       checked={promotion.enabled}
@@ -489,7 +489,7 @@ const PromotionsEditor: React.FC<{
                       type="button"
                       disabled={index === 0}
                       onClick={() => onChange(moveItem(promotions, index, -1))}
-                      className="rounded-lg p-2.5 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                      className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2.5 text-white/60 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                     >
                       <ArrowUp className="h-4 w-4" />
                     </button>
@@ -497,7 +497,7 @@ const PromotionsEditor: React.FC<{
                       type="button"
                       disabled={index === promotions.length - 1}
                       onClick={() => onChange(moveItem(promotions, index, 1))}
-                      className="rounded-lg p-2.5 text-white/45 hover:bg-white/5 hover:text-white disabled:opacity-20"
+                      className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2.5 text-white/60 transition hover:bg-white/10 hover:text-white disabled:opacity-20"
                     >
                       <ArrowDown className="h-4 w-4" />
                     </button>
@@ -508,7 +508,7 @@ const PromotionsEditor: React.FC<{
                           onChange(promotions.filter((current) => current.id !== promotion.id));
                         }
                       }}
-                      className="rounded-lg p-2.5 text-red-300/70 hover:bg-red-500/10 hover:text-red-300"
+                      className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-xl border border-red-300/15 bg-red-500/10 p-2.5 text-red-300/75 transition hover:bg-red-500/20 hover:text-red-300"
                     >
                       <Trash2 className="h-4 w-4" />
                     </button>
