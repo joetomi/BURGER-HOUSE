@@ -20,7 +20,7 @@ export const LocationSection: React.FC = () => {
   return (
     <section
       id="location"
-      className="relative mx-auto max-w-6xl px-4 pb-12 sm:px-6"
+      className="relative mx-auto max-w-6xl px-4 sm:px-6"
       dir={isArabic ? "rtl" : "ltr"}
       lang={language}
     >

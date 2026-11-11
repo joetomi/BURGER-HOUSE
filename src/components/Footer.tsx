@@ -2,27 +2,22 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Logo3D } from "./Logo3D";
+
 import { Phone } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <footer className="w-full py-16 px-6 border-t border-white/[0.05] bg-transparent text-center">
+    <footer className="w-full pb-16 px-6 border-t border-white/[0.05] bg-transparent text-center">
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
-        {/* Small 3D Logo */}
-        <div className="mb-4">
-          <Logo3D size="sm" />
+        {/* Footer brand */}
+        <div className="min-w-0 max-w-full">
+          <img src="/footer-brand.png" alt="Burger House" className="block h-auto w-[19.5rem] max-w-full sm:w-[22.75rem]" />
         </div>
 
-        {/* Restaurant Name */}
-        <span className="font-poppins text-xs font-bold tracking-[0.3em] text-[#FFFFFF] uppercase mb-4">
-          BURGER HOUSE
-        </span>
-
         {/* Contact & Social Links */}
-        <div className="mb-10 mt-3 flex w-full flex-col items-center gap-5">
+        <div className="mb-10 flex w-full flex-col items-center gap-5">
           <div
             className="flex flex-col items-center gap-3"
             dir={language === "ar" ? "rtl" : "ltr"}

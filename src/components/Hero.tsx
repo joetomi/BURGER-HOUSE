@@ -1,50 +1,21 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { useLanguage } from "@/context/LanguageContext";
-import { Logo3D } from "./Logo3D";
 
-export const Hero: React.FC = () => {
-  const { language } = useLanguage();
-
-  return (
-    <section className="relative pt-12 pb-4 px-6 text-center flex flex-col items-center justify-center overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative z-10 max-w-2xl mx-auto flex flex-col items-center"
-      >
-        {/* Interactive 3D Logo */}
-        <div className="mb-4">
-          <Logo3D size="lg" />
-        </div>
-
-        {/* Restaurant Name */}
-        <h1 className="font-poppins text-3xl md:text-5xl font-bold tracking-[0.3em] text-[#FFFFFF] uppercase mb-3 drop-shadow-md">
-          BURGER HOUSE
-        </h1>
-
-        {/* Divider accent */}
-        <div className="w-12 h-[1px] bg-[#D4A017] mb-4" />
-
-        {/* Tagline */}
-        <div
-          dir={language === "ar" ? "rtl" : "ltr"}
-          className={`flex items-center justify-center gap-3 md:gap-4 text-xs md:text-sm text-[#C7C7C7] uppercase mb-4 ${
-            language === "ar"
-              ? "font-cairo font-semibold max-md:tracking-normal tracking-[0.35em]"
-              : "font-poppins font-semibold tracking-[0.35em]"
-          }`}
-        >
-          <span>{language === "ar" ? "طازج." : "Fresh."}</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D4A017]" />
-          <span>{language === "ar" ? "مشوي." : "Grilled."}</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D4A017]" />
-          <span>{language === "ar" ? "فاخر." : "Premium."}</span>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
+export const Hero: React.FC = () => (
+  <section className="relative flex flex-col items-center overflow-hidden px-6 pb-4 pt-[4.5rem] text-center">
+    <h1 className="mb-5 w-full max-w-3xl">
+      <span className="relative block aspect-[1690/298] -translate-x-[2.04%] overflow-hidden [clip-path:polygon(0_0,100%_0,100%_92%,64%_92%,64%_100%,0_100%)]">
+        <img src="/hero-brand.png" alt="Burger House" className="absolute left-0 top-0 w-full max-w-none -translate-y-[25%]" />
+        {/* The replacement fills the inside of the original white rim. */}
+        <span className="absolute left-[52.07%] top-[50.95%] h-[86.14%] w-[15.37%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-black">
+          <img src="/hero-badge.png" alt="" className="block h-full w-full object-fill" />
+        </span>
+      </span>
+      <span className="relative mx-auto block aspect-[1690/200] w-[90%] overflow-hidden [clip-path:polygon(0_15%,64%_15%,64%_0,100%_0,100%_100%,0_100%)]">
+        <img src="/hero-brand.png" alt="BH Café" className="absolute left-0 top-0 w-full max-w-none -translate-y-[53.8%]" />
+      </span>
+    </h1>
+    <div className="mb-4 h-px w-12 bg-[#D4A017]" aria-hidden="true" />
+  </section>
+);
