@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
         {/* Footer brand */}
         <div className="min-w-0 max-w-full">
-          <img src="/footer-brand.png" alt="Burger House" className="block h-auto w-[19.5rem] max-w-full sm:w-[22.75rem]" />
+          <img src="/footer-brand.svg" width={600} height={450} alt="Burger House" className="block h-auto w-[19.5rem] max-w-full sm:w-[22.75rem]" />
         </div>
 
         {/* Contact & Social Links */}

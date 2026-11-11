@@ -11,7 +11,7 @@ interface Logo3DProps {
 }
 
 export const Logo3D: React.FC<Logo3DProps> = ({
-  src = "/logo.png",
+  src = "/logo.svg",
   alt = "BURGER HOUSE Logo",
   className = "",
   size = "lg",

@@ -121,7 +121,7 @@ const LoginScreen: React.FC<{ onLoggedIn: (username: string) => void }> = ({ onL
     <main className="flex min-h-screen items-center justify-center bg-[#0F0F0F] px-4 py-10 font-cairo text-white" dir="rtl">
       <section className="w-full max-w-md rounded-[28px] border border-white/10 bg-[#151515]/95 p-7 shadow-[0_30px_90px_rgba(0,0,0,0.5)] sm:p-9">
         <div className="mb-8 flex flex-col items-center text-center">
-          <img src="/loader-brand.png" alt="برجر هاوس" className="mb-4 h-20 w-20 object-contain" />
+          <img src="/loader-brand.svg" alt="برجر هاوس" className="mb-4 h-20 w-20 object-contain" />
           <h1 className="text-2xl font-bold">لوحة إدارة برجر هاوس</h1>
           <p className="mt-2 text-sm text-white/50">دخول صاحب المطعم</p>
         </div>
@@ -759,7 +759,7 @@ export const AdminApp: React.FC = () => {
       <header className="border-b border-white/10 bg-[#111111]/95 px-4 py-4 backdrop-blur-xl sm:px-6">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/loader-brand.png" alt="برجر هاوس" className="h-11 w-11 object-contain" />
+            <img src="/loader-brand.svg" alt="برجر هاوس" className="h-11 w-11 object-contain" />
             <div>
               <h1 className="font-bold">لوحة إدارة برجر هاوس</h1>
               <p className="text-xs text-white/40">مرحباً، {username}</p>
