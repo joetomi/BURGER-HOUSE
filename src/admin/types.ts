@@ -1,8 +1,6 @@
-export interface AdminMenuItem {
-  id: string;
-  nameAr: string;
-  nameEn: string;
-  price: number;
+import type { MenuItem } from "@/data/menu";
+
+export interface AdminMenuItem extends MenuItem {
   enabled: boolean;
 }
 

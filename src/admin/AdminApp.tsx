@@ -22,6 +22,7 @@ import type {
   AdminContentResponse,
   AdminMenuCategory,
   AdminMenuContent,
+  AdminMenuItem,
   AdminPromotion,
   AdminPromotionsContent,
 } from "./types";
@@ -195,12 +196,19 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
     onChange(categories.filter((category) => category.id !== selected.id));
   };
 
+  const updateItem = (id: string, patch: Partial<AdminMenuItem>) => {
+    if (!selected) return;
+    updateSelected({
+      items: selected.items.map((item) => item.id === id ? { ...item, ...patch } : item),
+    });
+  };
+
   const addMenuItem = () => {
     if (!selected) return;
     updateSelected({
       items: [
         ...selected.items,
-        { id: makeId("item"), nameAr: "صنف جديد", nameEn: "New Item", price: 0, enabled: true },
+        { id: makeId("item"), nameAr: "صنف جديد", nameEn: "New Item", price: 0, enabled: true, ingredientsVisible: false },
       ],
     });
   };
@@ -416,6 +424,42 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                           <Trash2 className="h-4 w-4" />
                         </button>
                       </div>
+                    </div>
+                    <div className="mt-3 border-t border-white/[0.07] pt-3">
+                      <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-white/70">
+                        <input
+                          type="checkbox"
+                          checked={item.ingredientsVisible === true}
+                          onChange={(event) => updateItem(item.id, { ingredientsVisible: event.target.checked })}
+                          className="accent-[#D4A017]"
+                        />
+                        إظهار المكونات
+                      </label>
+                      {item.ingredientsVisible && (
+                        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                          <label>
+                            <span className="mb-1 block text-xs text-white/50">المكونات بالعربية</span>
+                            <textarea
+                              className={inputClass}
+                              rows={2}
+                              maxLength={500}
+                              value={item.ingredientsAr ?? ""}
+                              onChange={(event) => updateItem(item.id, { ingredientsAr: event.target.value })}
+                            />
+                          </label>
+                          <label>
+                            <span className="mb-1 block text-xs text-white/50">المكونات بالإنجليزية</span>
+                            <textarea
+                              dir="ltr"
+                              className={inputClass}
+                              rows={2}
+                              maxLength={500}
+                              value={item.ingredientsEn ?? ""}
+                              onChange={(event) => updateItem(item.id, { ingredientsEn: event.target.value })}
+                            />
+                          </label>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}

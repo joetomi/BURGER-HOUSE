@@ -6,6 +6,9 @@ export interface MenuItem {
   nameEn: string;
   price: number;
   enabled?: boolean;
+  ingredientsVisible?: boolean;
+  ingredientsAr?: string;
+  ingredientsEn?: string;
 }
 
 export interface MenuCategory {

@@ -16,6 +16,11 @@ const cleanId = (value, label) => {
 
 const cleanEnabled = (value) => value !== false;
 
+const cleanIngredients = (value, label) => {
+  if (value == null || (typeof value === "string" && !value.trim())) return "";
+  return cleanText(value, label, 500);
+};
+
 const cleanMenuItem = (item) => {
   const price = Number(item?.price);
   if (!Number.isFinite(price) || price < 0 || price > 1000) throw new Error("سعر الصنف غير صالح.");
@@ -26,6 +31,9 @@ const cleanMenuItem = (item) => {
     nameEn: cleanText(item?.nameEn, "اسم الصنف بالإنجليزية"),
     price: Math.round(price * 100) / 100,
     enabled: cleanEnabled(item?.enabled),
+    ingredientsVisible: item?.ingredientsVisible === true,
+    ingredientsAr: cleanIngredients(item?.ingredientsAr, "المكونات بالعربية"),
+    ingredientsEn: cleanIngredients(item?.ingredientsEn, "المكونات بالإنجليزية"),
   };
 };
 
