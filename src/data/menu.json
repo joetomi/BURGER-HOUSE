@@ -359,7 +359,7 @@
           "id": "item-mwbz039h-ns1f",
           "nameAr": "كابتشينو",
           "nameEn": "Cappuccino",
-          "price": 8,
+          "price": 10,
           "enabled": true
         },
         {
@@ -644,7 +644,7 @@
           "id": "fr1",
           "nameAr": "موز",
           "nameEn": "Banana",
-          "price": 15,
+          "price": 16,
           "enabled": true
         },
         {
