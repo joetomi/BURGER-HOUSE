@@ -342,17 +342,17 @@
           "enabled": true
         },
         {
-          "id": "item-mwbz00ir-sn20",
-          "nameAr": "كورتادو",
-          "nameEn": "Cortado",
-          "price": 5,
-          "enabled": true
-        },
-        {
           "id": "item-mwbz02q2-lf8v",
           "nameAr": "أمريكانو",
           "nameEn": "Americano",
           "price": 5,
+          "enabled": true
+        },
+        {
+          "id": "item-mwbz00ir-sn20",
+          "nameAr": "كورتادو",
+          "nameEn": "Cortado",
+          "price": 6,
           "enabled": true
         },
         {
@@ -370,6 +370,13 @@
           "enabled": true
         },
         {
+          "id": "item-mwbz49jm-u6za",
+          "nameAr": "نسكافيه",
+          "nameEn": "Nescafé",
+          "price": 10,
+          "enabled": true
+        },
+        {
           "id": "item-mwbz48o5-c9sf",
           "nameAr": "كافي لاتيه",
           "nameEn": "Caffé Latte",
@@ -381,13 +388,6 @@
           "nameAr": "كراميل لاتيه",
           "nameEn": "Caramel Latte",
           "price": 14,
-          "enabled": true
-        },
-        {
-          "id": "item-mwbz49jm-u6za",
-          "nameAr": "نسكافيه",
-          "nameEn": "Nescafé",
-          "price": 0,
           "enabled": true
         },
         {
@@ -582,17 +582,17 @@
           "enabled": true
         },
         {
+          "id": "fj10",
+          "nameAr": "كركاديه",
+          "nameEn": "Roselle",
+          "price": 14,
+          "enabled": true
+        },
+        {
           "id": "fj4",
           "nameAr": "برتقال",
           "nameEn": "Orange",
           "price": 16,
-          "enabled": true
-        },
-        {
-          "id": "fj5",
-          "nameAr": "اناناس",
-          "nameEn": "Pineapple",
-          "price": 22,
           "enabled": true
         },
         {
@@ -610,6 +610,13 @@
           "enabled": true
         },
         {
+          "id": "fj5",
+          "nameAr": "اناناس",
+          "nameEn": "Pineapple",
+          "price": 22,
+          "enabled": true
+        },
+        {
           "id": "fj8",
           "nameAr": "يلو ميكس",
           "nameEn": "Yellow Mix",
@@ -621,13 +628,6 @@
           "nameAr": "ريد ميكس",
           "nameEn": "Red Mix",
           "price": 22,
-          "enabled": true
-        },
-        {
-          "id": "fj10",
-          "nameAr": "كركاديه",
-          "nameEn": "Roselle",
-          "price": 0,
           "enabled": true
         }
       ]
