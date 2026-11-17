@@ -5,113 +5,113 @@
       "image": "/hero-burger.png",
       "imageVisible": true,
       "id": "burgers",
-      "titleAr": "برجر",
+      "titleAr": "????",
       "titleEn": "Burgers",
       "enabled": true,
       "items": [
         {
           "id": "b1",
-          "nameAr": "كلاسيك برجر",
+          "nameAr": "?????? ????",
           "nameEn": "Classic Burger",
           "price": 20,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b5",
-          "nameAr": "تشيز برجر",
+          "nameAr": "???? ????",
           "nameEn": "Cheese Burger",
           "price": 24,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b4",
-          "nameAr": "عربي برجر",
+          "nameAr": "???? ????",
           "nameEn": "Arabic Burger",
           "price": 21,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b7",
-          "nameAr": "باربكيو برجر",
+          "nameAr": "??????? ????",
           "nameEn": "BBQ Burger",
           "price": 22,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b6",
-          "nameAr": "ماشروم برجر",
+          "nameAr": "?????? ????",
           "nameEn": "Mushroom Burger",
           "price": 22,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b10",
-          "nameAr": "سماش برجر",
+          "nameAr": "???? ????",
           "nameEn": "Smash Burger",
           "price": 23,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b13",
-          "nameAr": "فلات برجر",
+          "nameAr": "???? ????",
           "nameEn": "Flat Burger",
           "price": 21,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b11",
-          "nameAr": "تشيز ديب برجر",
+          "nameAr": "???? ??? ????",
           "nameEn": "Cheese Dip Burger",
           "price": 24,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "item-mwl1e57p-oxtq",
-          "nameAr": "بيف ستيك برجر",
+          "nameAr": "??? ???? ????",
           "nameEn": "Beef Steak Burger",
           "price": 28,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 12 دينار",
+          "ingredientsAr": "??? + 12 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b12",
-          "nameAr": "برايم برجر",
+          "nameAr": "????? ????",
           "nameEn": "Prime Burger",
           "price": 36,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 14 دينار",
+          "ingredientsAr": "??? + 14 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "item-mwl18d42-ceq7",
-          "nameAr": "ميني برجر",
+          "nameAr": "???? ????",
           "nameEn": "Mini Burger",
           "price": 35,
           "enabled": true,
@@ -121,42 +121,52 @@
         },
         {
           "id": "b2",
-          "nameAr": "تشكن برجر",
+          "nameAr": "???? ????",
           "nameEn": "Chicken Burger",
           "price": 18,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsAr": "??? + 6 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b3",
-          "nameAr": "زنجر برجر",
+          "nameAr": "???? ????",
           "nameEn": "Zinger Burger",
           "price": 21,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsAr": "??? + 6 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "b14",
-          "nameAr": "تشكن فيليه برجر",
+          "nameAr": "???? ????? ????",
           "nameEn": "Chicken Fillet Burger",
           "price": 21,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsAr": "??? + 6 ?????",
           "ingredientsEn": ""
         },
         {
           "id": "item-mwl18bnd-bw77",
-          "nameAr": "تشكن ستيك برجر",
+          "nameAr": "???? ???? ????",
           "nameEn": "Chicken Steak Burger",
           "price": 24,
           "enabled": true,
           "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsAr": "??? + 8 ?????",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "test-item-verification-auto",
+          "nameAr": "??? ?????? ??????",
+          "nameEn": "Test Verification Item",
+          "price": 1,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
           "ingredientsEn": ""
         }
       ]
@@ -165,13 +175,13 @@
       "image": "/category-wraps.png",
       "imageVisible": true,
       "id": "sandwiches",
-      "titleAr": "ساندوتشات راب",
+      "titleAr": "????????? ???",
       "titleEn": "Sandwiches & Wraps",
       "enabled": true,
       "items": [
         {
           "id": "s1",
-          "nameAr": "ساندوتش دجاج",
+          "nameAr": "??????? ????",
           "nameEn": "Chicken Sandwich",
           "price": 20,
           "enabled": true,
@@ -181,7 +191,7 @@
         },
         {
           "id": "s2",
-          "nameAr": "فاهيتا دجاج",
+          "nameAr": "?????? ????",
           "nameEn": "Chicken Fajita",
           "price": 12,
           "enabled": true,
@@ -191,7 +201,7 @@
         },
         {
           "id": "s3",
-          "nameAr": "مسحب",
+          "nameAr": "????",
           "nameEn": "Musahhab",
           "price": 14,
           "enabled": true,
@@ -201,7 +211,7 @@
         },
         {
           "id": "s4",
-          "nameAr": "تشيز ستيك",
+          "nameAr": "???? ????",
           "nameEn": "Cheese Steak",
           "price": 20,
           "enabled": true,
@@ -211,7 +221,7 @@
         },
         {
           "id": "s5",
-          "nameAr": "تشكن لودر",
+          "nameAr": "???? ????",
           "nameEn": "Chicken Loader",
           "price": 20,
           "enabled": true,
@@ -221,7 +231,7 @@
         },
         {
           "id": "s6",
-          "nameAr": "تشكن راب",
+          "nameAr": "???? ???",
           "nameEn": "Chicken Wrap",
           "price": 15,
           "enabled": true,
@@ -231,7 +241,7 @@
         },
         {
           "id": "s7",
-          "nameAr": "شيلي راب",
+          "nameAr": "???? ???",
           "nameEn": "Chili Wrap",
           "price": 20,
           "enabled": true,
@@ -241,7 +251,7 @@
         },
         {
           "id": "s8",
-          "nameAr": "زنجر راب",
+          "nameAr": "???? ???",
           "nameEn": "Zinger Wrap",
           "price": 14,
           "enabled": true,
@@ -251,7 +261,7 @@
         },
         {
           "id": "s9",
-          "nameAr": "كاساديا لحم",
+          "nameAr": "??????? ???",
           "nameEn": "Beef Quesadilla",
           "price": 22,
           "enabled": true,
@@ -261,7 +271,7 @@
         },
         {
           "id": "s10",
-          "nameAr": "تشكن دايت",
+          "nameAr": "???? ????",
           "nameEn": "Diet Chicken",
           "price": 12,
           "enabled": true,
@@ -275,13 +285,13 @@
       "image": "/category-meals.png",
       "imageVisible": true,
       "id": "meals",
-      "titleAr": "وجبات",
+      "titleAr": "?????",
       "titleEn": "Meals & Loaded Fries",
       "enabled": true,
       "items": [
         {
           "id": "m1",
-          "nameAr": "وجبة شيش طاووق",
+          "nameAr": "???? ??? ?????",
           "nameEn": "Shish Taouk Meal",
           "price": 27,
           "enabled": true,
@@ -291,7 +301,7 @@
         },
         {
           "id": "m2",
-          "nameAr": "وجبة تشكن فيليه",
+          "nameAr": "???? ???? ?????",
           "nameEn": "Chicken Fillet Meal",
           "price": 27,
           "enabled": true,
@@ -301,7 +311,7 @@
         },
         {
           "id": "m3",
-          "nameAr": "وجبة كفتة",
+          "nameAr": "???? ????",
           "nameEn": "Kofta Meal",
           "price": 30,
           "enabled": true,
@@ -311,7 +321,7 @@
         },
         {
           "id": "m4",
-          "nameAr": "وجبة مسحب",
+          "nameAr": "???? ????",
           "nameEn": "Musahhab Meal",
           "price": 30,
           "enabled": true,
@@ -321,7 +331,7 @@
         },
         {
           "id": "m5",
-          "nameAr": "تشيز فرايز",
+          "nameAr": "???? ?????",
           "nameEn": "Cheese Fries",
           "price": 25,
           "enabled": true,
@@ -331,7 +341,7 @@
         },
         {
           "id": "m6",
-          "nameAr": "تشكن تشيز فرايز",
+          "nameAr": "???? ???? ?????",
           "nameEn": "Chicken Cheese Fries",
           "price": 30,
           "enabled": true,
@@ -345,13 +355,13 @@
       "image": "/category-default.svg",
       "imageVisible": false,
       "id": "sides",
-      "titleAr": "المقبلات",
+      "titleAr": "????????",
       "titleEn": "Sides & Extras",
       "enabled": true,
       "items": [
         {
           "id": "sd1",
-          "nameAr": "بطاطا",
+          "nameAr": "?????",
           "nameEn": "Fries",
           "price": 4,
           "enabled": true,
@@ -361,7 +371,7 @@
         },
         {
           "id": "sd2",
-          "nameAr": "حلقات بصل",
+          "nameAr": "????? ???",
           "nameEn": "Onion Rings",
           "price": 5,
           "enabled": true,
@@ -371,7 +381,7 @@
         },
         {
           "id": "sd3",
-          "nameAr": "أصابع جبنة",
+          "nameAr": "????? ????",
           "nameEn": "Mozzarella Sticks",
           "price": 7,
           "enabled": true,
@@ -381,7 +391,7 @@
         },
         {
           "id": "sd4",
-          "nameAr": "صوص",
+          "nameAr": "???",
           "nameEn": "Sauce",
           "price": 2,
           "enabled": true,
@@ -395,13 +405,13 @@
       "image": "/category-default.svg",
       "imageVisible": false,
       "id": "drinks",
-      "titleAr": "المشروبات",
+      "titleAr": "?????????",
       "titleEn": "Beverages",
       "enabled": true,
       "items": [
         {
           "id": "d1",
-          "nameAr": "ماء",
+          "nameAr": "???",
           "nameEn": "Water",
           "price": 1,
           "enabled": true,
@@ -411,7 +421,7 @@
         },
         {
           "id": "d2",
-          "nameAr": "مشروب غازي",
+          "nameAr": "????? ????",
           "nameEn": "Soft Drink",
           "price": 3,
           "enabled": true,
@@ -421,7 +431,7 @@
         },
         {
           "id": "d3",
-          "nameAr": "عصير",
+          "nameAr": "????",
           "nameEn": "Juice",
           "price": 4,
           "enabled": true,
@@ -431,7 +441,7 @@
         },
         {
           "id": "d4",
-          "nameAr": "سن توب",
+          "nameAr": "?? ???",
           "nameEn": "Sun Top",
           "price": 3,
           "enabled": true,
@@ -447,13 +457,13 @@
       "image": "/categories/category-mw6tce3z-6ya3-1794135209465.webp",
       "imageVisible": true,
       "id": "category-mw6tce3z-6ya3",
-      "titleAr": "قهوة ساخنة",
+      "titleAr": "???? ?????",
       "titleEn": "HOT COFFEE",
       "enabled": true,
       "items": [
         {
           "id": "item-mw6tdz6e-npac",
-          "nameAr": "اسبريسو",
+          "nameAr": "???????",
           "nameEn": "Espresso",
           "price": 5,
           "enabled": true,
@@ -463,7 +473,7 @@
         },
         {
           "id": "item-mw6tf77h-h4fd",
-          "nameAr": "مكياتو",
+          "nameAr": "??????",
           "nameEn": "Macchiato",
           "price": 5,
           "enabled": true,
@@ -473,7 +483,7 @@
         },
         {
           "id": "item-mwbz02q2-lf8v",
-          "nameAr": "أمريكانو",
+          "nameAr": "????????",
           "nameEn": "Americano",
           "price": 5,
           "enabled": true,
@@ -483,7 +493,7 @@
         },
         {
           "id": "item-mwbz00ir-sn20",
-          "nameAr": "كورتادو",
+          "nameAr": "???????",
           "nameEn": "Cortado",
           "price": 6,
           "enabled": true,
@@ -493,7 +503,7 @@
         },
         {
           "id": "item-mwbz039h-ns1f",
-          "nameAr": "كابتشينو",
+          "nameAr": "????????",
           "nameEn": "Cappuccino",
           "price": 10,
           "enabled": true,
@@ -503,7 +513,7 @@
         },
         {
           "id": "item-mwbz47xp-e4s6",
-          "nameAr": "فلات وايت",
+          "nameAr": "???? ????",
           "nameEn": "Flat White",
           "price": 10,
           "enabled": true,
@@ -513,8 +523,8 @@
         },
         {
           "id": "item-mwbz49jm-u6za",
-          "nameAr": "نسكافيه",
-          "nameEn": "Nescafé",
+          "nameAr": "???????",
+          "nameEn": "Nescaf�",
           "price": 10,
           "enabled": true,
           "ingredientsVisible": false,
@@ -523,8 +533,8 @@
         },
         {
           "id": "item-mwbz48o5-c9sf",
-          "nameAr": "كافي لاتيه",
-          "nameEn": "Caffé Latte",
+          "nameAr": "???? ?????",
+          "nameEn": "Caff� Latte",
           "price": 12,
           "enabled": true,
           "ingredientsVisible": false,
@@ -533,7 +543,7 @@
         },
         {
           "id": "item-mwbz493w-qfx7",
-          "nameAr": "كراميل لاتيه",
+          "nameAr": "?????? ?????",
           "nameEn": "Caramel Latte",
           "price": 14,
           "enabled": true,
@@ -543,7 +553,7 @@
         },
         {
           "id": "item-mwbz49vn-le5z",
-          "nameAr": "هوت موكا",
+          "nameAr": "??? ????",
           "nameEn": "Hot Mocha",
           "price": 16,
           "enabled": true,
@@ -553,7 +563,7 @@
         },
         {
           "id": "item-mwbz4a86-48k8",
-          "nameAr": "هوت فرابتشينو",
+          "nameAr": "??? ?????????",
           "nameEn": "Hot Frappuccino",
           "price": 16,
           "enabled": true,
@@ -563,7 +573,7 @@
         },
         {
           "id": "item-mwbz4aib-bsuz",
-          "nameAr": "هوت سبانش لاتيه",
+          "nameAr": "??? ????? ?????",
           "nameEn": "Hot Spanish Latte",
           "price": 16,
           "enabled": true,
@@ -573,7 +583,7 @@
         },
         {
           "id": "item-mwbzg3jl-hazf",
-          "nameAr": "هوت شوكلت",
+          "nameAr": "??? ?????",
           "nameEn": "Hot Chocolate",
           "price": 18,
           "enabled": true,
@@ -583,7 +593,7 @@
         },
         {
           "id": "item-mwbzg3xg-jhpc",
-          "nameAr": "قهوة عربية",
+          "nameAr": "???? ?????",
           "nameEn": "Arabic Coffee",
           "price": 8,
           "enabled": true,
@@ -593,7 +603,7 @@
         },
         {
           "id": "item-mwbzg4cq-ast0",
-          "nameAr": "شاي",
+          "nameAr": "???",
           "nameEn": "Tea",
           "price": 5,
           "enabled": true,
@@ -607,13 +617,13 @@
       "image": "/categories/iced-coffee-1794135218841.webp",
       "imageVisible": true,
       "id": "iced-coffee",
-      "titleAr": "قهوة باردة",
+      "titleAr": "???? ?????",
       "titleEn": "ICED COFFEE",
       "enabled": true,
       "items": [
         {
           "id": "ic1",
-          "nameAr": "ايس امريكانو",
+          "nameAr": "??? ????????",
           "nameEn": "Iced Americano",
           "price": 10,
           "enabled": true,
@@ -623,7 +633,7 @@
         },
         {
           "id": "ic2",
-          "nameAr": "ايس شيكن اسبريسو",
+          "nameAr": "??? ???? ???????",
           "nameEn": "Iced Shaken Espresso",
           "price": 12,
           "enabled": true,
@@ -633,8 +643,8 @@
         },
         {
           "id": "ic3",
-          "nameAr": "ايس كافيه لاتيه",
-          "nameEn": "Iced Caffè Latte",
+          "nameAr": "??? ????? ?????",
+          "nameEn": "Iced Caff� Latte",
           "price": 15,
           "enabled": true,
           "ingredientsVisible": false,
@@ -643,7 +653,7 @@
         },
         {
           "id": "ic6",
-          "nameAr": "ايس سبانش لاتيه",
+          "nameAr": "??? ????? ?????",
           "nameEn": "Spanish Latte",
           "price": 15,
           "enabled": true,
@@ -653,7 +663,7 @@
         },
         {
           "id": "ic5",
-          "nameAr": "ايس فرابتشينو",
+          "nameAr": "??? ?????????",
           "nameEn": "Frappuccino",
           "price": 18,
           "enabled": true,
@@ -663,7 +673,7 @@
         },
         {
           "id": "ic4",
-          "nameAr": "ايس موكا",
+          "nameAr": "??? ????",
           "nameEn": "Iced Mocha",
           "price": 18,
           "enabled": true,
@@ -673,7 +683,7 @@
         },
         {
           "id": "ic7",
-          "nameAr": "أڤوكاتو",
+          "nameAr": "???????",
           "nameEn": "Affogato",
           "price": 18,
           "enabled": true,
@@ -683,7 +693,7 @@
         },
         {
           "id": "ic8",
-          "nameAr": "أڤوكاتو تويست",
+          "nameAr": "??????? ?????",
           "nameEn": "Affogato Twist",
           "price": 20,
           "enabled": true,
@@ -693,7 +703,7 @@
         },
         {
           "id": "ic9",
-          "nameAr": "بليند ايس كافيه",
+          "nameAr": "????? ??? ?????",
           "nameEn": "Blended Iced Coffee",
           "price": 20,
           "enabled": true,
@@ -707,13 +717,13 @@
       "image": "/categories/iced-tea-1794135227041.webp",
       "imageVisible": true,
       "id": "iced-tea",
-      "titleAr": "شاي مثلج",
+      "titleAr": "??? ????",
       "titleEn": "ICED TEA",
       "enabled": true,
       "items": [
         {
           "id": "it1",
-          "nameAr": "كلاسيك",
+          "nameAr": "??????",
           "nameEn": "Classic",
           "price": 15,
           "enabled": true,
@@ -723,7 +733,7 @@
         },
         {
           "id": "it2",
-          "nameAr": "خوخ",
+          "nameAr": "???",
           "nameEn": "Peach",
           "price": 15,
           "enabled": true,
@@ -733,7 +743,7 @@
         },
         {
           "id": "it3",
-          "nameAr": "باشن فروت",
+          "nameAr": "???? ????",
           "nameEn": "Passion Fruit",
           "price": 15,
           "enabled": true,
@@ -743,7 +753,7 @@
         },
         {
           "id": "it4",
-          "nameAr": "مانجو",
+          "nameAr": "?????",
           "nameEn": "Mango",
           "price": 15,
           "enabled": true,
@@ -753,7 +763,7 @@
         },
         {
           "id": "it5",
-          "nameAr": "كركاديه",
+          "nameAr": "???????",
           "nameEn": "Roselle",
           "price": 15,
           "enabled": true,
@@ -767,13 +777,13 @@
       "image": "/categories/fresh-juices-1794134491961.webp",
       "imageVisible": true,
       "id": "fresh-juices",
-      "titleAr": "عصائر طبيعية",
+      "titleAr": "????? ??????",
       "titleEn": "FRESH JUICES",
       "enabled": true,
       "items": [
         {
           "id": "fj1",
-          "nameAr": "فراولة",
+          "nameAr": "??????",
           "nameEn": "Strawberry",
           "price": 14,
           "enabled": true,
@@ -783,7 +793,7 @@
         },
         {
           "id": "fj2",
-          "nameAr": "مانجا",
+          "nameAr": "?????",
           "nameEn": "Mango",
           "price": 15,
           "enabled": true,
@@ -793,7 +803,7 @@
         },
         {
           "id": "fj3",
-          "nameAr": "كوكتيل",
+          "nameAr": "??????",
           "nameEn": "Cocktail",
           "price": 16,
           "enabled": true,
@@ -803,7 +813,7 @@
         },
         {
           "id": "fj10",
-          "nameAr": "كركاديه",
+          "nameAr": "???????",
           "nameEn": "Roselle",
           "price": 14,
           "enabled": true,
@@ -813,7 +823,7 @@
         },
         {
           "id": "fj4",
-          "nameAr": "برتقال",
+          "nameAr": "??????",
           "nameEn": "Orange",
           "price": 16,
           "enabled": true,
@@ -823,7 +833,7 @@
         },
         {
           "id": "fj6",
-          "nameAr": "ليمون ونعناع",
+          "nameAr": "????? ??????",
           "nameEn": "Lemon & Mint",
           "price": 16,
           "enabled": true,
@@ -833,7 +843,7 @@
         },
         {
           "id": "fj7",
-          "nameAr": "كيوي",
+          "nameAr": "????",
           "nameEn": "Kiwi",
           "price": 20,
           "enabled": true,
@@ -843,7 +853,7 @@
         },
         {
           "id": "fj5",
-          "nameAr": "اناناس",
+          "nameAr": "??????",
           "nameEn": "Pineapple",
           "price": 22,
           "enabled": true,
@@ -853,7 +863,7 @@
         },
         {
           "id": "fj8",
-          "nameAr": "يلو ميكس",
+          "nameAr": "??? ????",
           "nameEn": "Yellow Mix",
           "price": 22,
           "enabled": true,
@@ -863,7 +873,7 @@
         },
         {
           "id": "fj9",
-          "nameAr": "ريد ميكس",
+          "nameAr": "??? ????",
           "nameEn": "Red Mix",
           "price": 22,
           "enabled": true,
@@ -877,13 +887,13 @@
       "image": "/categories/froppe-1794135234225.webp",
       "imageVisible": true,
       "id": "froppe",
-      "titleAr": "فروبي",
-      "titleEn": "FROPPÉ",
+      "titleAr": "?????",
+      "titleEn": "FROPP�",
       "enabled": true,
       "items": [
         {
           "id": "fr1",
-          "nameAr": "موز",
+          "nameAr": "???",
           "nameEn": "Banana",
           "price": 16,
           "enabled": true,
@@ -893,7 +903,7 @@
         },
         {
           "id": "fr2",
-          "nameAr": "فراولة",
+          "nameAr": "??????",
           "nameEn": "Strawberry",
           "price": 16,
           "enabled": true,
@@ -903,7 +913,7 @@
         },
         {
           "id": "fr3",
-          "nameAr": "مانجا",
+          "nameAr": "?????",
           "nameEn": "Mango",
           "price": 16,
           "enabled": true,
@@ -913,7 +923,7 @@
         },
         {
           "id": "fr4",
-          "nameAr": "كوكتيل",
+          "nameAr": "??????",
           "nameEn": "Cocktail",
           "price": 18,
           "enabled": true,
@@ -923,7 +933,7 @@
         },
         {
           "id": "fr5",
-          "nameAr": "غرين بليرز",
+          "nameAr": "???? ?????",
           "nameEn": "Green Blazers",
           "price": 22,
           "enabled": true,
@@ -937,13 +947,13 @@
       "image": "/categories/mojito-1794135240899.webp",
       "imageVisible": true,
       "id": "mojito",
-      "titleAr": "موخيتو",
+      "titleAr": "??????",
       "titleEn": "MOJITO",
       "enabled": true,
       "items": [
         {
           "id": "mj1",
-          "nameAr": "كلاسيك",
+          "nameAr": "??????",
           "nameEn": "Classic",
           "price": 20,
           "enabled": true,
@@ -953,7 +963,7 @@
         },
         {
           "id": "mj2",
-          "nameAr": "بلو",
+          "nameAr": "???",
           "nameEn": "Blue",
           "price": 20,
           "enabled": true,
@@ -963,7 +973,7 @@
         },
         {
           "id": "mj3",
-          "nameAr": "رمان",
+          "nameAr": "????",
           "nameEn": "Pomegranate",
           "price": 20,
           "enabled": true,
@@ -973,7 +983,7 @@
         },
         {
           "id": "mj4",
-          "nameAr": "باشن فروت",
+          "nameAr": "???? ????",
           "nameEn": "Passion Fruit",
           "price": 20,
           "enabled": true,
@@ -983,7 +993,7 @@
         },
         {
           "id": "mj5",
-          "nameAr": "بلوبيري",
+          "nameAr": "???????",
           "nameEn": "Blueberry",
           "price": 20,
           "enabled": true,
@@ -993,7 +1003,7 @@
         },
         {
           "id": "mj6",
-          "nameAr": "فراولة",
+          "nameAr": "??????",
           "nameEn": "Strawberry",
           "price": 20,
           "enabled": true,
@@ -1003,7 +1013,7 @@
         },
         {
           "id": "mj7",
-          "nameAr": "اناناس",
+          "nameAr": "??????",
           "nameEn": "Pineapple",
           "price": 20,
           "enabled": true,
@@ -1013,7 +1023,7 @@
         },
         {
           "id": "mj8",
-          "nameAr": "كركاديه",
+          "nameAr": "???????",
           "nameEn": "Roselle",
           "price": 20,
           "enabled": true,
@@ -1027,13 +1037,13 @@
       "image": "/categories/smoothies-1794135247777.webp",
       "imageVisible": true,
       "id": "smoothies",
-      "titleAr": "سموثي",
+      "titleAr": "?????",
       "titleEn": "SMOOTHIES",
       "enabled": true,
       "items": [
         {
           "id": "sm1",
-          "nameAr": "كوكنت",
+          "nameAr": "?????",
           "nameEn": "Coconut",
           "price": 24,
           "enabled": true,
@@ -1043,7 +1053,7 @@
         },
         {
           "id": "sm2",
-          "nameAr": "باشن مانجو",
+          "nameAr": "???? ?????",
           "nameEn": "Passion Mango",
           "price": 24,
           "enabled": true,
@@ -1053,7 +1063,7 @@
         },
         {
           "id": "sm3",
-          "nameAr": "غرين",
+          "nameAr": "????",
           "nameEn": "Green",
           "price": 24,
           "enabled": true,
@@ -1063,7 +1073,7 @@
         },
         {
           "id": "sm4",
-          "nameAr": "تروبيكال",
+          "nameAr": "????????",
           "nameEn": "Tropical",
           "price": 24,
           "enabled": true,
@@ -1077,13 +1087,13 @@
       "image": "/categories/milkshakes-1794135255795.webp",
       "imageVisible": true,
       "id": "milkshakes",
-      "titleAr": "ميلك شيك",
+      "titleAr": "???? ???",
       "titleEn": "MILKSHAKES",
       "enabled": true,
       "items": [
         {
           "id": "ms1",
-          "nameAr": "فانيليا",
+          "nameAr": "???????",
           "nameEn": "Vanilla",
           "price": 20,
           "enabled": true,
@@ -1093,7 +1103,7 @@
         },
         {
           "id": "ms2",
-          "nameAr": "شوكلت",
+          "nameAr": "?????",
           "nameEn": "Chocolate",
           "price": 20,
           "enabled": true,
@@ -1103,7 +1113,7 @@
         },
         {
           "id": "ms3",
-          "nameAr": "بستاشيو",
+          "nameAr": "???????",
           "nameEn": "Pistachio",
           "price": 20,
           "enabled": true,
@@ -1113,7 +1123,7 @@
         },
         {
           "id": "ms4",
-          "nameAr": "كراميل",
+          "nameAr": "??????",
           "nameEn": "Caramel",
           "price": 20,
           "enabled": true,
@@ -1123,7 +1133,7 @@
         },
         {
           "id": "ms5",
-          "nameAr": "كندر",
+          "nameAr": "????",
           "nameEn": "Kinder",
           "price": 24,
           "enabled": true,
@@ -1133,7 +1143,7 @@
         },
         {
           "id": "ms6",
-          "nameAr": "فراولة",
+          "nameAr": "??????",
           "nameEn": "Strawberry",
           "price": 20,
           "enabled": true,
@@ -1143,7 +1153,7 @@
         },
         {
           "id": "ms7",
-          "nameAr": "مانجا",
+          "nameAr": "?????",
           "nameEn": "Mango",
           "price": 20,
           "enabled": true,
@@ -1153,7 +1163,7 @@
         },
         {
           "id": "ms8",
-          "nameAr": "بلوبيري",
+          "nameAr": "???????",
           "nameEn": "Blueberry",
           "price": 20,
           "enabled": true,
@@ -1163,7 +1173,7 @@
         },
         {
           "id": "ms9",
-          "nameAr": "يلو ميكس",
+          "nameAr": "??? ????",
           "nameEn": "Yellow Mix",
           "price": 22,
           "enabled": true,
@@ -1173,7 +1183,7 @@
         },
         {
           "id": "ms10",
-          "nameAr": "ريد ميكس",
+          "nameAr": "??? ????",
           "nameEn": "Red Mix",
           "price": 22,
           "enabled": true,
@@ -1187,13 +1197,13 @@
       "image": "/categories/water-soft-drinks-1794135263518.webp",
       "imageVisible": true,
       "id": "water-soft-drinks",
-      "titleAr": "مشروبات ومياه",
+      "titleAr": "??????? ?????",
       "titleEn": "WATER & SOFT DRINKS",
       "enabled": true,
       "items": [
         {
           "id": "ws1",
-          "nameAr": "ماء",
+          "nameAr": "???",
           "nameEn": "Still Water",
           "price": 3,
           "enabled": true,
@@ -1203,7 +1213,7 @@
         },
         {
           "id": "ws2",
-          "nameAr": "ماء غازي",
+          "nameAr": "??? ????",
           "nameEn": "Sparkling Water",
           "price": 6,
           "enabled": true,
@@ -1213,7 +1223,7 @@
         },
         {
           "id": "ws3",
-          "nameAr": "مشروب غازي",
+          "nameAr": "????? ????",
           "nameEn": "Soft Drinks",
           "price": 6,
           "enabled": true,
