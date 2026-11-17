@@ -13,99 +13,151 @@
           "id": "b1",
           "nameAr": "كلاسيك برجر",
           "nameEn": "Classic Burger",
-          "price": 12,
-          "enabled": true
-        },
-        {
-          "id": "b2",
-          "nameAr": "تشكن برجر",
-          "nameEn": "Chicken Burger",
-          "price": 11,
-          "enabled": true
-        },
-        {
-          "id": "b3",
-          "nameAr": "زنجر برجر",
-          "nameEn": "Zinger Burger",
-          "price": 12,
-          "enabled": true
-        },
-        {
-          "id": "b4",
-          "nameAr": "عربي برجر",
-          "nameEn": "Arabi Burger",
-          "price": 14,
-          "enabled": true
+          "price": 20,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
           "id": "b5",
           "nameAr": "تشيز برجر",
           "nameEn": "Cheese Burger",
-          "price": 15,
-          "enabled": true
+          "price": 24,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
-          "id": "b6",
-          "nameAr": "هالبينو برجر",
-          "nameEn": "Jalapeno Burger",
-          "price": 13,
-          "enabled": true
+          "id": "b4",
+          "nameAr": "عربي برجر",
+          "nameEn": "Arabic Burger",
+          "price": 21,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
           "id": "b7",
           "nameAr": "باربكيو برجر",
           "nameEn": "BBQ Burger",
-          "price": 14,
-          "enabled": true
+          "price": 22,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
-          "id": "b8",
-          "nameAr": "ستيك لحم برجر",
-          "nameEn": "Beef Steak Burger",
-          "price": 17,
-          "enabled": true
-        },
-        {
-          "id": "b9",
-          "nameAr": "ستيك دجاج برجر",
-          "nameEn": "Chicken Steak Burger",
-          "price": 16,
-          "enabled": true
+          "id": "b6",
+          "nameAr": "ماشروم برجر",
+          "nameEn": "Mushroom Burger",
+          "price": 22,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
           "id": "b10",
-          "nameAr": "شرمب برجر",
-          "nameEn": "Shrimp Burger",
-          "price": 18,
-          "enabled": true
-        },
-        {
-          "id": "b11",
-          "nameAr": "شوفان لحم برجر",
-          "nameEn": "Oat Beef Burger",
-          "price": 13,
-          "enabled": true
-        },
-        {
-          "id": "b12",
-          "nameAr": "شوفان دجاج برجر",
-          "nameEn": "Oat Chicken Burger",
-          "price": 12,
-          "enabled": true
+          "nameAr": "سماش برجر",
+          "nameEn": "Smash Burger",
+          "price": 23,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         },
         {
           "id": "b13",
           "nameAr": "فلات برجر",
           "nameEn": "Flat Burger",
-          "price": 11,
-          "enabled": true
+          "price": 21,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "b11",
+          "nameAr": "تشيز ديب برجر",
+          "nameEn": "Cheese Dip Burger",
+          "price": 24,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwl1e57p-oxtq",
+          "nameAr": "بيف ستيك برجر",
+          "nameEn": "Beef Steak Burger",
+          "price": 28,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 12 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "b12",
+          "nameAr": "برايم برجر",
+          "nameEn": "Prime Burger",
+          "price": 36,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 14 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwl18d42-ceq7",
+          "nameAr": "ميني برجر",
+          "nameEn": "Mini Burger",
+          "price": 35,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "b2",
+          "nameAr": "تشكن برجر",
+          "nameEn": "Chicken Burger",
+          "price": 18,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "b3",
+          "nameAr": "زنجر برجر",
+          "nameEn": "Zinger Burger",
+          "price": 21,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsEn": ""
         },
         {
           "id": "b14",
           "nameAr": "تشكن فيليه برجر",
           "nameEn": "Chicken Fillet Burger",
-          "price": 13,
-          "enabled": true
+          "price": 21,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 6 دينار",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwl18bnd-bw77",
+          "nameAr": "تشكن ستيك برجر",
+          "nameEn": "Chicken Steak Burger",
+          "price": 24,
+          "enabled": true,
+          "ingredientsVisible": true,
+          "ingredientsAr": "دبل + 8 دينار",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -122,70 +174,100 @@
           "nameAr": "ساندوتش دجاج",
           "nameEn": "Chicken Sandwich",
           "price": 13,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s2",
           "nameAr": "فاهيتا دجاج",
           "nameEn": "Chicken Fajita",
           "price": 12,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s3",
           "nameAr": "مسحب",
           "nameEn": "Musahhab",
           "price": 14,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s4",
           "nameAr": "تشيز ستيك",
           "nameEn": "Cheese Steak",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s5",
           "nameAr": "تشكن لودر",
           "nameEn": "Chicken Loader",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s6",
           "nameAr": "تشكن راب",
           "nameEn": "Chicken Wrap",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s7",
           "nameAr": "شيلي راب",
           "nameEn": "Chili Wrap",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s8",
           "nameAr": "زنجر راب",
           "nameEn": "Zinger Wrap",
           "price": 14,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s9",
           "nameAr": "كاساديا لحم",
           "nameEn": "Beef Quesadilla",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "s10",
           "nameAr": "تشكن دايت",
           "nameEn": "Diet Chicken",
           "price": 12,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -202,42 +284,60 @@
           "nameAr": "وجبة شيش طاووق",
           "nameEn": "Shish Taouk Meal",
           "price": 27,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "m2",
           "nameAr": "وجبة تشكن فيليه",
           "nameEn": "Chicken Fillet Meal",
           "price": 27,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "m3",
           "nameAr": "وجبة كفتة",
           "nameEn": "Kofta Meal",
           "price": 30,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "m4",
           "nameAr": "وجبة مسحب",
           "nameEn": "Musahhab Meal",
           "price": 30,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "m5",
           "nameAr": "تشيز فرايز",
           "nameEn": "Cheese Fries",
           "price": 25,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "m6",
           "nameAr": "تشكن تشيز فرايز",
           "nameEn": "Chicken Cheese Fries",
           "price": 30,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -254,28 +354,40 @@
           "nameAr": "بطاطا",
           "nameEn": "Fries",
           "price": 4,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sd2",
           "nameAr": "حلقات بصل",
           "nameEn": "Onion Rings",
           "price": 5,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sd3",
           "nameAr": "أصابع جبنة",
           "nameEn": "Mozzarella Sticks",
           "price": 7,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sd4",
           "nameAr": "صوص",
           "nameEn": "Sauce",
           "price": 2,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -292,28 +404,40 @@
           "nameAr": "ماء",
           "nameEn": "Water",
           "price": 1,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "d2",
           "nameAr": "مشروب غازي",
           "nameEn": "Soft Drink",
           "price": 3,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "d3",
           "nameAr": "عصير",
           "nameEn": "Juice",
           "price": 4,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "d4",
           "nameAr": "سن توب",
           "nameEn": "Sun Top",
           "price": 3,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     }
@@ -332,105 +456,150 @@
           "nameAr": "اسبريسو",
           "nameEn": "Espresso",
           "price": 5,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mw6tf77h-h4fd",
           "nameAr": "مكياتو",
           "nameEn": "Macchiato",
           "price": 5,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz02q2-lf8v",
           "nameAr": "أمريكانو",
           "nameEn": "Americano",
           "price": 5,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz00ir-sn20",
           "nameAr": "كورتادو",
           "nameEn": "Cortado",
           "price": 6,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz039h-ns1f",
           "nameAr": "كابتشينو",
           "nameEn": "Cappuccino",
           "price": 10,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz47xp-e4s6",
           "nameAr": "فلات وايت",
           "nameEn": "Flat White",
           "price": 10,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz49jm-u6za",
           "nameAr": "نسكافيه",
           "nameEn": "Nescafé",
           "price": 10,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz48o5-c9sf",
           "nameAr": "كافي لاتيه",
           "nameEn": "Caffé Latte",
           "price": 12,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz493w-qfx7",
           "nameAr": "كراميل لاتيه",
           "nameEn": "Caramel Latte",
           "price": 14,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz49vn-le5z",
           "nameAr": "هوت موكا",
           "nameEn": "Hot Mocha",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz4a86-48k8",
           "nameAr": "هوت فرابتشينو",
           "nameEn": "Hot Frappuccino",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbz4aib-bsuz",
           "nameAr": "هوت سبانش لاتيه",
           "nameEn": "Hot Spanish Latte",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbzg3jl-hazf",
           "nameAr": "هوت شوكلت",
           "nameEn": "Hot Chocolate",
           "price": 18,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbzg3xg-jhpc",
           "nameAr": "قهوة عربية",
           "nameEn": "Arabic Coffee",
           "price": 8,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "item-mwbzg4cq-ast0",
           "nameAr": "شاي",
           "nameEn": "Tea",
           "price": 5,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -447,63 +616,90 @@
           "nameAr": "ايس امريكانو",
           "nameEn": "Iced Americano",
           "price": 10,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic2",
           "nameAr": "ايس شيكن اسبريسو",
           "nameEn": "Iced Shaken Espresso",
           "price": 12,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic3",
           "nameAr": "ايس كافيه لاتيه",
           "nameEn": "Iced Caffè Latte",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic6",
           "nameAr": "ايس سبانش لاتيه",
           "nameEn": "Spanish Latte",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic5",
           "nameAr": "ايس فرابتشينو",
           "nameEn": "Frappuccino",
           "price": 18,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic4",
           "nameAr": "ايس موكا",
           "nameEn": "Iced Mocha",
           "price": 18,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic7",
           "nameAr": "أڤوكاتو",
           "nameEn": "Affogato",
           "price": 18,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic8",
           "nameAr": "أڤوكاتو تويست",
           "nameEn": "Affogato Twist",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ic9",
           "nameAr": "بليند ايس كافيه",
           "nameEn": "Blended Iced Coffee",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -520,35 +716,50 @@
           "nameAr": "كلاسيك",
           "nameEn": "Classic",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "it2",
           "nameAr": "خوخ",
           "nameEn": "Peach",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "it3",
           "nameAr": "باشن فروت",
           "nameEn": "Passion Fruit",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "it4",
           "nameAr": "مانجو",
           "nameEn": "Mango",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "it5",
           "nameAr": "كركاديه",
           "nameEn": "Roselle",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -565,70 +776,100 @@
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 14,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj2",
           "nameAr": "مانجا",
           "nameEn": "Mango",
           "price": 15,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj3",
           "nameAr": "كوكتيل",
           "nameEn": "Cocktail",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj10",
           "nameAr": "كركاديه",
           "nameEn": "Roselle",
           "price": 14,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj4",
           "nameAr": "برتقال",
           "nameEn": "Orange",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj6",
           "nameAr": "ليمون ونعناع",
           "nameEn": "Lemon & Mint",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj7",
           "nameAr": "كيوي",
           "nameEn": "Kiwi",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj5",
           "nameAr": "اناناس",
           "nameEn": "Pineapple",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj8",
           "nameAr": "يلو ميكس",
           "nameEn": "Yellow Mix",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fj9",
           "nameAr": "ريد ميكس",
           "nameEn": "Red Mix",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -645,35 +886,50 @@
           "nameAr": "موز",
           "nameEn": "Banana",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fr2",
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fr3",
           "nameAr": "مانجا",
           "nameEn": "Mango",
           "price": 16,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fr4",
           "nameAr": "كوكتيل",
           "nameEn": "Cocktail",
           "price": 18,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "fr5",
           "nameAr": "غرين بليرز",
           "nameEn": "Green Blazers",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -690,56 +946,80 @@
           "nameAr": "كلاسيك",
           "nameEn": "Classic",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj2",
           "nameAr": "بلو",
           "nameEn": "Blue",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj3",
           "nameAr": "رمان",
           "nameEn": "Pomegranate",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj4",
           "nameAr": "باشن فروت",
           "nameEn": "Passion Fruit",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj5",
           "nameAr": "بلوبيري",
           "nameEn": "Blueberry",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj6",
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj7",
           "nameAr": "اناناس",
           "nameEn": "Pineapple",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "mj8",
           "nameAr": "كركاديه",
           "nameEn": "Roselle",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -756,28 +1036,40 @@
           "nameAr": "كوكنت",
           "nameEn": "Coconut",
           "price": 24,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sm2",
           "nameAr": "باشن مانجو",
           "nameEn": "Passion Mango",
           "price": 24,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sm3",
           "nameAr": "غرين",
           "nameEn": "Green",
           "price": 24,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "sm4",
           "nameAr": "تروبيكال",
           "nameEn": "Tropical",
           "price": 24,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -794,70 +1086,100 @@
           "nameAr": "فانيليا",
           "nameEn": "Vanilla",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms2",
           "nameAr": "شوكلت",
           "nameEn": "Chocolate",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms3",
           "nameAr": "بستاشيو",
           "nameEn": "Pistachio",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms4",
           "nameAr": "كراميل",
           "nameEn": "Caramel",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms5",
           "nameAr": "كندر",
           "nameEn": "Kinder",
           "price": 24,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms6",
           "nameAr": "فراولة",
           "nameEn": "Strawberry",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms7",
           "nameAr": "مانجا",
           "nameEn": "Mango",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms8",
           "nameAr": "بلوبيري",
           "nameEn": "Blueberry",
           "price": 20,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms9",
           "nameAr": "يلو ميكس",
           "nameEn": "Yellow Mix",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ms10",
           "nameAr": "ريد ميكس",
           "nameEn": "Red Mix",
           "price": 22,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     },
@@ -874,21 +1196,30 @@
           "nameAr": "ماء",
           "nameEn": "Still Water",
           "price": 3,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ws2",
           "nameAr": "ماء غازي",
           "nameEn": "Sparkling Water",
           "price": 6,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
           "id": "ws3",
           "nameAr": "مشروب غازي",
           "nameEn": "Soft Drinks",
           "price": 6,
-          "enabled": true
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         }
       ]
     }
