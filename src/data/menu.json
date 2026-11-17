@@ -158,16 +158,6 @@
           "ingredientsVisible": true,
           "ingredientsAr": "??? + 8 ?????",
           "ingredientsEn": ""
-        },
-        {
-          "id": "test-item-verification-auto",
-          "nameAr": "??? ?????? ??????",
-          "nameEn": "Test Verification Item",
-          "price": 1,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": ""
         }
       ]
     },
@@ -524,7 +514,7 @@
         {
           "id": "item-mwbz49jm-u6za",
           "nameAr": "???????",
-          "nameEn": "Nescaf�",
+          "nameEn": "Nescaf?",
           "price": 10,
           "enabled": true,
           "ingredientsVisible": false,
@@ -534,7 +524,7 @@
         {
           "id": "item-mwbz48o5-c9sf",
           "nameAr": "???? ?????",
-          "nameEn": "Caff� Latte",
+          "nameEn": "Caff? Latte",
           "price": 12,
           "enabled": true,
           "ingredientsVisible": false,
@@ -644,7 +634,7 @@
         {
           "id": "ic3",
           "nameAr": "??? ????? ?????",
-          "nameEn": "Iced Caff� Latte",
+          "nameEn": "Iced Caff? Latte",
           "price": 15,
           "enabled": true,
           "ingredientsVisible": false,
@@ -888,7 +878,7 @@
       "imageVisible": true,
       "id": "froppe",
       "titleAr": "?????",
-      "titleEn": "FROPP�",
+      "titleEn": "FROPP?",
       "enabled": true,
       "items": [
         {
