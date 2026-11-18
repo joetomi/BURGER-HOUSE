@@ -123,12 +123,21 @@ export const publishAdminContent = async ({ baseSha, menu, promotions, images = 
     }),
   });
 
+  const now = new Date().toISOString();
+  const commitAuthor = {
+    name: process.env.GIT_COMMITTER_NAME || "joetomi1",
+    email: process.env.GIT_COMMITTER_EMAIL || "monemnetflix@gmail.com",
+    date: now,
+  };
+
   const commit = await githubRequest(repoPath("/git/commits"), {
     method: "POST",
     body: JSON.stringify({
       message: "Update menu content from Burger House Admin",
       tree: tree.sha,
       parents: [current.commitSha],
+      author: commitAuthor,
+      committer: commitAuthor,
     }),
   });
 
