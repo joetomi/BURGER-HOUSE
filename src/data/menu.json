@@ -470,10 +470,20 @@
           "ingredientsEn": ""
         },
         {
+          "id": "item-mwmksn3e-pyb8",
+          "nameAr": "سناك ستريبس",
+          "nameEn": "Snack Strips",
+          "price": 28,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
           "id": "sd4",
           "nameAr": "أصابع جبنة",
           "nameEn": "Mozzarella Sticks",
-          "price": 19,
+          "price": 22,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -488,12 +498,42 @@
           "ingredientsVisible": false,
           "ingredientsAr": "",
           "ingredientsEn": ""
+        }
+      ]
+    },
+    {
+      "image": "/category-default.svg",
+      "imageVisible": true,
+      "id": "category-mwmm34n6-p68c",
+      "titleAr": "سلطات",
+      "titleEn": "Salads",
+      "enabled": true,
+      "items": [
+        {
+          "id": "item-mwmm3mwp-p6cq",
+          "nameAr": "طحينة",
+          "nameEn": "Tahini",
+          "price": 10,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
         },
         {
-          "id": "item-mwmksn3e-pyb8",
-          "nameAr": "سناك ستريبس",
-          "nameEn": "Snack Strips",
-          "price": 24,
+          "id": "item-mwmm4ddc-e3pm",
+          "nameAr": "بابا غنوج",
+          "nameEn": "Baba Ghanoush",
+          "price": 12,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwmm4e0v-bcf0",
+          "nameAr": "كولسلو",
+          "nameEn": "Coleslaw",
+          "price": 12,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
