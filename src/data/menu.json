@@ -20,8 +20,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 20 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 28 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 20
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 28
+            }
           ]
         },
         {
@@ -35,8 +43,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 24
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 32
+            }
           ]
         },
         {
@@ -50,8 +66,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 29 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 21
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 29
+            }
           ]
         },
         {
@@ -65,8 +89,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 22 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 30 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 22
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 30
+            }
           ]
         },
         {
@@ -80,8 +112,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 22 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 30 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 22
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 30
+            }
           ]
         },
         {
@@ -95,8 +135,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 23 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 31 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 23
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 31
+            }
           ]
         },
         {
@@ -110,8 +158,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 29 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 21
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 29
+            }
           ]
         },
         {
@@ -125,8 +181,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 24
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 32
+            }
           ]
         },
         {
@@ -140,8 +204,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 28 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 40 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 28
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 40
+            }
           ]
         },
         {
@@ -155,8 +227,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 36 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 50 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 36
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 50
+            }
           ]
         },
         {
@@ -167,7 +247,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "b2",
@@ -180,8 +262,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 18 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 24 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 18
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 24
+            }
           ]
         },
         {
@@ -195,8 +285,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 27 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 21
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 27
+            }
           ]
         },
         {
@@ -210,8 +308,16 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 27 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 21
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 27
+            }
           ]
         },
         {
@@ -225,15 +331,23 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
-            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+            {
+              "nameAr": "عادي",
+              "nameEn": "Single",
+              "price": 24
+            },
+            {
+              "nameAr": "دبل",
+              "nameEn": "Double",
+              "price": 32
+            }
           ]
         }
       ]
     },
     {
       "image": "/category-default.svg",
-      "imageVisible": true,
+      "imageVisible": false,
       "id": "category-mwmiycnh-z67k",
       "titleAr": "ساندوتشات",
       "titleEn": "SANDWICHES",
@@ -247,7 +361,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmj0ijj-wlst",
@@ -257,7 +373,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmj2oci-3m6i",
@@ -267,7 +385,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmjfu96-ggon",
@@ -277,7 +397,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmjfutj-01ip",
@@ -287,7 +409,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmjfv8c-i4f4",
@@ -297,7 +421,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmjfvkv-qvrv",
@@ -307,7 +433,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -327,7 +455,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s2",
@@ -337,7 +467,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s3",
@@ -347,7 +479,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s4",
@@ -357,7 +491,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s5",
@@ -367,7 +503,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s6",
@@ -377,7 +515,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s7",
@@ -387,7 +527,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s8",
@@ -397,7 +539,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s9",
@@ -407,7 +551,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "s10",
@@ -417,7 +563,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -437,7 +585,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "m1",
@@ -447,7 +597,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "m4",
@@ -457,7 +609,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmjqgqx-wguu",
@@ -467,7 +621,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "m3",
@@ -477,7 +633,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmk560h-tmlo",
@@ -487,7 +645,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "m2",
@@ -497,7 +657,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -517,7 +679,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sd4",
@@ -527,7 +691,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmksn3e-pyb8",
@@ -537,7 +703,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sd1",
@@ -547,7 +715,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sd2",
@@ -557,7 +727,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sd3",
@@ -567,13 +739,15 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
     {
       "image": "/category-default.svg",
-      "imageVisible": true,
+      "imageVisible": false,
       "id": "category-mwmm34n6-p68c",
       "titleAr": "سلطات",
       "titleEn": "Salads",
@@ -587,7 +761,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmm4ddc-e3pm",
@@ -597,7 +773,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwmm4e0v-bcf0",
@@ -607,13 +785,15 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
     {
       "image": "/category-default.svg",
-      "imageVisible": true,
+      "imageVisible": false,
       "id": "category-mwnbhd0b-h6q7",
       "titleAr": "صوصات",
       "titleEn": "Souses",
@@ -627,7 +807,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo32v-p6aq",
@@ -637,7 +819,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo3k0-p8ta",
@@ -647,7 +831,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo43f-rzmx",
@@ -657,7 +843,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo4gu-zrbp",
@@ -667,7 +855,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo4se-kljl",
@@ -677,7 +867,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwnbo6pf-0yn1",
@@ -687,7 +879,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     }
@@ -709,7 +903,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mw6tf77h-h4fd",
@@ -719,7 +915,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz02q2-lf8v",
@@ -729,7 +927,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz00ir-sn20",
@@ -739,7 +939,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz039h-ns1f",
@@ -749,7 +951,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz47xp-e4s6",
@@ -759,7 +963,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz49jm-u6za",
@@ -769,7 +975,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz48o5-c9sf",
@@ -779,7 +987,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz493w-qfx7",
@@ -789,7 +999,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz49vn-le5z",
@@ -799,7 +1011,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz4a86-48k8",
@@ -809,7 +1023,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbz4aib-bsuz",
@@ -819,7 +1035,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbzg3jl-hazf",
@@ -829,7 +1047,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbzg3xg-jhpc",
@@ -839,7 +1059,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "item-mwbzg4cq-ast0",
@@ -849,7 +1071,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -869,7 +1093,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic2",
@@ -879,7 +1105,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic3",
@@ -889,7 +1117,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic6",
@@ -899,7 +1129,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic5",
@@ -909,7 +1141,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic4",
@@ -919,7 +1153,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic7",
@@ -929,7 +1165,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic8",
@@ -939,7 +1177,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ic9",
@@ -949,7 +1189,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -969,7 +1211,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "it2",
@@ -979,7 +1223,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "it3",
@@ -989,7 +1235,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "it4",
@@ -999,7 +1247,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "it5",
@@ -1009,7 +1259,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1029,7 +1281,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj2",
@@ -1039,7 +1293,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj3",
@@ -1049,7 +1305,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj10",
@@ -1059,7 +1317,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj4",
@@ -1069,7 +1329,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj6",
@@ -1079,7 +1341,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj7",
@@ -1089,7 +1353,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj5",
@@ -1099,7 +1365,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj8",
@@ -1109,7 +1377,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fj9",
@@ -1119,7 +1389,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1139,7 +1411,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fr2",
@@ -1149,7 +1423,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fr3",
@@ -1159,7 +1435,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fr4",
@@ -1169,7 +1447,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "fr5",
@@ -1179,7 +1459,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1199,7 +1481,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj2",
@@ -1209,7 +1493,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj3",
@@ -1219,7 +1505,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj4",
@@ -1229,7 +1517,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj5",
@@ -1239,7 +1529,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj6",
@@ -1249,7 +1541,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj7",
@@ -1259,7 +1553,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "mj8",
@@ -1269,7 +1565,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1289,7 +1587,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sm2",
@@ -1299,7 +1599,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sm3",
@@ -1309,7 +1611,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "sm4",
@@ -1319,7 +1623,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1339,7 +1645,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms2",
@@ -1349,7 +1657,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms3",
@@ -1359,7 +1669,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms4",
@@ -1369,7 +1681,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms5",
@@ -1379,7 +1693,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms6",
@@ -1389,7 +1705,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms7",
@@ -1399,7 +1717,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms8",
@@ -1409,7 +1729,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms9",
@@ -1419,7 +1741,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ms10",
@@ -1429,7 +1753,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
@@ -1449,7 +1775,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ws2",
@@ -1459,7 +1787,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         },
         {
           "id": "ws3",
@@ -1469,7 +1799,9 @@
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
-          "ingredientsEn": ""
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     }
