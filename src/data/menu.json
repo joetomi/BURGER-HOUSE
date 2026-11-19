@@ -240,18 +240,6 @@
           ]
         },
         {
-          "id": "item-mwl18d42-ceq7",
-          "nameAr": "ميني برجر",
-          "nameEn": "Mini Burger",
-          "price": 35,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": false,
-          "sizes": []
-        },
-        {
           "id": "b2",
           "nameAr": "تشكن برجر",
           "nameEn": "Chicken Burger",
@@ -342,6 +330,18 @@
               "price": 32
             }
           ]
+        },
+        {
+          "id": "item-mwl18d42-ceq7",
+          "nameAr": "ميني برجر",
+          "nameEn": "Mini Burger",
+          "price": 35,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
         }
       ]
     },
