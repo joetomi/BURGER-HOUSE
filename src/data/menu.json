@@ -440,6 +440,36 @@
       "enabled": true,
       "items": [
         {
+          "id": "item-mwmksmlg-ac8q",
+          "nameAr": "حلقات البصل",
+          "nameEn": "Onion Rings",
+          "price": 14,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "sd4",
+          "nameAr": "أصابع جبنة",
+          "nameEn": "Mozzarella Sticks",
+          "price": 22,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwmksn3e-pyb8",
+          "nameAr": "سناك ستريبس",
+          "nameEn": "Snack Strips",
+          "price": 28,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
           "id": "sd1",
           "nameAr": "تشيز فرايز",
           "nameEn": "Cheese Fries",
@@ -464,36 +494,6 @@
           "nameAr": "بيف تشيز فرايز",
           "nameEn": "Beef Cheese Fries",
           "price": 48,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": ""
-        },
-        {
-          "id": "item-mwmksn3e-pyb8",
-          "nameAr": "سناك ستريبس",
-          "nameEn": "Snack Strips",
-          "price": 28,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": ""
-        },
-        {
-          "id": "sd4",
-          "nameAr": "أصابع جبنة",
-          "nameEn": "Mozzarella Sticks",
-          "price": 22,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": ""
-        },
-        {
-          "id": "item-mwmksmlg-ac8q",
-          "nameAr": "حلقات البصل",
-          "nameEn": "Onion Rings",
-          "price": 14,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -534,6 +534,86 @@
           "nameAr": "كولسلو",
           "nameEn": "Coleslaw",
           "price": 12,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        }
+      ]
+    },
+    {
+      "image": "/category-default.svg",
+      "imageVisible": true,
+      "id": "category-mwnbhd0b-h6q7",
+      "titleAr": "صوصات",
+      "titleEn": "Souses",
+      "enabled": true,
+      "items": [
+        {
+          "id": "item-mwnbo1hh-8uy9",
+          "nameAr": "صوص كلاسيك",
+          "nameEn": "Classic Sauce",
+          "price": 4,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo32v-p6aq",
+          "nameAr": "صوص تشيز",
+          "nameEn": "Cheese Sauce",
+          "price": 6,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo3k0-p8ta",
+          "nameAr": "صوص ماشروم",
+          "nameEn": "Mushroom Sauce",
+          "price": 4,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo43f-rzmx",
+          "nameAr": "صوص باربكيو",
+          "nameEn": "BBQ Sauce",
+          "price": 4,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo4gu-zrbp",
+          "nameAr": "صوص كورن",
+          "nameEn": "Corn Sauce",
+          "price": 4,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo4se-kljl",
+          "nameAr": "صوص ساموراي",
+          "nameEn": "Samurai Sauce",
+          "price": 4,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": ""
+        },
+        {
+          "id": "item-mwnbo6pf-0yn1",
+          "nameAr": "صوص سبايسي",
+          "nameEn": "Spicy Sauce",
+          "price": 4,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
