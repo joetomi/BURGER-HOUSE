@@ -21,6 +21,21 @@ const cleanIngredients = (value, label) => {
   return cleanText(value, label, 500);
 };
 
+const cleanSize = (size) => {
+  const price = Number(size?.price);
+  if (!Number.isFinite(price) || price < 0 || price > 1000) throw new Error("سعر الحجم غير صالح.");
+  return {
+    nameAr: cleanText(size?.nameAr, "اسم الحجم بالعربية", 40),
+    nameEn: size?.nameEn ? cleanText(size.nameEn, "اسم الحجم بالإنجليزية", 40) : "",
+    price: Math.round(price * 100) / 100,
+  };
+};
+
+const cleanSizes = (sizes) => {
+  if (!Array.isArray(sizes) || sizes.length === 0) return [];
+  return sizes.map(cleanSize);
+};
+
 const cleanMenuItem = (item) => {
   const price = Number(item?.price);
   if (!Number.isFinite(price) || price < 0 || price > 1000) throw new Error("سعر الصنف غير صالح.");
@@ -34,6 +49,8 @@ const cleanMenuItem = (item) => {
     ingredientsVisible: item?.ingredientsVisible === true,
     ingredientsAr: cleanIngredients(item?.ingredientsAr, "المكونات بالعربية"),
     ingredientsEn: cleanIngredients(item?.ingredientsEn, "المكونات بالإنجليزية"),
+    sizesEnabled: item?.sizesEnabled === true,
+    sizes: item?.sizesEnabled === true ? cleanSizes(item?.sizes) : [],
   };
 };
 

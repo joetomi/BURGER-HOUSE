@@ -426,15 +426,39 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                       </div>
                     </div>
                     <div className="mt-3 border-t border-white/[0.07] pt-3">
-                      <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-white/70">
-                        <input
-                          type="checkbox"
-                          checked={item.ingredientsVisible === true}
-                          onChange={(event) => updateItem(item.id, { ingredientsVisible: event.target.checked })}
-                          className="accent-[#D4A017]"
-                        />
-                        إظهار المكونات
-                      </label>
+                      <div className="flex flex-wrap items-center gap-5">
+                        <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-white/70">
+                          <input
+                            type="checkbox"
+                            checked={item.ingredientsVisible === true}
+                            onChange={(event) => updateItem(item.id, { ingredientsVisible: event.target.checked })}
+                            className="accent-[#D4A017]"
+                          />
+                          إظهار المكونات
+                        </label>
+                        <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-white/70">
+                          <input
+                            type="checkbox"
+                            checked={item.sizesEnabled === true}
+                            onChange={(event) => {
+                              const enabled = event.target.checked;
+                              const defaultSizes = (item.sizes && item.sizes.length > 0)
+                                ? item.sizes
+                                : [
+                                    { nameAr: "عادي", nameEn: "Single", price: item.price || 0 },
+                                    { nameAr: "دبل", nameEn: "Double", price: (item.price || 0) + 8 },
+                                  ];
+                              updateItem(item.id, {
+                                sizesEnabled: enabled,
+                                sizes: enabled ? defaultSizes : item.sizes,
+                              });
+                            }}
+                            className="accent-[#D4A017]"
+                          />
+                          تفعيل الأحجام (عادي / دبل / تربل...)
+                        </label>
+                      </div>
+
                       {item.ingredientsVisible && (
                         <div className="mt-3 grid gap-3 sm:grid-cols-2">
                           <label>
@@ -458,6 +482,116 @@ const MenuEditor: React.FC<MenuEditorProps> = ({ title, categories, onChange }) 
                               onChange={(event) => updateItem(item.id, { ingredientsEn: event.target.value })}
                             />
                           </label>
+                        </div>
+                      )}
+
+                      {item.sizesEnabled && (
+                        <div className="mt-3 rounded-2xl border border-[#D4A017]/25 bg-black/35 p-3.5">
+                          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                              <span className="block text-xs font-bold text-[#D4A017]">خيارات الأحجام والأسعار</span>
+                              <span className="block text-[11px] text-white/40">تظهر الأسعار بجانب بعضها مع كتابة الحجم لكل سعر.</span>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                const currentSizes = item.sizes || [];
+                                const nextNameAr =
+                                  currentSizes.length === 0
+                                    ? "عادي"
+                                    : currentSizes.length === 1
+                                    ? "دبل"
+                                    : currentSizes.length === 2
+                                    ? "تربل"
+                                    : `حجم ${currentSizes.length + 1}`;
+                                const nextNameEn =
+                                  currentSizes.length === 0
+                                    ? "Single"
+                                    : currentSizes.length === 1
+                                    ? "Double"
+                                    : currentSizes.length === 2
+                                    ? "Triple"
+                                    : `Size ${currentSizes.length + 1}`;
+                                const lastPrice = currentSizes.length > 0 ? currentSizes[currentSizes.length - 1].price : item.price;
+                                const nextPrice = lastPrice + 8;
+                                updateItem(item.id, {
+                                  sizes: [...currentSizes, { nameAr: nextNameAr, nameEn: nextNameEn, price: nextPrice }],
+                                });
+                              }}
+                              className="inline-flex items-center gap-1.5 rounded-xl border border-[#D4A017]/40 bg-[#D4A017]/15 px-3 py-1.5 text-xs font-bold text-[#D4A017] transition hover:bg-[#D4A017]/25"
+                            >
+                              <Plus className="h-3.5 w-3.5" /> إضافة حجم إضافي
+                            </button>
+                          </div>
+
+                          <div className="space-y-2">
+                            {(item.sizes || []).map((size, sIndex) => (
+                              <div
+                                key={sIndex}
+                                className="grid grid-cols-[1fr_1fr_100px_auto] items-center gap-2 rounded-xl border border-white/5 bg-white/[0.02] p-2"
+                              >
+                                <label>
+                                  <span className="mb-1 block text-[10px] text-white/40">اسم الحجم (ع)</span>
+                                  <input
+                                    type="text"
+                                    value={size.nameAr}
+                                    placeholder="مثال: عادي أو دبل"
+                                    onChange={(event) => {
+                                      const nextSizes = [...(item.sizes || [])];
+                                      nextSizes[sIndex] = { ...nextSizes[sIndex], nameAr: event.target.value };
+                                      updateItem(item.id, { sizes: nextSizes });
+                                    }}
+                                    className={inputClass}
+                                  />
+                                </label>
+                                <label>
+                                  <span className="mb-1 block text-[10px] text-white/40">Size name (En)</span>
+                                  <input
+                                    type="text"
+                                    dir="ltr"
+                                    value={size.nameEn || ""}
+                                    placeholder="e.g. Double"
+                                    onChange={(event) => {
+                                      const nextSizes = [...(item.sizes || [])];
+                                      nextSizes[sIndex] = { ...nextSizes[sIndex], nameEn: event.target.value };
+                                      updateItem(item.id, { sizes: nextSizes });
+                                    }}
+                                    className={inputClass}
+                                  />
+                                </label>
+                                <label>
+                                  <span className="mb-1 block text-[10px] text-white/40">السعر (د.ل)</span>
+                                  <input
+                                    type="number"
+                                    min="0"
+                                    max="1000"
+                                    step="0.5"
+                                    dir="ltr"
+                                    value={size.price}
+                                    onChange={(event) => {
+                                      const nextSizes = [...(item.sizes || [])];
+                                      nextSizes[sIndex] = { ...nextSizes[sIndex], price: Number(event.target.value) };
+                                      updateItem(item.id, { sizes: nextSizes });
+                                    }}
+                                    className={inputClass}
+                                  />
+                                </label>
+                                <div className="pt-4">
+                                  <button
+                                    type="button"
+                                    title="حذف هذا الحجم"
+                                    onClick={() => {
+                                      const nextSizes = (item.sizes || []).filter((_, idx) => idx !== sIndex);
+                                      updateItem(item.id, { sizes: nextSizes });
+                                    }}
+                                    className="inline-flex min-h-11 min-w-10 items-center justify-center rounded-xl border border-red-300/15 bg-red-500/10 p-2 text-red-300/75 transition hover:bg-red-500/20 hover:text-red-300"
+                                  >
+                                    <Trash2 className="h-4 w-4" />
+                                  </button>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>

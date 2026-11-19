@@ -15,9 +15,14 @@
           "nameEn": "Classic Burger",
           "price": 20,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 20 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 28 }
+          ]
         },
         {
           "id": "b5",
@@ -25,9 +30,14 @@
           "nameEn": "Cheese Burger",
           "price": 24,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+          ]
         },
         {
           "id": "b4",
@@ -35,9 +45,14 @@
           "nameEn": "Arabic Burger",
           "price": 21,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 29 }
+          ]
         },
         {
           "id": "b7",
@@ -45,9 +60,14 @@
           "nameEn": "BBQ Burger",
           "price": 22,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 22 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 30 }
+          ]
         },
         {
           "id": "b6",
@@ -55,9 +75,14 @@
           "nameEn": "Mushroom Burger",
           "price": 22,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 22 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 30 }
+          ]
         },
         {
           "id": "b10",
@@ -65,9 +90,14 @@
           "nameEn": "Smash Burger",
           "price": 23,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 23 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 31 }
+          ]
         },
         {
           "id": "b13",
@@ -75,9 +105,14 @@
           "nameEn": "Flat Burger",
           "price": 21,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 29 }
+          ]
         },
         {
           "id": "b11",
@@ -85,9 +120,14 @@
           "nameEn": "Cheese Dip Burger",
           "price": 24,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+          ]
         },
         {
           "id": "item-mwl1e57p-oxtq",
@@ -95,9 +135,14 @@
           "nameEn": "Beef Steak Burger",
           "price": 28,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 12 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 28 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 40 }
+          ]
         },
         {
           "id": "b12",
@@ -105,9 +150,14 @@
           "nameEn": "Prime Burger",
           "price": 36,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 14 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 36 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 50 }
+          ]
         },
         {
           "id": "item-mwl18d42-ceq7",
@@ -125,9 +175,14 @@
           "nameEn": "Chicken Burger",
           "price": 18,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 18 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 24 }
+          ]
         },
         {
           "id": "b3",
@@ -135,9 +190,14 @@
           "nameEn": "Zinger Burger",
           "price": 21,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 27 }
+          ]
         },
         {
           "id": "b14",
@@ -145,9 +205,14 @@
           "nameEn": "Chicken Fillet Burger",
           "price": 21,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 6 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 21 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 27 }
+          ]
         },
         {
           "id": "item-mwl18bnd-bw77",
@@ -155,9 +220,14 @@
           "nameEn": "Chicken Steak Burger",
           "price": 24,
           "enabled": true,
-          "ingredientsVisible": true,
-          "ingredientsAr": "دبل + 8 دينار",
-          "ingredientsEn": ""
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": [
+            { "nameAr": "عادي", "nameEn": "Single", "price": 24 },
+            { "nameAr": "دبل", "nameEn": "Double", "price": 32 }
+          ]
         }
       ]
     },

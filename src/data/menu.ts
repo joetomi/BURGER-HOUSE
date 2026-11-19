@@ -1,5 +1,12 @@
 import menuContent from "./menu.json";
 
+export interface MenuItemSize {
+  id?: string;
+  nameAr: string;
+  nameEn?: string;
+  price: number;
+}
+
 export interface MenuItem {
   id: string;
   nameAr: string;
@@ -9,6 +16,8 @@ export interface MenuItem {
   ingredientsVisible?: boolean;
   ingredientsAr?: string;
   ingredientsEn?: string;
+  sizesEnabled?: boolean;
+  sizes?: MenuItemSize[];
 }
 
 export interface MenuCategory {
