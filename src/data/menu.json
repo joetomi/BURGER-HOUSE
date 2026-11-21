@@ -1760,6 +1760,28 @@
       ]
     },
     {
+      "image": "/categories/category-mwr07tq0-7ps8-1795301806265.webp",
+      "imageVisible": true,
+      "id": "category-mwr07tq0-7ps8",
+      "titleAr": "جرانولا",
+      "titleEn": "Granola",
+      "enabled": true,
+      "items": [
+        {
+          "id": "item-mwr0cduu-c3mx",
+          "nameAr": "جرانولا ريتش",
+          "nameEn": "Granola Rich",
+          "price": 24,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
+        }
+      ]
+    },
+    {
       "image": "/categories/water-soft-drinks-1794135263518.webp",
       "imageVisible": true,
       "id": "water-soft-drinks",
@@ -1796,28 +1818,6 @@
           "nameAr": "مشروب غازي",
           "nameEn": "Soft Drinks",
           "price": 6,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": false,
-          "sizes": []
-        }
-      ]
-    },
-    {
-      "image": "/categories/category-mwr07tq0-7ps8-1795301806265.webp",
-      "imageVisible": true,
-      "id": "category-mwr07tq0-7ps8",
-      "titleAr": "جرانولا",
-      "titleEn": "Granola",
-      "enabled": true,
-      "items": [
-        {
-          "id": "item-mwr0cduu-c3mx",
-          "nameAr": "جرانولا ريتش",
-          "nameEn": "Granola Rich",
-          "price": 24,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
