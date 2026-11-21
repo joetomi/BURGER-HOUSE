@@ -1793,7 +1793,7 @@
           "id": "ws1",
           "nameAr": "ماء",
           "nameEn": "Still Water",
-          "price": 3,
+          "price": 1,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
