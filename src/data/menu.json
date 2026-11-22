@@ -118,18 +118,6 @@
           "sizes": []
         },
         {
-          "id": "b12",
-          "nameAr": "برايم برجر",
-          "nameEn": "Prime Burger",
-          "price": 36,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
           "id": "b2",
           "nameAr": "تشكن برجر",
           "nameEn": "Chicken Burger",
@@ -158,6 +146,18 @@
           "nameAr": "تشكن فيليه برجر",
           "nameEn": "Chicken Fillet Burger",
           "price": 20,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
+          "id": "b12",
+          "nameAr": "برايم برجر",
+          "nameEn": "Prime Burger",
+          "price": 36,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
