@@ -19,13 +19,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 30
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b5",
@@ -37,13 +31,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 36
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b4",
@@ -55,13 +43,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 34
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b7",
@@ -73,13 +55,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 33
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b6",
@@ -91,13 +67,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 33
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b10",
@@ -109,13 +79,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 33
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b13",
@@ -151,13 +115,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 39
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b12",
@@ -169,13 +127,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 50
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b2",
@@ -187,13 +139,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 24
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b3",
@@ -205,13 +151,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 26
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b14",
@@ -223,13 +163,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 27
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "item-mwl18bnd-bw77",
@@ -241,13 +175,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 32
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "item-mwl18d42-ceq7",
