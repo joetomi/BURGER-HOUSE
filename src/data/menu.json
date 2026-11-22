@@ -22,18 +22,6 @@
           "sizes": []
         },
         {
-          "id": "b5",
-          "nameAr": "تشيز برجر",
-          "nameEn": "Cheese Burger",
-          "price": 26,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
           "id": "b4",
           "nameAr": "عربي برجر",
           "nameEn": "Arabic Burger",
@@ -94,22 +82,10 @@
           "sizes": []
         },
         {
-          "id": "b11",
-          "nameAr": "تشيز ديب برجر",
-          "nameEn": "Cheese Dip Burger",
-          "price": 50,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
-          "id": "item-mwl1e57p-oxtq",
-          "nameAr": "بيف ستيك برجر",
-          "nameEn": "Beef Steak Burger",
-          "price": 29,
+          "id": "b5",
+          "nameAr": "تشيز برجر",
+          "nameEn": "Cheese Burger",
+          "price": 26,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -154,6 +130,30 @@
           "sizes": []
         },
         {
+          "id": "item-mwl18bnd-bw77",
+          "nameAr": "تشكن ستيك برجر",
+          "nameEn": "Chicken Steak Burger",
+          "price": 26,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
+          "id": "item-mwl1e57p-oxtq",
+          "nameAr": "بيف ستيك برجر",
+          "nameEn": "Beef Steak Burger",
+          "price": 29,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
           "id": "b12",
           "nameAr": "برايم برجر",
           "nameEn": "Prime Burger",
@@ -166,10 +166,10 @@
           "sizes": []
         },
         {
-          "id": "item-mwl18bnd-bw77",
-          "nameAr": "تشكن ستيك برجر",
-          "nameEn": "Chicken Steak Burger",
-          "price": 26,
+          "id": "b11",
+          "nameAr": "تشيز ديب برجر",
+          "nameEn": "Cheese Dip Burger",
+          "price": 50,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
