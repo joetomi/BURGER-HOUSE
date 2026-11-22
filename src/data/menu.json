@@ -127,13 +127,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 29
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "b11",
@@ -151,7 +145,7 @@
           "id": "item-mwl1e57p-oxtq",
           "nameAr": "بيف ستيك برجر",
           "nameEn": "Beef Steak Burger",
-          "price": 30,
+          "price": 29,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
