@@ -46,10 +46,10 @@
           "sizes": []
         },
         {
-          "id": "b1",
-          "nameAr": "كلاسيك برجر",
-          "nameEn": "Classic Burger",
-          "price": 21,
+          "id": "b14",
+          "nameAr": "تشكن فيليه برجر",
+          "nameEn": "Chicken Fillet Burger",
+          "price": 20,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -58,10 +58,10 @@
           "sizes": []
         },
         {
-          "id": "b14",
-          "nameAr": "تشكن فيليه برجر",
-          "nameEn": "Chicken Fillet Burger",
-          "price": 20,
+          "id": "b1",
+          "nameAr": "كلاسيك برجر",
+          "nameEn": "Classic Burger",
+          "price": 21,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
