@@ -21,14 +21,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 20
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 28
+              "price": 30
             }
           ]
         },
@@ -44,14 +39,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 24
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 32
+              "price": 36
             }
           ]
         },
@@ -67,14 +57,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 21
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 29
+              "price": 34
             }
           ]
         },
@@ -90,14 +75,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 22
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 30
+              "price": 33
             }
           ]
         },
@@ -113,14 +93,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 22
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 30
+              "price": 33
             }
           ]
         },
@@ -136,14 +111,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 23
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 31
+              "price": 33
             }
           ]
         },
@@ -158,11 +128,6 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 21
-            },
             {
               "nameAr": "دبل",
               "nameEn": "Double",
@@ -180,18 +145,7 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": [
-            {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 24
-            },
-            {
-              "nameAr": "دبل",
-              "nameEn": "Double",
-              "price": 32
-            }
-          ]
+          "sizes": []
         },
         {
           "id": "item-mwl1e57p-oxtq",
@@ -205,14 +159,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 28
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 40
+              "price": 39
             }
           ]
         },
@@ -227,11 +176,6 @@
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 36
-            },
             {
               "nameAr": "دبل",
               "nameEn": "Double",
@@ -251,11 +195,6 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 18
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
               "price": 24
@@ -274,14 +213,9 @@
           "sizesEnabled": true,
           "sizes": [
             {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 21
-            },
-            {
               "nameAr": "دبل",
               "nameEn": "Double",
-              "price": 27
+              "price": 26
             }
           ]
         },
@@ -289,18 +223,13 @@
           "id": "b14",
           "nameAr": "تشكن فيليه برجر",
           "nameEn": "Chicken Fillet Burger",
-          "price": 21,
+          "price": 20,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 21
-            },
             {
               "nameAr": "دبل",
               "nameEn": "Double",
@@ -312,18 +241,13 @@
           "id": "item-mwl18bnd-bw77",
           "nameAr": "تشكن ستيك برجر",
           "nameEn": "Chicken Steak Burger",
-          "price": 25,
+          "price": 26,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
           "sizes": [
-            {
-              "nameAr": "عادي",
-              "nameEn": "Single",
-              "price": 24
-            },
             {
               "nameAr": "دبل",
               "nameEn": "Double",
