@@ -10,6 +10,42 @@
       "enabled": true,
       "items": [
         {
+          "id": "b2",
+          "nameAr": "تشكن برجر",
+          "nameEn": "Chicken Burger",
+          "price": 17,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
+          "id": "b3",
+          "nameAr": "زنجر برجر",
+          "nameEn": "Zinger Burger",
+          "price": 19,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
+          "id": "b13",
+          "nameAr": "فلات برجر",
+          "nameEn": "Flat Burger",
+          "price": 20,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": true,
+          "sizes": []
+        },
+        {
           "id": "b1",
           "nameAr": "كلاسيك برجر",
           "nameEn": "Classic Burger",
@@ -22,10 +58,10 @@
           "sizes": []
         },
         {
-          "id": "b4",
-          "nameAr": "عربي برجر",
-          "nameEn": "Arabic Burger",
-          "price": 24,
+          "id": "b14",
+          "nameAr": "تشكن فيليه برجر",
+          "nameEn": "Chicken Fillet Burger",
+          "price": 20,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -70,10 +106,10 @@
           "sizes": []
         },
         {
-          "id": "b13",
-          "nameAr": "فلات برجر",
-          "nameEn": "Flat Burger",
-          "price": 20,
+          "id": "b4",
+          "nameAr": "عربي برجر",
+          "nameEn": "Arabic Burger",
+          "price": 24,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -86,42 +122,6 @@
           "nameAr": "تشيز برجر",
           "nameEn": "Cheese Burger",
           "price": 26,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
-          "id": "b2",
-          "nameAr": "تشكن برجر",
-          "nameEn": "Chicken Burger",
-          "price": 17,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
-          "id": "b3",
-          "nameAr": "زنجر برجر",
-          "nameEn": "Zinger Burger",
-          "price": 19,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": true,
-          "sizes": []
-        },
-        {
-          "id": "b14",
-          "nameAr": "تشكن فيليه برجر",
-          "nameEn": "Chicken Fillet Burger",
-          "price": 20,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -154,6 +154,18 @@
           "sizes": []
         },
         {
+          "id": "item-mwl18d42-ceq7",
+          "nameAr": "ميني برجر",
+          "nameEn": "Mini Burger",
+          "price": 35,
+          "enabled": true,
+          "ingredientsVisible": false,
+          "ingredientsAr": "",
+          "ingredientsEn": "",
+          "sizesEnabled": false,
+          "sizes": []
+        },
+        {
           "id": "b12",
           "nameAr": "برايم برجر",
           "nameEn": "Prime Burger",
@@ -175,18 +187,6 @@
           "ingredientsAr": "",
           "ingredientsEn": "",
           "sizesEnabled": true,
-          "sizes": []
-        },
-        {
-          "id": "item-mwl18d42-ceq7",
-          "nameAr": "ميني برجر",
-          "nameEn": "Mini Burger",
-          "price": 35,
-          "enabled": true,
-          "ingredientsVisible": false,
-          "ingredientsAr": "",
-          "ingredientsEn": "",
-          "sizesEnabled": false,
           "sizes": []
         }
       ]
