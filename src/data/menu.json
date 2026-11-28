@@ -330,10 +330,10 @@
           "sizes": []
         },
         {
-          "id": "s4",
-          "nameAr": "تشيكن راب",
-          "nameEn": "Chicken Wrap",
-          "price": 20,
+          "id": "s5",
+          "nameAr": "زنجر راب",
+          "nameEn": "Zinger Wrap",
+          "price": 21,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
@@ -342,10 +342,10 @@
           "sizes": []
         },
         {
-          "id": "s5",
-          "nameAr": "زنجر راب",
-          "nameEn": "Zinger Wrap",
-          "price": 21,
+          "id": "s4",
+          "nameAr": "تشيكن راب",
+          "nameEn": "Chicken Wrap",
+          "price": 28,
           "enabled": true,
           "ingredientsVisible": false,
           "ingredientsAr": "",
